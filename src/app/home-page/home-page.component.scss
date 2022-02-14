@@ -1,0 +1,69 @@
+.hero-section
+{
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 5% 45% 45% 5%;
+  grid-template-rows: 100%;
+
+  .hero-text
+  {
+    grid-column: 2;
+    margin: auto 0px;
+
+
+    // Heading
+    .hero-heading{
+      font-size: 60px;
+      margin: 0px;
+    }
+
+    // Information Text
+    .hero-about{
+      font-size: 15px;
+      font-weight: 100;
+      width: 70%;
+      margin: 20px 20%;
+    }
+
+    // View projects link
+    a{
+      color: black  ;
+      font-size: 22px;
+    }
+  }
+
+
+  // Logo and social links
+  .hero-logo-links
+  {
+    grid-column: 3;
+    display: flex;
+    justify-content: space-between;
+
+    // Big hero logo
+    .hero-logo-image{
+      height: 60%;
+      margin: auto 0px;
+    }
+
+    // Social Media Links
+    .hero-social-links{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      gap: 30px;
+      margin: auto auto;
+
+      img{
+        height: 30px;
+        width: 30px;
+      }
+    }
+
+  }
+
+
+
+
+}

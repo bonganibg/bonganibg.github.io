@@ -1,0 +1,15 @@
+.nav-bar-container
+{
+  height: 50px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+
+  .page-links
+  {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+  }
+
+}
