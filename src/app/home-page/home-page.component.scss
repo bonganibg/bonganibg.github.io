@@ -5,7 +5,7 @@
   grid-template-columns: 50% 50%;
   grid-template-rows: 100%;
   padding: 0px 10%;
-  background-color: #F5F5F5;
+  background-color: #EEE;
 
   .hero-text
   {
@@ -181,7 +181,7 @@
 // Featured Projects
 .featured-projects
 {
-  height: 300vh;
+  scroll-snap-type: y mandatory;
 
   // Individual project
   .project{
@@ -189,6 +189,7 @@
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 100%;
+    scroll-snap-align: start;
 
 
 
@@ -274,97 +275,71 @@
     align-content: center;
     margin: 0px 10%;
 
-    // Project Item
-    .project-item{
+    li{
+      display: flex;
+      justify-content: center;
+    }
+
+    // Project banner image
+    .project-card{
+      width: 500px;
       display: flex;
       flex-direction: column;
-      width: 350px;
-      align-self: center;
-      margin: 0px auto;
+      justify-content: center;
 
       // Project image
       .project-image{
-        height: 250px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: -60px;
-        z-index: 1;
-
+        height: 450px;
+        width: 450px;
+        margin: 0px auto;
         img{
-          height: 250px;
+          height: 100%;
+          width: 100%;
         }
       }
 
-      // Project info
+      // Project information
       .project-information{
-        display: flex;
-        flex-direction: column;
-        background-color: brown;
-        // Links
-        .project-links{
-          display: flex;
-          flex-direction: column;
-          gap: 10px;
-          float: right;
+        .project-name{
+          font-size: 30px;
+          font-family: "Lato";
+          font-weight: 100;
+          width: 80%;
+          margin: 0px auto  ;
+        }
 
-          .view-project{
-            font-size: 25px;
-            height: 30px;
-            width: 30px;
+        // Project description
+        .project-description{
+          font-size: 18px;
+          font-family: "Nixie One";
+          width: 80%;
+          margin: 5px auto;
+        }
+
+        // Project technology
+        .project-tech{
+          display: flex;
+          gap: 5px;
+          width: 80%;
+          margin: 5px auto;
+
+          a{
+            height: 40px;
+            width: 40px;
             border-radius: 50%;
-            background-color: beige;
             display: flex;
             justify-content: center;
             align-items: center;
-          }
 
-          // Github
-          .github-link{
             img{
               height: 30px;
               width: 30px;
             }
-          }
-        }
 
-
-        // Project Details
-        .project-details{
-          // Project Name
-          h2{
-            margin: 0px;
-            font-size: 20px;
-          }
-
-          p{
-            font-size: 15px;
-            margin: 0px;
-            width: 80%;
-            margin-left: 10%;
-          }
-
-          .project-tech{
-            display: flex;
-            gap: 10px;
-
-            a{
-              height: 40px;
-              width: 40px;
-              background-color: aqua;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              border-radius: 50%;
-
-              img{
-                width: 20px;
-                height: 20px;
-              }
-            }
           }
         }
       }
+
     }
   }
 }
@@ -378,7 +353,7 @@
   padding: 5% 20%;
   h2{
     width: 50%;
-    font-size: 30px;
+    font-size: 23px;
     margin: 0px;
     font-weight: 200;
     font-family: "Lato";
@@ -396,11 +371,47 @@
 // Featured project container
 .featured-projects-header
 {
-  height: 50vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  h2{
-    font-size: 5rem;
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    overflow: hidden;
+
+    // Left side container
+    .left{
+      position: relative;
+      width: 50%;
+      height: 100%;
+      background-color: #FFF;
+      overflow: hidden;
+
+      h1{
+        left: 100%;
+      }
+    }
+
+    // right side container
+    .right{
+      position: relative;
+      width: 50%;
+      height: 100%;
+      background-color: #FFF;
+      overflow: hidden;
+    }
+
+
+    h1{
+      position: absolute;
+      font-size: 15em;
+      white-space: nowrap;
+      color: #EEE;
+      line-height: 10vh;
+      animation: anim 10s linear infinite
+    }
+
+    @keyframes anim {
+      0% {transform: translateX(0);}
+      100%{transform: translateX(-100%);}
   }
+
 }
