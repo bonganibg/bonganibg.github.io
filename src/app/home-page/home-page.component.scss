@@ -1,36 +1,41 @@
 .hero-section
 {
   height: 100vh;
-  width: 100vw;
   display: grid;
-  grid-template-columns: 5% 45% 45% 5%;
+  grid-template-columns: 50% 50%;
   grid-template-rows: 100%;
-
+  padding: 0px 10%;
+  background-color: #F5F5F5;
 
   .hero-text
   {
-    grid-column: 2;
+    grid-column: 1;
     margin: auto 0px;
-
+    z-index: 1;
 
     // Heading
     .hero-heading{
       font-size: 60px;
       margin: 0px;
+      font-family: "Lato";
+      font-weight: 100;
+      letter-spacing: 10px;
     }
 
     // Information Text
     .hero-about{
-      font-size: 15px;
-      font-weight: 100;
+      font-size: 18px;
+      font-family: "Nixie One";
       width: 70%;
       margin: 20px 20%;
+
     }
 
     // View projects link
     a{
       color: black  ;
       font-size: 22px;
+      font-family: "Lato";
     }
   }
 
@@ -38,23 +43,39 @@
   // Logo and social links
   .hero-logo-links
   {
-    grid-column: 3;
+    grid-column: 2;
     display: flex;
-    justify-content: space-between;
+    justify-content: end;
 
-    // Big hero logo
-    .hero-logo-image{
-      height: 60%;
-      margin: auto 0px;
+    // Big circle
+    .hero-background-item{
+      height: 650px;
+      width: 650px;
+      background-color: #FFF;
+      border-radius: 50%;
+      margin: auto;
+      position: absolute;
+      top: 20%;
+      left: 40%;
+
+      box-shadow: rgba(182, 182, 182, 0.2) 0px 18px 50px -10px;
+    }
+
+    // Big Logo
+    .hero-logo-big{
+      z-index: 1;
+      width: 50%;
+      margin: auto;
     }
 
     // Social Media Links
     .hero-social-links{
+      z-index: 1;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
       gap: 30px;
-      margin: auto auto;
+      margin: auto 0px;
 
       img{
         height: 30px;
@@ -137,8 +158,222 @@
 
     }
   }
+}
 
 
 
+// Featured Projects
+.featured-projects
+{
+  height: 300vh;
 
+  // Individual project
+  .project{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+
+
+
+    // Image of the project
+    .project-image{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+    // Client or project type
+    .project-client{
+      grid-column: 2;
+      margin: 0px;
+      font-size: 13px;
+    }
+
+    // Project name
+    .project-name{
+      margin: 0px;
+      font-size: 50px;
+      font-weight: 200;
+    }
+
+    // Tech in project
+    .project-tech{
+      display: flex;
+      gap: 10px;
+      a{
+        height: 50px;
+        width: 50px;
+        background-color: aqua;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img{
+          height: 40px;
+          width: 40px;
+        }
+      }
+    }
+
+
+    // Description of the project
+    .project-description{
+      width: 80%;
+      margin-left: 10%;
+      font-size: 18px;
+    }
+
+    // Links to view the project
+    .project-links{
+      display: flex;
+      justify-content: space-between;
+      padding: 10%;
+      a{
+        color: black;
+        font-size: 20px;
+      }
+
+      img{
+        height: 30px;
+        width: 30px;
+      }
+    }
+  }
+
+}
+
+
+
+// List of projects
+.projects-container
+{
+
+  width: 100vw;
+  .projects-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    gap: 30px;
+    align-content: center;
+    margin: 0px 10%;
+
+    // Project Item
+    .project-item{
+      display: flex;
+      flex-direction: column;
+      width: 350px;
+      align-self: center;
+      margin: 0px auto;
+
+      // Project image
+      .project-image{
+        height: 250px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: -60px;
+        z-index: 1;
+
+        img{
+          height: 250px;
+        }
+      }
+
+      // Project info
+      .project-information{
+        display: flex;
+        flex-direction: column;
+        background-color: brown;
+        // Links
+        .project-links{
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          float: right;
+
+          .view-project{
+            font-size: 25px;
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+            background-color: beige;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+
+          // Github
+          .github-link{
+            img{
+              height: 30px;
+              width: 30px;
+            }
+          }
+        }
+
+
+        // Project Details
+        .project-details{
+          // Project Name
+          h2{
+            margin: 0px;
+            font-size: 20px;
+          }
+
+          p{
+            font-size: 15px;
+            margin: 0px;
+            width: 80%;
+            margin-left: 10%;
+          }
+
+          .project-tech{
+            display: flex;
+            gap: 10px;
+
+            a{
+              height: 40px;
+              width: 40px;
+              background-color: aqua;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border-radius: 50%;
+
+              img{
+                width: 20px;
+                height: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+// Quote Section
+.quote-section
+{
+  width: 100%;
+  margin: 0px;
+  padding: 5% 20%;
+  h2{
+    width: 50%;
+    font-size: 30px;
+    margin: 0px;
+    font-weight: 200;
+    font-family: "Lato";
+  }
+
+  p{
+    margin: 5px 10%;
+    font-family: "Nixie One";
+    font-size: 15px;
+  }
 }

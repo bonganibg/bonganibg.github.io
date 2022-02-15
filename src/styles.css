@@ -1,3 +1,14 @@
+@font-face {
+  font-family: "Nixie One";
+  src: local("NixieOne"), url(./assets/fonts/NixieOne-Regular.ttf) format("truetype");
+}
+
+
+@font-face {
+  font-family: "Lato";
+  src: local("Lato"), url(./assets/fonts/Lato-Regular.ttf) format("truetype");
+}
+
 a{
   text-decoration: none;
 }
@@ -5,6 +16,7 @@ a{
 body{
   padding: 0px;
   margin: 0px;
+  overflow-x: hidden;
 }
 
 li{
