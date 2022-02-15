@@ -1,0 +1,138 @@
+.project-info-container
+{
+
+  // Heading with project image and main information
+  .project-info-header
+  {
+    height: 600px;
+    width: 800px;
+    display: flex;
+    margin: 0px auto;
+
+    // Project banner image
+    .project-image
+    {
+      height: 400px;
+      width: 400px;
+      margin: auto;
+    }
+
+    // Project infromation heading
+    .project-information
+    {
+      margin: auto;
+      height: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      // Content at the top of the screen
+      .top-third{
+
+        // Client or project type
+        .client{
+          font-size: 15px;
+          margin: 0px;
+        }
+
+        // Platforms
+        .platforms{
+          font-size: 30px;
+          margin: 0px;
+          font-weight: 200;
+        }
+
+        // Technologies USed
+        .technologies{
+          display: flex;
+          gap: 20px;
+          // Technologies Image
+          a{
+            height: 40px;
+            width: 40px;
+            background-color: aqua;
+            justify-content: center;
+            border-radius: 50%;
+            display: flex;
+
+            img{
+              height: 30px;
+              width: 30px;
+              margin: auto;
+            }
+          }
+        }
+      }
+
+      // Roles Container
+      .roles-container{
+        // Roles heading
+        .roles-heading{
+          font-size: 25px;
+          margin: 0px;
+        }
+
+        .roles-list{
+          max-height: 200px;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          overflow-y: scroll;
+          margin-top: 5px;
+          .role{
+            margin: 0px;
+          }
+        }
+      }
+    }
+
+  }
+
+
+
+
+  // IMAGE SLIDEER
+  .image-slider-holder
+  {
+
+
+    img{
+      height: 400px;
+    }
+
+    .slider-container
+    {
+      width: 100%;
+      height: 75vh;
+      flex-direction: row;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .image-slider{
+      width: 100%;
+      height: 500px;
+      position: absolute;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: .7s;
+
+      .slide-div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0px 30px;
+
+        img{
+          position: relative;
+          width: 240px;
+          height: 370px;
+          transition: 0.5s;
+        }
+      }
+
+    }
+  }
+}
