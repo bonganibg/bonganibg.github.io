@@ -13,7 +13,7 @@ export interface Skills
     Image: string,
     Description: string,
     Languages: { headline: string,  languages: string[]},
-    Frameworkds: { headline: string, frameworks: string[] }
+    Frameworks: { headline: string, frameworks: string[] }
   },
 
   Database: {

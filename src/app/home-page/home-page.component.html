@@ -2,11 +2,11 @@
 
   <!-- Text information -->
   <div class="hero-text">
-    <h2 class="hero-heading">
-      software  & <br> web engineer
+    <h2 class="hero-heading" [innerHTML]="headerData.Text.heading">
+      {{headerData.Text.heading}}
     </h2>
     <p class="hero-about">
-      hi, i am bongani, i am a full stack engineer with experties in designing and developing web, desktop and mobile systems
+      {{headerData.Text.summary}}
     </p>
 
     <a href="" class="hero-view-projects">
@@ -19,7 +19,7 @@
   <div class="hero-logo-links">
 
     <!-- LOGO image -->
-    <img src="/assets/logo.svg" alt="" class="hero-logo-big scroll">
+    <img src="{{headerData.Logo}}" alt="" class="hero-logo-big scroll">
 
 
     <div class="hero-background-item ">
@@ -30,22 +30,22 @@
     <ul class="hero-social-links">
       <!-- LinkedIn -->
       <li>
-        <a href="">
-          <img src="https://cdn-icons-png.flaticon.com/512/220/220343.png" alt="">
+        <a href="{{headerData.SocialOne.link}}">
+          <img src="{{headerData.SocialOne.image}}" alt="">
         </a>
       </li>
 
       <!-- GitHub -->
       <li class="scroll">
-        <a href="htttps://github.com/bonganibg">
-          <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="">
+        <a href="{{headerData.SocialTwo.link}}">
+          <img src="{{headerData.SocialTwo.image}}" alt="">
         </a>
       </li>
 
       <!-- Instagram -->
       <li>
-        <a href="https://instagram.com/bonganibg">
-          <img src="https://cdn-icons-png.flaticon.com/512/1384/1384031.png" alt="">
+        <a href="{{headerData.SocialThree.link}}">
+          <img src="{{headerData.SocialThree.image}}" alt="">
         </a>
       </li>
     </ul>
@@ -57,11 +57,11 @@
 <section class="text-scrolling">
 
   <h2 class="scroll-left">
-    SKILLS SKILLS SKILLS SKILLS
+    SKILLS SKILLS SKILLS SKILLS SKILLS SKILLS SKILLS SKILLS
   </h2>
 
   <h2 class="scroll-right">
-    SKILLS SKILLS SKILLS SKILLS
+    SKILLS SKILLS SKILLS SKILLS SKILLS SKILLS SKILLS SKILLS
   </h2>
 
 </section>
@@ -77,53 +77,41 @@
 
     <!-- Skill Image -->
     <div class="skill-image">
-      <img src="/assets/images/design.jpg" alt="">
+      <img src="{{skillsData.Design.Image}}" alt="">
     </div>
 
     <!-- Skill Text -->
     <div class="skill-information">
       <!-- Skill Name -->
       <h2 class="skill-name">
-        Design
+        {{skillsData.Design.Heading}}
       </h2>
       <!-- Skill Description -->
       <p class="skill-description">
-        I really love design so much, like a really really lot and i always try and make everything i make look beautiful becuase without beauty there is ugliness and if ther is ugliness there is not beauty
+        {{skillsData.Design.Description}}
       </p>
 
       <!-- Sub Heading -->
       <h2 class="headline">
-        Design Tasks
+        {{skillsData.Design.Design.headline}}
       </h2>
 
       <!-- Skills -->
-      <ul class="list-of-tools">
+      <ul class="list-of-tools" *ngFor="let skill of skillsData.Design.Design.experience">
         <li>
-          UI Mockups
-        </li>
-        <li>
-          Photo Editing
-        </li>
-        <li>
-          Logo Design
+          {{skill}}
         </li>
       </ul>
 
       <!-- Sub Heading -->
       <h2 class="headline">
-        Implementation
+        {{skillsData.Design.Implementation.headline}}
       </h2>
 
       <!-- Skills -->
-      <ul class="list-of-tools">
+      <ul class="list-of-tools" *ngFor="let language of skillsData.Design.Implementation.languages">
         <li>
-          HTML
-        </li>
-        <li>
-          CSS
-        </li>
-        <li>
-          XML
+          {{language}}
         </li>
       </ul>
 
@@ -133,15 +121,9 @@
       </h2>
 
       <!-- Skills -->
-      <ul class="list-of-tools">
+      <ul class="list-of-tools" *ngFor="let framework of skillsData.Design.Implementation.frameworks">
         <li>
-          Angular
-        </li>
-        <li>
-          Bootstrap
-        </li>
-        <li>
-          WPF
+          {{framework}}
         </li>
       </ul>
 
@@ -155,30 +137,27 @@
 
      <!-- Skill Image -->
       <div class="skill-image">
-        <img src="/assets/images/programming.jpg" alt="">
+        <img src="{{skillsData.Programming.Image}}" alt="">
       </div>
 
       <!-- Skill Text -->
       <div class="skill-information">
         <!-- Skill Name -->
         <h2 class="skill-name">
-          Programming
+          {{skillsData.Programming.Heading}}
         </h2>
         <!-- Skill Description -->
         <p class="skill-description">
-          Programming is what I do, I love writing code, and code is loved to be written by me, it's just the way that it is, how did i find myself to be so pittyful, I'm alon, im miserable
+          {{skillsData.Programming.Description}}
         </p>
 
         <!-- Languages -->
         <h2 class="headline">
-          Languages
+          {{skillsData.Programming.Languages.headline}}
         </h2>
 
-        <ul class="list-of-tools">
-          <li>C#</li>
-          <li>Java</li>
-          <li>JavaScript</li>
-          <li>TypeScript</li>
+        <ul class="list-of-tools" *ngFor="let language of skillsData.Programming.Languages.languages">
+          <li>{{language}}</li>
         </ul>
 
         <!-- Languages -->
@@ -186,20 +165,9 @@
           Frameworks
         </h2>
 
-        <ul class="list-of-tools">
-          <li>.Net Core</li>
-          <li>.NET Framework</li>
-          <li>ASP.NET</li>
-          <li>Express</li>
-          <li>Node.js</li>
-          <li>Express</li>
-          <li>Express</li>
-          <li>Express</li>
-          <li>Express</li>
-          <li>Express</li>
+        <ul class="list-of-tools" *ngFor="let frameworks of skillsData.Programming.Frameworks.frameworks">
+          <li>  {{frameworks}} </li>
         </ul>
-
-
       </div>
   </div>
 
@@ -209,53 +177,45 @@
 
     <!-- Skill Image -->
      <div class="skill-image">
-       <img src="/assets/images/database.jpg" alt="">
+       <img src="{{skillsData.Database.Image}}" alt="">
      </div>
 
      <!-- Skill Text -->
      <div class="skill-information">
        <!-- Skill Name -->
        <h2 class="skill-name">
-         Data
+        {{skillsData.Database.Heading}}
        </h2>
        <!-- Skill Description -->
        <p class="skill-description">
-         Data is everywhere and that is a very scary thing knowing that there is a lot of information just floating there in nothingness but as a developer it i obvious that it is not floating in thin are where a bird can eat it, so i have equiped myself with skills beyond those of a mortal to be able to manipulate the transporation of data
+        {{skillsData.Database.Description}}
        </p>
 
        <!-- Database languages -->
        <h2 class="headline">
-         Languages
+        {{skillsData.Database.Languages.headline}}
        </h2>
 
-       <ul class="list-of-tools">
-         <li>SQL</li>
-         <li>T-SQL</li>
-         <li>noSQL</li>
-         <li>JSON</li>
-         <li>Spreadsheet</li>
+       <ul class="list-of-tools" *ngFor="let language of skillsData.Database.Languages.languages">
+         <li>{{language}}</li>
        </ul>
 
-       <!-- Database languages -->
+       <!-- Database Software -->
        <h2 class="headline">
-        Software
+        {{skillsData.Database.Software.headline}}
       </h2>
 
-      <ul class="list-of-tools">
-        <li>MS SQL Server</li>
-        <li>ORACLE SQL</li>
-        <li>Access</li>
+      <ul class="list-of-tools" *ngFor="let software of skillsData.Database.Software.systems">
+        <li>{{software}}</li>
       </ul>
 
-      <!-- Database languages -->
+      <!-- Database Cloud -->
       <h2 class="headline">
-        Cloud
+        {{skillsData.Database.Cloud.headline}}
       </h2>
 
-      <ul class="list-of-tools">
-        <li>Azure</li>
-        <li>Firebase</li>
-        <li>MongoDb</li>
+      <ul class="list-of-tools" *ngFor="let cloud of skillsData.Database.Cloud.platforms">
+        <li>{{cloud}}</li>
       </ul>
 
 
@@ -266,15 +226,15 @@
 
 <section class="featured-projects-header">
 
-  <div class="left">
+  <div class="featured-left">
     <h1>
-      FEATURED PROJECTS
+      FEATURED PROJECTS FEATURED PROJECTS FEATURED PROJECTS
     </h1>
   </div>
 
-  <div class="right">
+  <div class="featured-right">
     <h1>
-      FEATURED PROJECTS
+      FEATURED PROJECTS FEATURED PROJECTS FEATURED PROJECTS
     </h1>
   </div>
 </section>
@@ -283,191 +243,270 @@
 <!-- Three featured projects -->
 <section class="featured-projects">
 
-
-  <!-- Project One -->
-  <div class="project project-one">
-
-    <!-- App Screenshot -->
-    <div class="project-image">
-      <img src="/assets/mibo.svg" alt="">
-    </div>
-
-
-    <!-- Information about the project -->
-    <div class="project-information">
-
-      <!-- Project type / Project Client -->
-      <p class="project-client">
-        Personal Project
-      </p>
-
-      <!-- Project Name -->
-      <h1 class="project-name">
-        MiBo Maps
-      </h1>
-
-      <!-- Technologies used in the project -->
-      <ul class="project-tech">
-        <!-- Tech item -->
-        <li>
-          <a href="">
-            <img src="https://cdn-icons-png.flaticon.com/512/1126/1126012.png" alt="">
-          </a>
-        </li>
-      </ul>
-
-
-      <p class="project-description">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum error suscipit laboriosam accusantium, eligendi exercitationem ex dolorum qui id, similique dolores harum dignissimos nostrum nihil tempore maiores. Harum, labore unde?
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae delectus autem asperiores? Modi possimus, nemo perferendis dolores minus voluptatem qui incidunt dicta numquam ipsam explicabo pariatur voluptate delectus nam nihil?
-        <br>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium commodi accusantium quam eligendi sapiente inventore incidunt modi suscipit, est corporis magni, quidem nostrum vitae, ab unde! Dolorum aliquam molestias a.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, dolore temporibus! Aperiam sunt nisi, voluptates tempora amet enim itaque voluptas natus aspernatur aut a minus, perspiciatis optio? Nam, fugiat? Expedita!
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat facere molestias atque eveniet facilis repudiandae optio perferendis non similique officia? Debitis aut et enim assumenda ipsum quas cumque odio impedit!
-      </p>
-
-
-
-      <div class="project-links">
-
-        <a href="" class="view-project">
-          View Project &rarr;
-        </a>
-
-        <a href="" class="project-repo">
-          <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="">
-        </a>
+  <ul class="list-featured-projects">
+    <!-- Individual Project -->
+    <li class="project">
+      <!-- Image container -->
+      <div class="featured-image-container">
+        <img  class="featured-image foreground-image" src="/assets/mibo.svg" alt="">
+        <!-- <img  class="featured-image background-image" src="/assets/mibo.svg" alt=""> -->
       </div>
 
-    </div>
-  </div>
+      <!-- Information Container -->
+      <div class="featured-information">
+
+        <!-- Top half project information -->
+        <div class="text-information">
+
+          <!-- Project Client or project type -->
+          <p class="client-name">
+            Case Study
+          </p>
+
+          <!-- Project Name -->
+          <h2 class="featured-project-name">
+            MiBo Maps
+          </h2>
+
+          <!-- Platform -->
+          <h3 class="featured-platform">
+            Platform: Android, Web
+          </h3>
+
+          <!-- List of project stack -->
+          <ul class="featured-technologies">
+            <li>Angular</li>
+            <li>Firebase</li>
+            <li>Android</li>
+          </ul>
+
+
+          <div class="project-description">
+            <!-- Project Information -->
+            <h2 class="headline">
+              Summary
+            </h2>
+            <!-- Paragraph -->
+            <p class="paragraph">
+              Something that lets mandem see places close to them needed to be created and it needed to allow the mandem to be able to get the locations to those places
+            </p>
+
+             <!-- Project Information -->
+             <h2 class="headline">
+              Role
+            </h2>
+            <!-- Paragraph -->
+            <p class="paragraph">
+              Something that lets mandem see places close to them needed to be created and it needed to allow the mandem to be able to get the locations to those places
+            </p>
+
+          </div>
+        </div>
+
+
+        <!-- Links -->
+        <div class="featured-project-links">
+
+          <!-- Github -->
+          <div class="featured-link">
+            <a href="">
+              <img src="/assets/logos/github.svg" alt="">
+              <p>Github</p>
+            </a>
+          </div>
+
+          <!-- Live -->
+          <div class="featured-link">
+            <a href="">
+              <img src="/assets/logos/github.svg" alt="">
+              <p>Live</p>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </li>
 
 
 
 
 
-  <!-- Project One -->
-  <div class="project project-one">
-
-    <!-- App Screenshot -->
-    <div class="project-image">
-      <img src="/assets/mibo.svg" alt="">
-    </div>
-
-
-    <!-- Information about the project -->
-    <div class="project-information">
-
-      <!-- Project type / Project Client -->
-      <p class="project-client">
-        Personal Project
-      </p>
-
-      <!-- Project Name -->
-      <h1 class="project-name">
-        MiBo Maps
-      </h1>
-
-      <!-- Technologies used in the project -->
-      <ul class="project-tech">
-        <!-- Tech item -->
-        <li>
-          <a href="">
-            <img src="https://cdn-icons-png.flaticon.com/512/1126/1126012.png" alt="">
-          </a>
-        </li>
-      </ul>
-
-
-      <p class="project-description">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum error suscipit laboriosam accusantium, eligendi exercitationem ex dolorum qui id, similique dolores harum dignissimos nostrum nihil tempore maiores. Harum, labore unde?
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae delectus autem asperiores? Modi possimus, nemo perferendis dolores minus voluptatem qui incidunt dicta numquam ipsam explicabo pariatur voluptate delectus nam nihil?
-        <br>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium commodi accusantium quam eligendi sapiente inventore incidunt modi suscipit, est corporis magni, quidem nostrum vitae, ab unde! Dolorum aliquam molestias a.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, dolore temporibus! Aperiam sunt nisi, voluptates tempora amet enim itaque voluptas natus aspernatur aut a minus, perspiciatis optio? Nam, fugiat? Expedita!
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat facere molestias atque eveniet facilis repudiandae optio perferendis non similique officia? Debitis aut et enim assumenda ipsum quas cumque odio impedit!
-      </p>
 
 
 
-      <div class="project-links">
 
-        <a href="" class="view-project">
-          View Project &rarr;
-        </a>
-
-        <a href="" class="project-repo">
-          <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="">
-        </a>
+    <!-- Individual Project -->
+    <li class="project">
+      <!-- Image container -->
+      <div class="featured-image-container">
+        <img  class="featured-image foreground-image" src="/assets/mibo.svg" alt="">
+        <!-- <img  class="featured-image background-image" src="/assets/mibo.svg" alt=""> -->
       </div>
 
-    </div>
-  </div>
+      <!-- Information Container -->
+      <div class="featured-information">
+
+        <!-- Top half project information -->
+        <div class="text-information">
+
+          <!-- Project Client or project type -->
+          <p class="client-name">
+            Case Study
+          </p>
+
+          <!-- Project Name -->
+          <h2 class="featured-project-name">
+            MiBo Maps
+          </h2>
+
+          <!-- Platform -->
+          <h3 class="featured-platform">
+            Platform: Android, Web
+          </h3>
+
+          <!-- List of project stack -->
+          <ul class="featured-technologies">
+            <li>Angular</li>
+            <li>Firebase</li>
+            <li>Android</li>
+          </ul>
 
 
+          <div class="project-description">
+            <!-- Project Information -->
+            <h2 class="headline">
+              Summary
+            </h2>
+            <!-- Paragraph -->
+            <p class="paragraph">
+              Something that lets mandem see places close to them needed to be created and it needed to allow the mandem to be able to get the locations to those places
+            </p>
+
+             <!-- Project Information -->
+             <h2 class="headline">
+              Role
+            </h2>
+            <!-- Paragraph -->
+            <p class="paragraph">
+              Something that lets mandem see places close to them needed to be created and it needed to allow the mandem to be able to get the locations to those places
+            </p>
+
+          </div>
+        </div>
 
 
+        <!-- Links -->
+        <div class="featured-project-links">
 
-  <!-- Project One -->
-  <div class="project project-one">
+          <!-- Github -->
+          <div class="featured-link">
+            <a href="">
+              <img src="/assets/logos/github.svg" alt="">
+              <p>Github</p>
+            </a>
+          </div>
 
-    <!-- App Screenshot -->
-    <div class="project-image">
-      <img src="/assets/mibo.svg" alt="">
-    </div>
+          <!-- Live -->
+          <div class="featured-link">
+            <a href="">
+              <img src="/assets/logos/github.svg" alt="">
+              <p>Live</p>
+            </a>
+          </div>
 
+        </div>
 
-    <!-- Information about the project -->
-    <div class="project-information">
+      </div>
+    </li>
 
-      <!-- Project type / Project Client -->
-      <p class="project-client">
-        Personal Project
-      </p>
-
-      <!-- Project Name -->
-      <h1 class="project-name">
-        MiBo Maps
-      </h1>
-
-      <!-- Technologies used in the project -->
-      <ul class="project-tech">
-        <!-- Tech item -->
-        <li>
-          <a href="">
-            <img src="https://cdn-icons-png.flaticon.com/512/1126/1126012.png" alt="">
-          </a>
-        </li>
-      </ul>
-
-
-      <p class="project-description">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum error suscipit laboriosam accusantium, eligendi exercitationem ex dolorum qui id, similique dolores harum dignissimos nostrum nihil tempore maiores. Harum, labore unde?
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae delectus autem asperiores? Modi possimus, nemo perferendis dolores minus voluptatem qui incidunt dicta numquam ipsam explicabo pariatur voluptate delectus nam nihil?
-        <br>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium commodi accusantium quam eligendi sapiente inventore incidunt modi suscipit, est corporis magni, quidem nostrum vitae, ab unde! Dolorum aliquam molestias a.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, dolore temporibus! Aperiam sunt nisi, voluptates tempora amet enim itaque voluptas natus aspernatur aut a minus, perspiciatis optio? Nam, fugiat? Expedita!
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat facere molestias atque eveniet facilis repudiandae optio perferendis non similique officia? Debitis aut et enim assumenda ipsum quas cumque odio impedit!
-      </p>
-
-
-
-      <div class="project-links">
-
-        <a href="" class="view-project">
-          View Project &rarr;
-        </a>
-
-        <a href="" class="project-repo">
-          <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="">
-        </a>
+    <!-- Individual Project -->
+    <li class="project">
+      <!-- Image container -->
+      <div class="featured-image-container">
+        <img  class="featured-image foreground-image" src="/assets/mibobanner.svg" alt="">
+        <!-- <img  class="featured-image background-image" src="/assets/mibo.svg" alt=""> -->
       </div>
 
-    </div>
-  </div>
+      <!-- Information Container -->
+      <div class="featured-information">
+
+        <!-- Top half project information -->
+        <div class="text-information">
+
+          <!-- Project Client or project type -->
+          <p class="client-name">
+            Case Study
+          </p>
+
+          <!-- Project Name -->
+          <h2 class="featured-project-name">
+            MiBo Maps
+          </h2>
+
+          <!-- Platform -->
+          <h3 class="featured-platform">
+            Platform: Android, Web
+          </h3>
+
+          <!-- List of project stack -->
+          <ul class="featured-technologies">
+            <li>Angular</li>
+            <li>Firebase</li>
+            <li>Android</li>
+          </ul>
+
+
+          <div class="project-description">
+            <!-- Project Information -->
+            <h2 class="headline">
+              Summary
+            </h2>
+            <!-- Paragraph -->
+            <p class="paragraph">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, rerum error modi aspernatur neque maxime, sequi, quis quos ipsa est veritatis ex ad officiis enim doloremque velit? Culpa, numquam ullam.
+            </p>
+
+             <!-- Project Information -->
+             <h2 class="headline">
+              Role
+            </h2>
+            <!-- Paragraph -->
+            <p class="paragraph">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, rerum error modi aspernatur neque maxime, sequi, quis quos ipsa est veritatis ex ad officiis enim doloremque velit? Culpa, numquam ullam.
+            </p>
+
+          </div>
+        </div>
+
+
+        <!-- Links -->
+        <div class="featured-project-links">
+
+          <!-- Github -->
+          <div class="featured-link">
+            <a href="">
+              <img src="/assets/logos/github.svg" alt="">
+              <p>Github</p>
+            </a>
+          </div>
+
+          <!-- Live -->
+          <div class="featured-link">
+            <a href="">
+              <img src="/assets/logos/github.svg" alt="">
+              <p>Live</p>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </li>
+  </ul>
 </section>
 
-
+<br>
 
 
 <!-- Other Projects -->
@@ -495,7 +534,7 @@
 
           <!-- Summary of project -->
           <p class="project-description">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis quaerat fugiat nostrum sunt soluta architecto voluptatibus magnam laboriosam voluptate? Nisi placeat suscipit dolor mollitia quibusdam aliquam modi labore dicta ea.
+            Location mapping application for android
           </p>
 
           <!-- Tech used to build project -->

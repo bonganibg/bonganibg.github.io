@@ -1,136 +1,128 @@
-.project-info-container
+.featured-projects
 {
+  // List of featured projects
+  .list-featured-projects{
+    height: 100vh;
+    width: 100vw;
+    // Project List Item
+    .project{
+      height: 100vh;
+      width: 100vw;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(800px, 1fr));
+      grid-template-rows: 100%;
 
-  // Heading with project image and main information
-  .project-info-header
-  {
-    height: 600px;
-    width: 800px;
-    display: flex;
-    margin: 0px auto;
+      // Project image container
+      .featured-image-container{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
 
-    // Project banner image
-    .project-image
-    {
-      height: 400px;
-      width: 400px;
-      margin: auto;
-    }
-
-    // Project infromation heading
-    .project-information
-    {
-      margin: auto;
-      height: 400px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-
-      // Content at the top of the screen
-      .top-third{
-
-        // Client or project type
-        .client{
-          font-size: 15px;
-          margin: 0px;
+        // All of the images
+        .featured-image{
+          height: 50%;
+          margin: auto;
         }
+      }
 
-        // Platforms
-        .platforms{
-          font-size: 30px;
-          margin: 0px;
-          font-weight: 200;
-        }
 
-        // Technologies USed
-        .technologies{
-          display: flex;
-          gap: 20px;
-          // Technologies Image
-          a{
-            height: 40px;
-            width: 40px;
-            background-color: aqua;
-            justify-content: center;
-            border-radius: 50%;
+      // Written Information abou the project
+      .featured-information{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        // Top half of the section
+        .text-information{
+          // Project type/ Client
+          .client-name{
+            margin: 0px;
+            font-size: 1em;
+            font-family: "Nixie One";
+          }
+
+          // Project Name
+          .featured-project-name{
+            font-size: 2.1em;
+            margin: 0px;
+            font-family: "Lato";
+            font-weight: 100;
+          }
+
+          // Platform
+          .featured-platform{
+            font-size: 1.2em;
+            font-family: "Nixie One";
+            margin: 0px;
+          }
+
+          // Technologies
+          .featured-technologies{
             display: flex;
+            gap: 20px;
+            margin: 5px 0px;
 
-            img{
-              height: 30px;
-              width: 30px;
-              margin: auto;
+            li{
+              background-color: #EEE;
+              box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+              padding: 8px;
+              border-radius: 10px;
+              font-size: 1em;
+              font-family: "Lato";
+            }
+          }
+
+
+
+          // Project information and details
+          .project-description{
+            height: 70vh;
+            overflow-y: scroll;
+            margin: 10px 0px;
+
+            // Sub Headings
+            .headline{
+              font-size: 1.7em;
+              font-family: "Nixie One";
+              margin: 0px;
+            }
+
+            // Text information
+            .paragraph{
+              margin: 10px 5%;
+              font-size: 1em;
+              font-family: "Lato";
+              letter-spacing: 1px;
+
             }
           }
         }
-      }
 
-      // Roles Container
-      .roles-container{
-        // Roles heading
-        .roles-heading{
-          font-size: 25px;
-          margin: 0px;
-        }
-
-        .roles-list{
-          max-height: 200px;
+        // Links to the projects information
+        .featured-project-links{
           display: flex;
-          flex-direction: column;
-          gap: 10px;
-          overflow-y: scroll;
-          margin-top: 5px;
-          .role{
-            margin: 0px;
+          gap: 50px;
+          // Link container
+          .featured-link{
+            a{
+              display: flex;
+              gap: 10px;
+              img{
+                height: 40px;
+                width: 40px;
+              }
+
+              p{
+                font-size: 1.5em;
+                margin: auto 0px;
+                color: #444;
+              }
+            }
           }
+
         }
-      }
-    }
 
-  }
-
-
-
-
-  // IMAGE SLIDEER
-  .image-slider-holder
-  {
-
-
-    img{
-      height: 400px;
-    }
-
-    .slider-container
-    {
-      width: 100%;
-      height: 75vh;
-      flex-direction: row;
-      align-items: center;
-      overflow: hidden;
-    }
-
-    .image-slider{
-      width: 100%;
-      height: 500px;
-      position: absolute;
-      left: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: .7s;
-
-      .slide-div{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0px 30px;
-
-        img{
-          position: relative;
-          width: 240px;
-          height: 370px;
-          transition: 0.5s;
-        }
       }
 
     }

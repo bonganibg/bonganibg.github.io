@@ -1,14 +1,48 @@
 .nav-bar-container
 {
-  height: 50px;
+  height: 8vh;
   display: flex;
   justify-content: space-between;
+  padding: 0px 10%;
+  background-color: #EEE;
 
   .page-links
   {
     display: flex;
     justify-content: space-around;
-    gap: 10px;
+    gap: 10%;
+
+    .link{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .link-info{
+        display: flex;
+        flex-direction: column;
+
+
+        p{
+          color: #444;
+          font-size: 1.2em;
+          margin: 0px;
+        }
+
+        .dot{
+          width: 10px;
+          height: 10px;
+          background-color: aqua;
+          margin: 2px auto;
+          border-radius: 50%;
+          opacity: 0;
+          transition: 0.5s;
+        }
+      }
+    }
+  }
+
+  img{
+    height: 80%;
+    margin: auto 0px;
   }
 
 }

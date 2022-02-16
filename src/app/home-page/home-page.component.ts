@@ -1,5 +1,9 @@
 import { style } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
+import { FeaturedProjects } from '../models/featured.model';
+import { Heading } from '../models/header.model';
+import { Skills } from '../models/skills.model';
+import { HomepageService } from './homepage.service';
 
 @Component({
   selector: 'app-home-page',
@@ -8,7 +12,35 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePageComponent implements OnInit {
 
-  constructor() {
+  constructor(private homeService: HomepageService) {
+   this.parallaxFunction();
+  }
+
+  featuredProjectData!: FeaturedProjects;
+  headerData!: Heading;
+  skillsData!:  Skills;
+
+  ngOnInit(): void {
+    // Load the header information
+    this.headerData = this.homeService.getHeadingInformation();
+
+    // Load the featured project information
+
+    // Load the list of projects
+
+    // Load the skills information
+    this.skillsData = this.homeService.getSkillsInformation();
+  }
+
+
+
+
+
+
+
+  // Parallax things
+  parallaxFunction()
+  {
     window.addEventListener('scroll', function(e){
       // Header scrolling
       const logo = document.querySelector('.scroll') as HTMLSelectElement;
@@ -32,12 +64,12 @@ export class HomePageComponent implements OnInit {
       right.style.transform = `translate3d(-${textRate}px, 0px, 0px)`;
 
 
+      const ftleft = document.querySelector('.featured-left') as HTMLScriptElement;
+      const ftright = document.querySelector('.featured-right') as HTMLScriptElement;
+      ftleft.style.transform = `translate3d(${textRate}px, 0px, 0px)`;
+      ftright.style.transform = `translate3d(-${textRate}px, 0px, 0px)`;
     })
   }
-
-  ngOnInit(): void {
-  }
-
 
 
 }
