@@ -190,219 +190,73 @@
 
 
 
-// Featured Project infromation
+
+
+
+
+// Featured projectrs section
 .featured-projects
 {
-  height: 350vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 
-  // List of featured projects
-  .list-featured-projects{
-    height: 100vh;
+  // Featured project
+  .featured-project{
+    height: 80vh;
 
-    // Project List Item
-    .project{
-      height: 100vh;
-      width: 100vw;
-      display: grid;
-      margin-top: 100px;
-      grid-template-columns: 50% 50%;
-
-      // Project image container
-      .featured-image-container{
-        display: flex;
-        justify-content: center;
-
-        // All of the images
-        .featured-image{
-          height: 80%;
-          width: 80%;
-          margin: auto;
-        }
-      }
-
-
-      // Written Information abou the project
-      .featured-information{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-
-        // Top half of the section
-        .text-information{
-          // Project type/ Client
-          .client-name{
-            margin: 0px;
-            font-size: 1em;
-            font-family: "Nixie One";
-          }
-
-          // Project Name
-          .featured-project-name{
-            font-size: 2.1em;
-            margin: 0px;
-            font-family: "Lato";
-            font-weight: 100;
-          }
-
-          // Platform
-          .featured-platform{
-            font-size: 1.2em;
-            font-family: "Nixie One";
-            margin: 0px;
-          }
-
-          // Technologies
-          .featured-technologies{
-            display: flex;
-            gap: 20px;
-            margin: 5px 0px;
-
-            li{
-              background-color: #EEE;
-              box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-              padding: 8px;
-              border-radius: 10px;
-              font-size: 1em;
-              font-family: "Lato";
-            }
-          }
-
-
-
-          // Project information and details
-          .project-description{
-            margin: 10px 0px;
-
-            // Sub Headings
-            .headline{
-              font-size: 1.7em;
-              font-family: "Nixie One";
-              margin: 0px;
-            }
-
-            // Text information
-            .paragraph{
-              margin: 10px 5%;
-              font-size: 1em;
-              font-family: "Lato";
-              letter-spacing: 1px;
-
-            }
-          }
-        }
-
-        // Links to the projects information
-        .featured-project-links{
-          display: flex;
-          gap: 50px;
-          // Link container
-          .featured-link{
-            a{
-              display: flex;
-              gap: 10px;
-              img{
-                height: 40px;
-                width: 40px;
-              }
-
-              p{
-                font-size: 1.5em;
-                margin: auto 0px;
-                color: #444;
-              }
-            }
-          }
-
-        }
-
-      }
-
-    }
-  }
-}
-
-
-
-
-
-// List of projects
-.projects-container
-{
-  .projects-list{
+    margin-top: 20px;
+    margin-bottom: 50vh;
+    background-color: rgb(206, 206, 206);
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
-    gap: 30px;
-    align-content: center;
-    margin: 0px 10%;
+    grid-template-columns: 15% 70% 15%;
+    grid-template-rows: 15% 15% 70%;
 
-    li{
-      display: flex;
-      justify-content: center;
+    .project-name{
+      grid-column: 2;
+      grid-row: 1;
+      text-align: center;
+      font-size: 2.5em;
+      font-family: "Lato";
+      font-weight: 100;
+      margin: auto 0px;
     }
 
-    // Project banner image
-    .project-card{
-      width: 500px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-
-      // Project image
-      .project-image{
-        height: 450px;
-        width: 450px;
-        margin: 0px auto;
-        img{
-          height: 100%;
-          width: 100%;
-        }
-      }
-
-      // Project information
-      .project-information{
-        .project-name{
-          font-size: 30px;
-          font-family: "Lato";
-          font-weight: 100;
-          width: 90%;
-          margin: 0px auto  ;
-        }
-
-        // Project description
-        .project-description{
-          font-size: 18px;
-          font-family: "Nixie One";
-          width: 90%;
-          margin: 5px auto;
-        }
-
-        // Project technology
-        .project-tech{
-          display: flex;
-          gap: 5px;
-          width: 90%;
-          margin: 5px auto;
-
-          a{
-            height: 40px;
-            width: 40px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            img{
-              height: 30px;
-              width: 30px;
-            }
-
-          }
-        }
-      }
-
+    .project-description{
+      grid-column: 2;
+      grid-row: 2;
+      text-align: center;
+      font-family: "Nixie One";
+      font-size: 1.5em;
+      margin: auto 0px;
     }
+
+    .project-image-container{
+      grid-column: 2;
+      grid-row: 3;
+      width: 100%;
+      height: 100%;
+      background-color: #FFF;
+      border-radius: 30px 30px 0px 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px -2px 8px 0px;
+
+      img{
+        height: 100%;
+        width: 90%;
+        object-fit: scale-down;
+      }
+    }
+
+
   }
+
 }
+
+
+
 
 
 
@@ -411,10 +265,11 @@
 {
   overflow: hidden;
   h2{
-    font-size: 10em;
+    font-size: 5em;
     white-space: nowrap;
-    font-family: "Nixie One";
     color: #f1f1f1;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 3px;
   }
 
   .scroll-left{
@@ -425,31 +280,45 @@
   }
 }
 
-
-
 // Featured project container
 .featured-projects-header
 {
-    width: 100%;
-    height: 80vh;
-    overflow: hidden;
-    background-color: #444;
-    display: flex;
-    flex-direction: column;
+  margin-top: 30px;
+   height: 50vh;
+   width: 100%;
+   background-color: #EEE;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 
-    h1{
-      font-size: 10em;
-      white-space: nowrap;
-      color: #EEE;
-      line-height: 10vh;
-      -webkit-text-fill-color: transparent;
-      -webkit-text-stroke: 3px;
-      left: 100%
+  // Heading and description
+  .featured-projects-content{
+    text-align: center;
+
+    .header-featured{
+      font-size: 2.5em;
+      margin: 0px;
+      font-family: "Lato";
+      font-weight: lighter;
     }
 
-    .featured-left{
-      h1{
-        direction: rtl;
-      }
+    .description-featured{
+      font-size: 1.3em;
+      margin: 10px 15%;
+      font-family: "Nixie One";
     }
+
+    .view-all-projects{
+      height: 40px;
+      width: 150px;
+      background-color: #444;
+      border-style: none;
+      color: #FFF;
+      font-family: "Nixie One";
+    }
+
+
+  }
+
+
 }
