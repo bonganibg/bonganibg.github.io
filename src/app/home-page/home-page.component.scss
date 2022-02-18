@@ -1,3 +1,6 @@
+$textColorOne: #444;
+$textColorTwo: #EEE;
+
 .hero-section
 {
   height: 100vh;
@@ -201,16 +204,35 @@
   display: flex;
   flex-direction: column;
 
+  .featured-project:nth-child(2){
+    background: #ECE9E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    h2{
+      color: $textColorOne;
+    }
+
+    p{
+      color: $textColorOne;
+    }
+
+    .project-image-container{
+      background-color: #444;
+    }
+  }
+
+
   // Featured project
   .featured-project{
     height: 80vh;
-
     margin-top: 20px;
-    margin-bottom: 50vh;
-    background-color: rgb(206, 206, 206);
+    background: #232526;  /* fallback for old browsers */
+    background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     display: grid;
     grid-template-columns: 15% 70% 15%;
     grid-template-rows: 15% 15% 70%;
+
 
     .project-name{
       grid-column: 2;
@@ -220,6 +242,7 @@
       font-family: "Lato";
       font-weight: 100;
       margin: auto 0px;
+      color: $textColorTwo;
     }
 
     .project-description{
@@ -229,6 +252,7 @@
       font-family: "Nixie One";
       font-size: 1.5em;
       margin: auto 0px;
+      color: $textColorTwo;
     }
 
     .project-image-container{
@@ -238,15 +262,112 @@
       height: 100%;
       background-color: #FFF;
       border-radius: 30px 30px 0px 0px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      box-shadow: rgba(99, 99, 99, 0.2) 0px -2px 8px 0px;
+      overflow-y: hidden;
+      transition: all 0.5s ease-out;
+      position: relative;
+      display: inline-block;
+
 
       img{
         height: 100%;
-        width: 90%;
+        width: 100%;
+        margin: 0px auto;
         object-fit: scale-down;
+        transition: all 0.8s ease-out;
+      }
+
+      // Information about the project
+      .featured-project-information{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        transition: all 0.5s ease-out;
+        transform: translateY(0);
+        background-color: $textColorTwo;
+
+
+        // Platform heading
+        .platform-heading{
+          grid-row: 1;
+          font-size: 1.5em;
+          font-family: "Lato";
+          font-weight: 200;
+          margin:  0px 10%;
+        }
+
+        .details{
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+
+          .featured-info{
+            margin: 0px auto;
+            width: 300px;
+            text-align: center;
+
+
+            // Sub headings
+            .more-info-heading{
+              font-size: 1.2em;
+              font-family: "Lato";
+              font-weight: 200;
+            }
+
+            .featured-lists{
+
+            }
+          }
+        }
+
+        // Project links
+        .project-links{
+          display: flex;
+          justify-content: space-between;
+          margin: 0px 5%;
+
+          // external Links
+          .external-links{
+            display: flex;
+            gap: 20px;
+            li{
+              a{
+                .link{
+                  display: flex;
+                  gap: 10px;
+                  align-items: center;
+                  img{
+                    height: 30px;
+                    width: 30px;
+                  }
+
+                  p{
+                    font-size: 1.1em;
+                    color: $textColorOne;
+                  }
+                }
+              }
+            }
+          }
+
+
+          .view-project{
+            font-size: 1.5em;
+            font-family: "Lato";
+            color: $textColorOne;
+          }
+        }
+
+      }
+    }
+
+
+    // On Card over
+    .project-image-container:hover {
+
+      // Bring the project information up
+      .featured-project-information{
+        transform: translateY(-100%);
       }
     }
 
@@ -286,7 +407,9 @@
   margin-top: 30px;
    height: 50vh;
    width: 100%;
-   background-color: #EEE;
+   background: #ECE9E6;  /* fallback for old browsers */
+   background: linear-gradient(to left, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
    display: flex;
    justify-content: center;
    align-items: center;
@@ -322,3 +445,6 @@
 
 
 }
+
+
+
