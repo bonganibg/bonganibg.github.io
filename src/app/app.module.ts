@@ -8,6 +8,8 @@ import { ProjectInfoPageComponent } from './project-info-page/project-info-page.
 import { MarkdownModule } from 'ngx-markdown';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AboutMeComponent } from './about-me/about-me.component';
+import { AppRoutingModule } from './app-routing.module';
+import { MyProjectsComponent } from './my-projects/my-projects.component';
 
 @NgModule({
   declarations: [
@@ -15,13 +17,15 @@ import { AboutMeComponent } from './about-me/about-me.component';
     HomePageComponent,
     NavBarComponent,
     ProjectInfoPageComponent,
-    AboutMeComponent
+    AboutMeComponent,
+    MyProjectsComponent
   ],
   imports: [
     BrowserModule,
     MarkdownModule,
     HttpClientModule,
-    MarkdownModule.forRoot({loader: HttpClient})
+    MarkdownModule.forRoot({loader: HttpClient}),
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
