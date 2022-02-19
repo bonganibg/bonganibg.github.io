@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
+import { FeaturedProjects } from '../models/featured.model';
 import { Heading } from '../models/header.model';
+import { Project } from '../models/project.model';
 import { Skills } from '../models/skills.model';
 
 @Injectable({
@@ -40,6 +42,55 @@ export class HomepageService
   }
 }
 
+dummyProjectOne: Project = {
+  ID: "proabdosboasd",
+  Name: "MiBo Maps",
+  Image: ["/assets/mibobanner.svg"],
+  Platforms: ["Android"],
+  Description: {full: "link.md", summary: "The worst mapping application in the world"},
+  Client: "Perosnal",
+  Technologies: ["Android", "Firebase"],
+  Services: [ "Here API", "Google Maps API"],
+  Responsibilities: ["UI Design", "Database Design", "Programming"],
+  Github: {available: false, link: ""},
+  Live: {available: true, link: "playstore"},
+  Video: "",
+  Complete: true
+}
+
+dummyProjectTwo: Project = {
+  ID: "adfadfasdfasdf",
+  Name: "Screen Shot Bot",
+  Image: ["/assets/logo.svg"],
+  Description: {full: "link.md", summary: "A very simple bot created to allow users of the platform discord to take screenshots of their favourite webpages and share the content with their friends"},
+  Client: "Perosnal",
+  Platforms: ["Discord"],
+  Technologies: ["NodeJS"],
+  Services: ["Discord JS"],
+  Responsibilities: ["Programming"],
+  Github: {available: true, link: "https://github.com/bonganibg"},
+  Live: {available: false, link: ""},
+  Video: "",
+  Complete: true
+}
+
+dummyProjectThrees: Project = {
+  ID: "etwertwertwert",
+  Name: "Bonganibg.github.io",
+  Image: ["/assets/mibo.svg"],
+  Description: {full: "link.md", summary: "Personal portfolio website for professional software engineer bongani brendon gumbo"},
+  Client: "Bonganibg",
+  Platforms: ["Web"],
+  Technologies: ["Angular", "Firebase"],
+  Services: [],
+  Responsibilities: ["UI Design", "Database Design", "Programming"],
+  Github: {available: true, link: "https://github.com/bonganibg"},
+  Live: {available: true, link: "https://github.com/bonganibg"},
+  Video: "",
+  Complete: true
+}
+
+
 
   // Get the information from the heading section
   getHeadingInformation()
@@ -51,6 +102,19 @@ export class HomepageService
   getSkillsInformation()
   {
     return this.dummySkills;
+  }
+
+  // Get Featured Projects
+  getFeaturedProjects()
+  {
+    let featuredProjects: FeaturedProjects = {
+      Heading: "Take a look at some of my featured projects, they might have been rushed, but they work, still developing them",
+      ProjectOne: this.dummyProjectOne,
+      ProjectTwo: this.dummyProjectTwo,
+      ProjectThree: this.dummyProjectThrees
+    }
+
+    return featuredProjects;
   }
 
 }

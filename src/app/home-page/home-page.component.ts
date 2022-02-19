@@ -25,11 +25,13 @@ export class HomePageComponent implements OnInit {
     this.headerData = this.homeService.getHeadingInformation();
 
     // Load the featured project information
+    this.featuredProjectData = this.homeService.getFeaturedProjects();
 
     // Load the list of projects
 
     // Load the skills information
     this.skillsData = this.homeService.getSkillsInformation();
+
   }
 
 

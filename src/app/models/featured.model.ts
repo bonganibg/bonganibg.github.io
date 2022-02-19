@@ -1,6 +1,9 @@
+import { Project } from "./project.model";
+
 export interface FeaturedProjects
 {
-  ProjectOne: string,
-  ProjectTwo: string,
-  ProjectThree: string
+  Heading: string,
+  ProjectOne: Project,
+  ProjectTwo: Project,
+  ProjectThree: Project
 }

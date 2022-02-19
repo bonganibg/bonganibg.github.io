@@ -234,7 +234,7 @@
 
     <!-- Featured projects description -->
     <p class="description-featured">
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta dolorem quos autem repellat numquam quo quia repudiandae a, earum temporibus fuga fugiat repellendus ipsa nam accusantium consequatur illum nisi assumenda!
+      {{featuredProjectData.Heading}}
     </p>
 
     <!-- View all projects Button -->
@@ -257,35 +257,32 @@
   <div class="featured-project">
     <!-- Project Name -->
     <h2 class="project-name">
-        MiBo Maps
+        {{featuredProjectData.ProjectOne.Name}}
     </h2>
     <!-- Project description -->
     <p class="project-description">
-      The best mapping application you will ever see in your whole damn life
+      {{featuredProjectData.ProjectOne.Description.summary}}
     </p>
 
     <!-- Container for project image -->
     <div class="project-image-container">
-
-      <img src="/assets/appbanner.png" alt="">
+      <!-- Project Image -->
+      <img src={{featuredProjectData.ProjectOne.Image[0]}} alt="">
 
       <!-- More information on the project -->
       <div class="featured-project-information">
-
         <!-- Platfrom -->
         <h2 class="platform-heading">
-          Platform: Android
+          Platform: {{featuredProjectData.ProjectOne.Platforms.toString()}}
         </h2>
-
         <div class="details">
           <!-- Stack -->
           <div class="featured-info">
             <h2 class="more-info-heading">
               Languages and Tools
             </h2>
-            <ul class="featured-lists">
-              <li> <p>Android Studio</p> </li>
-              <li> <p>Firebase</p> </li>
+            <ul class="featured-lists" *ngFor="let tech of featuredProjectData.ProjectOne.Technologies ">
+              <li> <p>{{tech}}</p> </li>
             </ul>
 
           </div>
@@ -294,88 +291,245 @@
             <h2 class="more-info-heading">
               Other Services
             </h2>
-            <ul class="featured-lists">
-              <li> <p>Here API</p> </li>
-              <li> <p>Google Maps API</p> </li>
+            <ul class="featured-lists" *ngFor="let item of featuredProjectData.ProjectOne.Services">
+              <li> <p> {{item}} </p> </li>
             </ul>
-
           </div>
           <!-- Responsibilities -->
           <div class="featured-info">
             <h2 class="more-info-heading">
               Responsibilities
             </h2>
-            <ul class="featured-lists">
-              <li> <p>Research</p> </li>
-              <li> <p>Design</p> </li>
-              <li> <p>Implementation</p> </li>
-              <li> <p>Deployment</p> </li>
+            <ul class="featured-lists" *ngFor="let item of featuredProjectData.ProjectOne.Responsibilities">
+              <li> <p>{{item}}</p> </li>
             </ul>
           </div>
         </div>
 
-
-
         <!-- Links to the project repo or live link and view project page -->
       <div class="project-links">
-
         <!-- External Links -->
         <ul class="external-links">
-          <li> <a href=""> <div class="link"> <img src="/assets/logos/github.svg" alt="">  <p>GitHub</p>  </div> </a> </li>
-          <li> <a href=""> <div class="link"> <img src="/assets/logos/github.svg" alt="">  <p>Live</p>  </div> </a> </li>
+          <!-- GITHUB LINK -->
+          <li *ngIf="featuredProjectData.ProjectOne.Github.available">
+            <a href={{featuredProjectData.ProjectOne.Github.link}}>
+              <div class="link">
+               <img src="/assets/logos/github.svg" alt="">
+               <p>GitHub</p>
+              </div>
+            </a>
+          </li>
+          <!-- LIVE LINK -->
+          <li *ngIf="featuredProjectData.ProjectOne.Live.available">
+            <a href="">
+              <div class="link">
+                <img src="/assets/logos/github.svg" alt="">
+                 <p>Live</p>
+                </div>
+              </a>
+            </li>
         </ul>
 
         <!-- View project link -->
-        <a href="" class="view-project">
+        <a href="/projects/{{featuredProjectData.ProjectOne.ID}}" class="view-project">
           projects &rarr;
         </a>
       </div>
-
       </div>
-
-
-
     </div>
   </div>
 
 
-  <!-- Individual project / Project Two-->
+
+
+
+
+
+  <!-- PROJECT 2 -->
   <div class="featured-project">
     <!-- Project Name -->
     <h2 class="project-name">
-        MiBo Maps
+        {{featuredProjectData.ProjectTwo.Name}}
     </h2>
     <!-- Project description -->
     <p class="project-description">
-      The best mapping application you will ever see in your whole damn life
+      {{featuredProjectData.ProjectTwo.Description.summary}}
     </p>
 
     <!-- Container for project image -->
     <div class="project-image-container">
+      <!-- Project Image -->
+      <img src={{featuredProjectData.ProjectTwo.Image[0]}} alt="">
 
-      <img src="/assets/appbanner.png" alt="">
+      <!-- More information on the project -->
+      <div class="featured-project-information">
+        <!-- Platfrom -->
+        <h2 class="platform-heading">
+          Platform: {{featuredProjectData.ProjectTwo.Platforms.toString()}}
+        </h2>
+        <div class="details">
+          <!-- Stack -->
+          <div class="featured-info">
+            <h2 class="more-info-heading">
+              Languages and Tools
+            </h2>
+            <ul class="featured-lists" *ngFor="let tech of featuredProjectData.ProjectTwo.Technologies ">
+              <li> <p>{{tech}}</p> </li>
+            </ul>
 
+          </div>
+          <!-- Other services -->
+          <div class="featured-info">
+            <h2 class="more-info-heading">
+              Other Services
+            </h2>
+            <ul class="featured-lists" *ngFor="let item of featuredProjectData.ProjectTwo.Services">
+              <li> <p> {{item}} </p> </li>
+            </ul>
+          </div>
+          <!-- Responsibilities -->
+          <div class="featured-info">
+            <h2 class="more-info-heading">
+              Responsibilities
+            </h2>
+            <ul class="featured-lists" *ngFor="let item of featuredProjectData.ProjectTwo.Responsibilities">
+              <li> <p>{{item}}</p> </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Links to the project repo or live link and view project page -->
+      <div class="project-links">
+        <!-- External Links -->
+        <ul class="external-links">
+          <!-- GITHUB LINK -->
+          <li *ngIf="featuredProjectData.ProjectTwo.Github.available">
+            <a href={{featuredProjectData.ProjectTwo.Github.link}}>
+              <div class="link">
+               <img src="/assets/logos/github.svg" alt="">
+               <p>GitHub</p>
+              </div>
+            </a>
+          </li>
+          <!-- LIVE LINK -->
+          <li *ngIf="featuredProjectData.ProjectTwo.Live.available">
+            <a href="">
+              <div class="link">
+                <img src="/assets/logos/github.svg" alt="">
+                 <p>Live</p>
+                </div>
+              </a>
+            </li>
+        </ul>
+
+        <!-- View project link -->
+        <a href="/projects/{{featuredProjectData.ProjectTwo.ID}}" class="view-project">
+          projects &rarr;
+        </a>
+      </div>
+      </div>
     </div>
   </div>
 
 
-  <!-- Individual project / Project Three-->
+
+
+
+
+
+
+
+
+
+
+  <!-- FEATURED PROJECT THREE -->
   <div class="featured-project">
     <!-- Project Name -->
     <h2 class="project-name">
-        MiBo Maps
+        {{featuredProjectData.ProjectThree.Name}}
     </h2>
     <!-- Project description -->
     <p class="project-description">
-      The best mapping application you will ever see in your whole damn life
+      {{featuredProjectData.ProjectThree.Description.summary}}
     </p>
 
     <!-- Container for project image -->
     <div class="project-image-container">
+      <!-- Project Image -->
+      <img src={{featuredProjectData.ProjectThree.Image[0]}} alt="">
 
-      <img src="/assets/appbanner.png" alt="">
+      <!-- More information on the project -->
+      <div class="featured-project-information">
+        <!-- Platfrom -->
+        <h2 class="platform-heading">
+          Platform: {{featuredProjectData.ProjectThree.Platforms.toString()}}
+        </h2>
+        <div class="details">
+          <!-- Stack -->
+          <div class="featured-info">
+            <h2 class="more-info-heading">
+              Languages and Tools
+            </h2>
+            <ul class="featured-lists" *ngFor="let tech of featuredProjectData.ProjectThree.Technologies ">
+              <li> <p>{{tech}}</p> </li>
+            </ul>
 
+          </div>
+          <!-- Other services -->
+          <div class="featured-info">
+            <h2 class="more-info-heading">
+              Other Services
+            </h2>
+            <ul class="featured-lists" *ngFor="let item of featuredProjectData.ProjectThree.Services">
+              <li> <p> {{item}} </p> </li>
+            </ul>
+          </div>
+          <!-- Responsibilities -->
+          <div class="featured-info">
+            <h2 class="more-info-heading">
+              Responsibilities
+            </h2>
+            <ul class="featured-lists" *ngFor="let item of featuredProjectData.ProjectThree.Responsibilities">
+              <li> <p>{{item}}</p> </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Links to the project repo or live link and view project page -->
+      <div class="project-links">
+        <!-- External Links -->
+        <ul class="external-links">
+          <!-- GITHUB LINK -->
+          <li *ngIf="featuredProjectData.ProjectThree.Github.available">
+            <a href={{featuredProjectData.ProjectThree.Github.link}}>
+              <div class="link">
+               <img src="/assets/logos/github.svg" alt="">
+               <p>GitHub</p>
+              </div>
+            </a>
+          </li>
+          <!-- LIVE LINK -->
+          <li *ngIf="featuredProjectData.ProjectThree.Live.available">
+            <a href="">
+              <div class="link">
+                <img src="/assets/logos/github.svg" alt="">
+                 <p>Live</p>
+                </div>
+              </a>
+            </li>
+        </ul>
+
+        <!-- View project link -->
+        <a href="/projects/{{featuredProjectData.ProjectThree.ID}}" class="view-project">
+          projects &rarr;
+        </a>
+      </div>
+      </div>
     </div>
   </div>
+
+
+
+
 </section>
 
