@@ -1,0 +1,77 @@
+main
+{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+
+
+  .about-me-page-container
+  {
+    width: 700px;
+
+    // Content holder
+    .section-container{
+
+      // Big Heading for sections
+      .about-heading{
+        font-size: 1.8em;
+        font-family: "Nixie One";
+        margin: 20px 0px;
+      }
+
+      // about me list section
+      .about-me-section{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        // List item
+        li{
+          height: 100%;
+
+          // about container
+          .about-me-container{
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-template-rows: auto;
+
+
+            .line{
+              height: 100%;
+              justify-content: center;
+              width: 1px;
+              background-color: black;
+              display: flex;
+              justify-content: center;
+              margin: 0px 10px;
+              p{
+                margin: 0px;
+              }
+            }
+
+
+            // text Content
+            .text-content{
+              .section-header{
+                font-size: 1.2em;
+                font-family: "Nixie One";
+                margin: 0px 5px;
+              }
+
+              .information {
+                font-size: 1em;
+                margin: 5px 15px 25px 15px;
+                font-family: "Lato";
+
+              }
+            }
+          }
+
+        }
+
+      }
+
+    }
+  }
+
+}

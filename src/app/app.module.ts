@@ -7,13 +7,15 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { ProjectInfoPageComponent } from './project-info-page/project-info-page.component';
 import { MarkdownModule } from 'ngx-markdown';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { AboutMeComponent } from './about-me/about-me.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
     NavBarComponent,
-    ProjectInfoPageComponent
+    ProjectInfoPageComponent,
+    AboutMeComponent
   ],
   imports: [
     BrowserModule,
