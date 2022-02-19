@@ -3,7 +3,7 @@ export interface Project
   ID: string,
   Name: string,
   Image: string[],
-  Description: {full: string, summary: string},
+  Description: {full: string, summary: string, overview: string},
   Client: string,
   Platforms: string[],
   Technologies: string[],

@@ -8,17 +8,17 @@
     <div class="project-information">
       <!-- Name -->
       <h2 class="project-name">
-        MiBo Maps
+        {{project.Name}}
       </h2>
       <!-- Description -->
       <p class="project-description">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt assumenda nostrum nobis in, aliquam vel architecto maxime amet veniam eum ex similique cum, consequuntur, officia sit ipsam ratione laborum iure?
+        {{project.Description.summary}}
       </p>
     </div>
 
     <!-- Project image -->
     <div class="project-image">
-      <img src="/assets/appbanner.png" alt="">
+      <img src={{project.Image[0]}} alt="">
     </div>
   </div>
 
@@ -31,9 +31,9 @@
       </h2>
 
       <ul class="details-list">
-        <li><p>Project Type: College Project</p></li>
-        <li><p>Platform: Android</p></li>
-        <li><p>Status: Complete</p></li>
+        <li><p>{{project.Client}} </p></li>
+        <li><p>Platform: {{project.Platforms.toString()}} </p></li>
+        <li><p>Status: Complete </p></li>
       </ul>
     </div>
 
@@ -43,12 +43,8 @@
         Responsibilites
       </h2>
 
-      <ul class="details-list">
-        <li><p> Research </p></li>
-        <li><p> User Interface Design </p></li>
-        <li><p> Database Design </p></li>
-        <li><p> Codeing </p></li>
-        <li><p> Deployment </p></li>
+      <ul class="details-list" *ngFor="let response of project.Responsibilities">
+        <li><p> {{response}} </p></li>
       </ul>
     </div>
 
@@ -58,12 +54,8 @@
         Languages & Technologies
       </h2>
 
-      <ul class="details-list">
-        <li><p>Android (Android Studio Java)</p></li>
-        <li><p>Firebase</p></li>
-        <li><p>Here API</p></li>
-        <li><p>Google Maps API</p></li>
-        <li><p>Git + Bitbucket</p></li>
+      <ul class="details-list" *ngFor="let tech of project.Technologies">
+        <li><p> {{tech}} </p></li>
       </ul>
     </div>
   </div>
@@ -79,13 +71,7 @@
 <section class="project-overview-container">
 
   <p class="paragraph">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum provident ullam voluptate deserunt quae eos nulla nesciunt earum, ratione optio quibusdam dolore! Praesentium quaerat ducimus voluptatum enim quam, ratione ipsa.
-
-    <br>
-    <br>
-
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum provident ullam voluptate deserunt quae eos nulla nesciunt earum, ratione optio quibusdam dolore! Praesentium quaerat ducimus voluptatum enim quam, ratione ipsa.
-
+    {{project.Description.overview}}
   </p>
 
 </section>
