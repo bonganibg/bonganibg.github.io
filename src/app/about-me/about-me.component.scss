@@ -2,15 +2,20 @@ main
 {
   height: 100vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 
 
   .about-me-page-container
   {
     width: 700px;
 
+
+
     // Content holder
     .section-container{
+      display: flex;
+      flex-direction: column;
 
       // Big Heading for sections
       .about-heading{
@@ -23,7 +28,7 @@ main
       .about-me-section{
         width: 100%;
         display: flex;
-        flex-direction: column;
+
 
         // List item
         li{

@@ -1,16 +1,16 @@
 <main>
 
-  <section class="about-me-page-container">
+  <section class="about-me-page-container" *ngFor="let about of aboutMe">
 
     <!-- Section heading -->
     <div class="section-container">
       <h2 class="about-heading">
-        Personal
+        {{about.About.heading}}
       </h2>
 
 
       <!-- About me lists -->
-      <ul class="about-me-section">
+      <ul class="about-me-section" *ngFor="let info of about.About.sections">
         <!-- INDI ITEM -->
         <li>
           <div class="about-me-container">
@@ -25,44 +25,16 @@
               <div class="text-content">
                 <!-- Section Header -->
                 <h3 class="section-header">
-                  Summary
+                  {{info.Heading}}
                 </h3>
 
                 <!-- Information -->
                 <p class="information">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias id culpa, eum temporibus quas nulla illum! Voluptas voluptatum aliquam libero quae eaque fugiat nihil molestias, accusantium maxime voluptate. Ad, obcaecati?
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis ratione repellendus ducimus iusto, ea possimus nihil dicta animi provident nisi nobis corporis exercitationem hic fuga veritatis reprehenderit delectus, aliquam recusandae.
+                  {{info.Content}}
                 </p>
               </div>
           </div>
         </li>
-
-        <!-- INDI ITEM -->
-        <li>
-          <div class="about-me-container">
-            <!-- Line on the side of the list item -->
-            <div class="line">
-              <p>
-                &#9899;
-              </p>
-            </div>
-
-            <!-- Text Content -->
-              <div class="text-content">
-                <!-- Section Header -->
-                <h3 class="section-header">
-                  Summary
-                </h3>
-
-                <!-- Information -->
-                <p class="information">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias id culpa, eum temporibus quas nulla illum! Voluptas voluptatum aliquam libero quae eaque fugiat nihil molestias, accusantium maxime voluptate. Ad, obcaecati?
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis ratione repellendus ducimus iusto, ea possimus nihil dicta animi provident nisi nobis corporis exercitationem hic fuga veritatis reprehenderit delectus, aliquam recusandae.
-                </p>
-              </div>
-          </div>
-        </li>
-
       </ul>
 
     </div>

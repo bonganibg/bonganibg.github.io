@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AboutMe } from '../models/about.model';
+import { AboutService } from './about.service';
 
 @Component({
   selector: 'app-about-me',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutMeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private aboutService: AboutService) { }
 
+
+  aboutMe!: AboutMe[];
   ngOnInit(): void {
+    this.aboutMe = this.aboutService.getAboutMe();
   }
 
 }
