@@ -63,11 +63,6 @@ export class HomePageComponent implements OnInit {
       left.style.transform = `translate3d(${textRate}px, 0px, 0px)`;
       right.style.transform = `translate3d(-${textRate}px, 0px, 0px)`;
 
-
-      const ftleft = document.querySelector('.featured-left') as HTMLScriptElement;
-      const ftright = document.querySelector('.featured-right') as HTMLScriptElement;
-      ftleft.style.transform = `translate3d(${textRate}px, 0px, 0px)`;
-      ftright.style.transform = `translate3d(-${textRate}px, 0px, 0px)`;
     })
   }
 
