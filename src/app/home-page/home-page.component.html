@@ -10,7 +10,7 @@
         {{headerData.Text.summary}}
       </p>
 
-      <a href="" class="view-projects">
+      <a href="/projects" class="view-projects">
         projects &rarr;
       </a>
     </div>
@@ -240,11 +240,6 @@
       <p class="description-featured">
         {{featuredProjectData.Heading}}
       </p>
-
-      <!-- View all projects Button -->
-      <button class="view-all-projects">
-        View Projects
-      </button>
     </div>
 
   </section>
@@ -335,7 +330,8 @@
           </ul>
 
           <!-- View project link -->
-          <a href="/projects/{{featuredProjectData.ProjectOne.ID}}" class="view-project">
+          <a [routerLink]="['/proj']"
+          [queryParams]="{id: featuredProjectData.ProjectOne.ID}" class="view-project">
             projects &rarr;
           </a>
         </div>
@@ -427,7 +423,8 @@
           </ul>
 
           <!-- View project link -->
-          <a href="/projects/{{featuredProjectData.ProjectTwo.ID}}" class="view-project">
+          <a [routerLink]="['/proj']"
+          [queryParams]="{id: featuredProjectData.ProjectTwo.ID}" class="view-project">
             projects &rarr;
           </a>
         </div>
@@ -524,7 +521,8 @@
           </ul>
 
           <!-- View project link -->
-          <a href="/projects/{{featuredProjectData.ProjectThree.ID}}" class="view-project">
+          <a [routerLink]="['/proj']"
+          [queryParams]="{id: featuredProjectData.ProjectThree.ID}" class="view-project">
             projects &rarr;
           </a>
         </div>

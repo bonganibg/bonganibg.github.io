@@ -22,6 +22,7 @@
     </div>
   </div>
 
+  <hr>
   <!-- Project details and roles -->
   <div class="project-details-container">
     <!-- Details about the project/ Platform, client, status  -->
@@ -35,6 +36,7 @@
         <li><p>Platform: {{project.Platforms.toString()}} </p></li>
         <li><p>Status: Complete </p></li>
       </ul>
+
     </div>
 
     <!-- Role in the project -->
@@ -59,6 +61,8 @@
       </ul>
     </div>
   </div>
+  <hr>
+
 </section>
 
 <br>
@@ -78,36 +82,27 @@
 
 
 <!-- Development Process -->
-<section class="project-development-container">
+<section class="project-development-container" *ngFor="let proj of project.Description.full">
   <!-- Project information heading -->
   <h2 class="development-heading">
-    Planning and Research
+    {{proj.Subheading}}
   </h2>
 
-  <p class="paragraph">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum provident ullam voluptate deserunt quae eos nulla nesciunt earum, ratione optio quibusdam dolore! Praesentium quaerat ducimus voluptatum enim quam, ratione ipsa.
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum provident ullam voluptate deserunt quae eos nulla nesciunt earum, ratione optio quibusdam dolore! Praesentium quaerat ducimus voluptatum enim quam, ratione ipsa.
+  <div class="parag" *ngFor="let para of proj.Content">
+    <p class="paragraph" >
+      {{para.Paragraph}}
+    </p>
 
-    <br>
-    <br>
+    <ul class="development-list" *ngFor="let item of para.List">
+      <li class="dev-li"> <p> {{item}} </p> </li>
+    </ul>
 
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum provident ullam voluptate deserunt quae eos nulla nesciunt earum, ratione optio quibusdam dolore! Praesentium quaerat ducimus voluptatum enim quam, ratione ipsa.
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum provident ullam voluptate deserunt quae eos nulla nesciunt earum, ratione optio quibusdam dolore! Praesentium quaerat ducimus voluptatum enim quam, ratione ipsa.
+  </div>
 
-    <br>
-    <br>
 
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum provident ullam voluptate deserunt quae eos nulla nesciunt earum, ratione optio quibusdam dolore! Praesentium quaerat ducimus voluptatum enim quam, ratione ipsa.
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum provident ullam voluptate deserunt quae eos nulla nesciunt earum, ratione optio quibusdam dolore! Praesentium quaerat ducimus voluptatum enim quam, ratione ipsa.
-  </p>
+  <br>
+  <br>
 
-  <ul class="development-list">
-    <li class="dev-li"> <p class="paragraph"> something</p> </li>
-    <li class="dev-li"> <p class="paragraph"> something</p> </li>
-    <li class="dev-li"> <p class="paragraph"> something</p> </li>
-    <li class="dev-li"> <p class="paragraph"> something</p> </li>
-
-  </ul>
 
 
 

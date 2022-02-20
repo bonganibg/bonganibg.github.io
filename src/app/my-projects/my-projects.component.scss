@@ -132,10 +132,15 @@ main
                 }
               }
 
-              .view-project{
-                font-family: "Nixie One";
-                font-size: 1em;
-                color: #444;
+              a{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                .view-project{
+                  font-family: "Nixie One";
+                  font-size: 1em;
+                  color: #444;
+                }
               }
             }
           }

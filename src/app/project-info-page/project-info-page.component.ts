@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Project } from '../models/project.model';
 import { ProjectService } from '../my-projects/project.service';
 
@@ -9,12 +10,19 @@ import { ProjectService } from '../my-projects/project.service';
 })
 export class ProjectInfoPageComponent implements OnInit {
 
-  constructor(private projectService: ProjectService) { }
+  constructor(private projectService: ProjectService,
+              private route: ActivatedRoute) { }
 
   project!: Project;
   ngOnInit(): void {
+    let id  = "";
+    this.route.queryParams.subscribe(data => {
 
-    this.project = this.projectService.getProject("etwertwertwert");
+      if (data['id'])
+        id = data['id'];
+    });
+
+
+    this.project = this.projectService.getProject(id);
   }
-
 }

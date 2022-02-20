@@ -1,9 +1,11 @@
+import { ArticleSection } from "./project-article.model";
+
 export interface Project
 {
   ID: string,
   Name: string,
   Image: string[],
-  Description: {full: string, summary: string, overview: string},
+  Description: {full: ArticleSection[], summary: string, overview: string},
   Client: string,
   Platforms: string[],
   Technologies: string[],

@@ -55,8 +55,6 @@ export class HomePageComponent implements OnInit {
       var circleRate = scrolled * 0.15;
       circle.style.transform = `translate3d(1px, ${circleRate}px, 0px)`;
 
-
-
       // Skills letter Scrolling
       const left = document.querySelector('.scroll-left') as HTMLScriptElement;
       const right = document.querySelector('.scroll-right') as HTMLScriptElement;

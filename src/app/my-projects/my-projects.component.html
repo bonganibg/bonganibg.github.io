@@ -23,7 +23,7 @@
 
                 <!-- Name -->
                 <h3 class="name">
-                  {{project.Name}}
+                  <!-- {{project.Name}} -->
                 </h3>
 
                 <!-- Project Summary -->
@@ -58,7 +58,8 @@
                 </div>
 
                 <!-- View Project Link -->
-                <a href="/projects/{{project.ID}}">
+                <a  [routerLink]="['/proj']"
+                    [queryParams]="{id: project.ID}">
                   <h3 class="view-project">
                     view project &rarr;
                   </h3>
