@@ -1,343 +1,347 @@
-<section class="hero-section">
+<main>
+  <section class="hero-section">
 
-  <!-- Text information -->
-  <div class="hero-text">
-    <h2 class="hero-heading" [innerHTML]="headerData.Text.heading">
-      {{headerData.Text.heading}}
-    </h2>
-    <p class="hero-about">
-      {{headerData.Text.summary}}
-    </p>
-
-    <a href="" class="view-projects">
-      projects &rarr;
-    </a>
-  </div>
-
-
-  <!-- Big Logo and links -->
-  <div class="hero-logo-links">
-
-    <!-- LOGO image -->
-    <img src="{{headerData.Logo}}" alt="" class="hero-logo-big scroll">
-
-
-    <div class="hero-background-item ">
-
-    </div>
-
-    <!-- External links -->
-    <ul class="hero-social-links">
-      <!-- LinkedIn -->
-      <li>
-        <a href="{{headerData.SocialOne.link}}">
-          <img src="{{headerData.SocialOne.image}}" alt="">
-        </a>
-      </li>
-
-      <!-- GitHub -->
-      <li class="scroll">
-        <a href="{{headerData.SocialTwo.link}}">
-          <img src="{{headerData.SocialTwo.image}}" alt="">
-        </a>
-      </li>
-
-      <!-- Instagram -->
-      <li>
-        <a href="{{headerData.SocialThree.link}}">
-          <img src="{{headerData.SocialThree.image}}" alt="">
-        </a>
-      </li>
-    </ul>
-
-  </div>
-</section>
-
-<!-- Quote Section -->
-<section class="text-scrolling">
-
-  <div class="scrolling-effect">
-    <h2 class="scroll-left">
-      SKILLS SKILLS SKILLS SKILLS SKILLS SKILLS SKILLS SKILLS
-    </h2>
-
-    <h2 class="scroll-right">
-      SKILLS SKILLS SKILLS SKILLS SKILLS SKILLS SKILLS SKILLS
-    </h2>
-  </div>
-</section>
-
-
-
-
-<!-- Skills section -->
-<section class="skills-section">
-
-  <!-- Design -->
-  <div class="skills skills-left">
-
-    <!-- Skill Image -->
-    <div class="skill-image">
-      <img src="{{skillsData.Design.Image}}" alt="">
-    </div>
-
-    <!-- Skill Text -->
-    <div class="skill-information">
-      <!-- Skill Name -->
-      <h2 class="skill-name">
-        {{skillsData.Design.Heading}}
+    <!-- Text information -->
+    <div class="hero-text">
+      <h2 class="hero-heading" [innerHTML]="headerData.Text.heading">
+        {{headerData.Text.heading}}
       </h2>
-      <!-- Skill Description -->
-      <p class="skill-description">
-        {{skillsData.Design.Description}}
+      <p class="hero-about">
+        {{headerData.Text.summary}}
       </p>
 
-      <!-- Sub Heading -->
-      <h2 class="headline">
-        {{skillsData.Design.Design.headline}}
-      </h2>
+      <a href="" class="view-projects">
+        projects &rarr;
+      </a>
+    </div>
 
-      <!-- Skills -->
-      <ul class="list-of-tools" *ngFor="let skill of skillsData.Design.Design.experience">
+
+    <!-- Big Logo and links -->
+    <div class="hero-logo-links">
+
+      <!-- LOGO image -->
+      <img src="{{headerData.Logo}}" alt="" class="hero-logo-big scroll">
+
+
+      <div class="hero-background-item ">
+        <svg viewBox="0 0 2235 2235" fill="none">
+          <circle cx="1117.5" cy="1117.5" r="1117.5" fill="white"/>
+        </svg>
+
+      </div>
+
+      <!-- External links -->
+      <ul class="hero-social-links">
+        <!-- LinkedIn -->
         <li>
-          {{skill}}
+          <a href="{{headerData.SocialOne.link}}">
+            <img src="{{headerData.SocialOne.image}}" alt="">
+          </a>
+        </li>
+
+        <!-- GitHub -->
+        <li class="scroll">
+          <a href="{{headerData.SocialTwo.link}}">
+            <img src="{{headerData.SocialTwo.image}}" alt="">
+          </a>
+        </li>
+
+        <!-- Instagram -->
+        <li>
+          <a href="{{headerData.SocialThree.link}}">
+            <img src="{{headerData.SocialThree.image}}" alt="">
+          </a>
         </li>
       </ul>
-
-      <!-- Sub Heading -->
-      <h2 class="headline">
-        {{skillsData.Design.Implementation.headline}}
-      </h2>
-
-      <!-- Skills -->
-      <ul class="list-of-tools" *ngFor="let language of skillsData.Design.Implementation.languages">
-        <li>
-          {{language}}
-        </li>
-      </ul>
-
-      <!-- Sub Heading -->
-      <h2 class="headline">
-        Frameworks
-      </h2>
-
-      <!-- Skills -->
-      <ul class="list-of-tools" *ngFor="let framework of skillsData.Design.Implementation.frameworks">
-        <li>
-          {{framework}}
-        </li>
-      </ul>
-
 
     </div>
-  </div>
+  </section>
+
+  <!-- Quote Section -->
+  <section class="text-scrolling">
+
+    <div class="scrolling-effect">
+      <h2 class="scroll-left">
+        SKILLS SKILLS SKILLS SKILLS SKILLS SKILLS SKILLS SKILLS
+      </h2>
+
+      <h2 class="scroll-right">
+        SKILLS SKILLS SKILLS SKILLS SKILLS SKILLS SKILLS SKILLS
+      </h2>
+    </div>
+  </section>
 
 
-   <!-- Programming -->
-  <div class="skills skills-right">
 
-     <!-- Skill Image -->
+
+  <!-- Skills section -->
+  <section class="skills-section">
+
+    <!-- Design -->
+    <div class="skills skills-left">
+
+      <!-- Skill Image -->
       <div class="skill-image">
-        <img src="{{skillsData.Programming.Image}}" alt="">
+        <img src="{{skillsData.Design.Image}}" alt="">
       </div>
 
       <!-- Skill Text -->
       <div class="skill-information">
         <!-- Skill Name -->
         <h2 class="skill-name">
-          {{skillsData.Programming.Heading}}
+          {{skillsData.Design.Heading}}
         </h2>
         <!-- Skill Description -->
         <p class="skill-description">
-          {{skillsData.Programming.Description}}
+          {{skillsData.Design.Description}}
         </p>
 
-        <!-- Languages -->
+        <!-- Sub Heading -->
         <h2 class="headline">
-          {{skillsData.Programming.Languages.headline}}
+          {{skillsData.Design.Design.headline}}
         </h2>
 
-        <ul class="list-of-tools" *ngFor="let language of skillsData.Programming.Languages.languages">
-          <li>{{language}}</li>
+        <!-- Skills -->
+        <ul class="list-of-tools" *ngFor="let skill of skillsData.Design.Design.experience">
+          <li>
+            {{skill}}
+          </li>
         </ul>
 
-        <!-- Languages -->
+        <!-- Sub Heading -->
+        <h2 class="headline">
+          {{skillsData.Design.Implementation.headline}}
+        </h2>
+
+        <!-- Skills -->
+        <ul class="list-of-tools" *ngFor="let language of skillsData.Design.Implementation.languages">
+          <li>
+            {{language}}
+          </li>
+        </ul>
+
+        <!-- Sub Heading -->
         <h2 class="headline">
           Frameworks
         </h2>
 
-        <ul class="list-of-tools" *ngFor="let frameworks of skillsData.Programming.Frameworks.frameworks">
-          <li>  {{frameworks}} </li>
+        <!-- Skills -->
+        <ul class="list-of-tools" *ngFor="let framework of skillsData.Design.Implementation.frameworks">
+          <li>
+            {{framework}}
+          </li>
         </ul>
+
+
       </div>
-  </div>
+    </div>
 
 
-   <!-- Database and networking -->
-   <div class="skills skills-left">
+     <!-- Programming -->
+    <div class="skills skills-right">
 
-    <!-- Skill Image -->
-     <div class="skill-image">
-       <img src="{{skillsData.Database.Image}}" alt="">
-     </div>
+       <!-- Skill Image -->
+        <div class="skill-image">
+          <img src="{{skillsData.Programming.Image}}" alt="">
+        </div>
 
-     <!-- Skill Text -->
-     <div class="skill-information">
-       <!-- Skill Name -->
-       <h2 class="skill-name">
-        {{skillsData.Database.Heading}}
-       </h2>
-       <!-- Skill Description -->
-       <p class="skill-description">
-        {{skillsData.Database.Description}}
-       </p>
+        <!-- Skill Text -->
+        <div class="skill-information">
+          <!-- Skill Name -->
+          <h2 class="skill-name">
+            {{skillsData.Programming.Heading}}
+          </h2>
+          <!-- Skill Description -->
+          <p class="skill-description">
+            {{skillsData.Programming.Description}}
+          </p>
 
-       <!-- Database languages -->
-       <h2 class="headline">
-        {{skillsData.Database.Languages.headline}}
-       </h2>
+          <!-- Languages -->
+          <h2 class="headline">
+            {{skillsData.Programming.Languages.headline}}
+          </h2>
 
-       <ul class="list-of-tools" *ngFor="let language of skillsData.Database.Languages.languages">
-         <li>{{language}}</li>
-       </ul>
+          <ul class="list-of-tools" *ngFor="let language of skillsData.Programming.Languages.languages">
+            <li>{{language}}</li>
+          </ul>
 
-       <!-- Database Software -->
-       <h2 class="headline">
-        {{skillsData.Database.Software.headline}}
+          <!-- Languages -->
+          <h2 class="headline">
+            Frameworks
+          </h2>
+
+          <ul class="list-of-tools" *ngFor="let frameworks of skillsData.Programming.Frameworks.frameworks">
+            <li>  {{frameworks}} </li>
+          </ul>
+        </div>
+    </div>
+
+
+     <!-- Database and networking -->
+     <div class="skills skills-left">
+
+      <!-- Skill Image -->
+       <div class="skill-image">
+         <img src="{{skillsData.Database.Image}}" alt="">
+       </div>
+
+       <!-- Skill Text -->
+       <div class="skill-information">
+         <!-- Skill Name -->
+         <h2 class="skill-name">
+          {{skillsData.Database.Heading}}
+         </h2>
+         <!-- Skill Description -->
+         <p class="skill-description">
+          {{skillsData.Database.Description}}
+         </p>
+
+         <!-- Database languages -->
+         <h2 class="headline">
+          {{skillsData.Database.Languages.headline}}
+         </h2>
+
+         <ul class="list-of-tools" *ngFor="let language of skillsData.Database.Languages.languages">
+           <li>{{language}}</li>
+         </ul>
+
+         <!-- Database Software -->
+         <h2 class="headline">
+          {{skillsData.Database.Software.headline}}
+        </h2>
+
+        <ul class="list-of-tools" *ngFor="let software of skillsData.Database.Software.systems">
+          <li>{{software}}</li>
+        </ul>
+
+        <!-- Database Cloud -->
+        <h2 class="headline">
+          {{skillsData.Database.Cloud.headline}}
+        </h2>
+
+        <ul class="list-of-tools" *ngFor="let cloud of skillsData.Database.Cloud.platforms">
+          <li>{{cloud}}</li>
+        </ul>
+
+
+       </div>
+   </div>
+  </section>
+
+
+  <section class="featured-projects-header">
+    <!-- Featured projects header -->
+    <div class="featured-projects-content">
+      <h2 class="header-featured">
+        Featured Projects
       </h2>
 
-      <ul class="list-of-tools" *ngFor="let software of skillsData.Database.Software.systems">
-        <li>{{software}}</li>
-      </ul>
+      <!-- Featured projects description -->
+      <p class="description-featured">
+        {{featuredProjectData.Heading}}
+      </p>
 
-      <!-- Database Cloud -->
-      <h2 class="headline">
-        {{skillsData.Database.Cloud.headline}}
+      <!-- View all projects Button -->
+      <button class="view-all-projects">
+        View Projects
+      </button>
+    </div>
+
+  </section>
+
+
+
+
+
+  <!-- Featured projects section -->
+  <section class="featured-projects">
+
+
+    <!-- Individual project / Project One-->
+    <div class="featured-project">
+      <!-- Project Name -->
+      <h2 class="project-name">
+          {{featuredProjectData.ProjectOne.Name}}
       </h2>
+      <!-- Project description -->
+      <p class="project-description">
+        {{featuredProjectData.ProjectOne.Description.summary}}
+      </p>
 
-      <ul class="list-of-tools" *ngFor="let cloud of skillsData.Database.Cloud.platforms">
-        <li>{{cloud}}</li>
-      </ul>
+      <!-- Container for project image -->
+      <div class="project-image-container">
+        <!-- Project Image -->
+        <img src={{featuredProjectData.ProjectOne.Image[0]}} alt="">
 
+        <!-- More information on the project -->
+        <div class="featured-project-information">
+          <!-- Platfrom -->
+          <h2 class="platform-heading">
+            Platform: {{featuredProjectData.ProjectOne.Platforms.toString()}}
+          </h2>
+          <div class="details">
+            <!-- Stack -->
+            <div class="featured-info">
+              <h2 class="more-info-heading">
+                Languages and Tools
+              </h2>
+              <ul class="featured-lists" *ngFor="let tech of featuredProjectData.ProjectOne.Technologies ">
+                <li> <p>{{tech}}</p> </li>
+              </ul>
 
-     </div>
- </div>
-</section>
-
-
-<section class="featured-projects-header">
-  <!-- Featured projects header -->
-  <div class="featured-projects-content">
-    <h2 class="header-featured">
-      Featured Projects
-    </h2>
-
-    <!-- Featured projects description -->
-    <p class="description-featured">
-      {{featuredProjectData.Heading}}
-    </p>
-
-    <!-- View all projects Button -->
-    <button class="view-all-projects">
-      View Projects
-    </button>
-  </div>
-
-</section>
-
-
-
-
-
-<!-- Featured projects section -->
-<section class="featured-projects">
-
-
-  <!-- Individual project / Project One-->
-  <div class="featured-project">
-    <!-- Project Name -->
-    <h2 class="project-name">
-        {{featuredProjectData.ProjectOne.Name}}
-    </h2>
-    <!-- Project description -->
-    <p class="project-description">
-      {{featuredProjectData.ProjectOne.Description.summary}}
-    </p>
-
-    <!-- Container for project image -->
-    <div class="project-image-container">
-      <!-- Project Image -->
-      <img src={{featuredProjectData.ProjectOne.Image[0]}} alt="">
-
-      <!-- More information on the project -->
-      <div class="featured-project-information">
-        <!-- Platfrom -->
-        <h2 class="platform-heading">
-          Platform: {{featuredProjectData.ProjectOne.Platforms.toString()}}
-        </h2>
-        <div class="details">
-          <!-- Stack -->
-          <div class="featured-info">
-            <h2 class="more-info-heading">
-              Languages and Tools
-            </h2>
-            <ul class="featured-lists" *ngFor="let tech of featuredProjectData.ProjectOne.Technologies ">
-              <li> <p>{{tech}}</p> </li>
-            </ul>
-
+            </div>
+            <!-- Other services -->
+            <div class="featured-info">
+              <h2 class="more-info-heading">
+                Other Services
+              </h2>
+              <ul class="featured-lists" *ngFor="let item of featuredProjectData.ProjectOne.Services">
+                <li> <p> {{item}} </p> </li>
+              </ul>
+            </div>
+            <!-- Responsibilities -->
+            <div class="featured-info">
+              <h2 class="more-info-heading">
+                Responsibilities
+              </h2>
+              <ul class="featured-lists" *ngFor="let item of featuredProjectData.ProjectOne.Responsibilities">
+                <li> <p>{{item}}</p> </li>
+              </ul>
+            </div>
           </div>
-          <!-- Other services -->
-          <div class="featured-info">
-            <h2 class="more-info-heading">
-              Other Services
-            </h2>
-            <ul class="featured-lists" *ngFor="let item of featuredProjectData.ProjectOne.Services">
-              <li> <p> {{item}} </p> </li>
-            </ul>
-          </div>
-          <!-- Responsibilities -->
-          <div class="featured-info">
-            <h2 class="more-info-heading">
-              Responsibilities
-            </h2>
-            <ul class="featured-lists" *ngFor="let item of featuredProjectData.ProjectOne.Responsibilities">
-              <li> <p>{{item}}</p> </li>
-            </ul>
-          </div>
-        </div>
 
-        <!-- Links to the project repo or live link and view project page -->
-      <div class="project-links">
-        <!-- External Links -->
-        <ul class="external-links">
-          <!-- GITHUB LINK -->
-          <li *ngIf="featuredProjectData.ProjectOne.Github.available">
-            <a href={{featuredProjectData.ProjectOne.Github.link}}>
-              <div class="link">
-               <img src="/assets/logos/github.svg" alt="">
-               <p>GitHub</p>
-              </div>
-            </a>
-          </li>
-          <!-- LIVE LINK -->
-          <li *ngIf="featuredProjectData.ProjectOne.Live.available">
-            <a href="">
-              <div class="link">
-                <img src="/assets/logos/github.svg" alt="">
-                 <p>Live</p>
+          <!-- Links to the project repo or live link and view project page -->
+        <div class="project-links">
+          <!-- External Links -->
+          <ul class="external-links">
+            <!-- GITHUB LINK -->
+            <li *ngIf="featuredProjectData.ProjectOne.Github.available">
+              <a href={{featuredProjectData.ProjectOne.Github.link}}>
+                <div class="link">
+                 <img src="/assets/logos/github.svg" alt="">
+                 <p>GitHub</p>
                 </div>
               </a>
             </li>
-        </ul>
+            <!-- LIVE LINK -->
+            <li *ngIf="featuredProjectData.ProjectOne.Live.available">
+              <a href="">
+                <div class="link">
+                  <img src="/assets/logos/github.svg" alt="">
+                   <p>Live</p>
+                  </div>
+                </a>
+              </li>
+          </ul>
 
-        <!-- View project link -->
-        <a href="/projects/{{featuredProjectData.ProjectOne.ID}}" class="view-project">
-          projects &rarr;
-        </a>
-      </div>
+          <!-- View project link -->
+          <a href="/projects/{{featuredProjectData.ProjectOne.ID}}" class="view-project">
+            projects &rarr;
+          </a>
+        </div>
+        </div>
       </div>
     </div>
-  </div>
 
 
 
@@ -345,91 +349,91 @@
 
 
 
-  <!-- PROJECT 2 -->
-  <div class="featured-project">
-    <!-- Project Name -->
-    <h2 class="project-name">
-        {{featuredProjectData.ProjectTwo.Name}}
-    </h2>
-    <!-- Project description -->
-    <p class="project-description">
-      {{featuredProjectData.ProjectTwo.Description.summary}}
-    </p>
+    <!-- PROJECT 2 -->
+    <div class="featured-project">
+      <!-- Project Name -->
+      <h2 class="project-name">
+          {{featuredProjectData.ProjectTwo.Name}}
+      </h2>
+      <!-- Project description -->
+      <p class="project-description">
+        {{featuredProjectData.ProjectTwo.Description.summary}}
+      </p>
 
-    <!-- Container for project image -->
-    <div class="project-image-container">
-      <!-- Project Image -->
-      <img src={{featuredProjectData.ProjectTwo.Image[0]}} alt="">
+      <!-- Container for project image -->
+      <div class="project-image-container">
+        <!-- Project Image -->
+        <img src={{featuredProjectData.ProjectTwo.Image[0]}} alt="">
 
-      <!-- More information on the project -->
-      <div class="featured-project-information">
-        <!-- Platfrom -->
-        <h2 class="platform-heading">
-          Platform: {{featuredProjectData.ProjectTwo.Platforms.toString()}}
-        </h2>
-        <div class="details">
-          <!-- Stack -->
-          <div class="featured-info">
-            <h2 class="more-info-heading">
-              Languages and Tools
-            </h2>
-            <ul class="featured-lists" *ngFor="let tech of featuredProjectData.ProjectTwo.Technologies ">
-              <li> <p>{{tech}}</p> </li>
-            </ul>
+        <!-- More information on the project -->
+        <div class="featured-project-information">
+          <!-- Platfrom -->
+          <h2 class="platform-heading">
+            Platform: {{featuredProjectData.ProjectTwo.Platforms.toString()}}
+          </h2>
+          <div class="details">
+            <!-- Stack -->
+            <div class="featured-info">
+              <h2 class="more-info-heading">
+                Languages and Tools
+              </h2>
+              <ul class="featured-lists" *ngFor="let tech of featuredProjectData.ProjectTwo.Technologies ">
+                <li> <p>{{tech}}</p> </li>
+              </ul>
 
+            </div>
+            <!-- Other services -->
+            <div class="featured-info">
+              <h2 class="more-info-heading">
+                Other Services
+              </h2>
+              <ul class="featured-lists" *ngFor="let item of featuredProjectData.ProjectTwo.Services">
+                <li> <p> {{item}} </p> </li>
+              </ul>
+            </div>
+            <!-- Responsibilities -->
+            <div class="featured-info">
+              <h2 class="more-info-heading">
+                Responsibilities
+              </h2>
+              <ul class="featured-lists" *ngFor="let item of featuredProjectData.ProjectTwo.Responsibilities">
+                <li> <p>{{item}}</p> </li>
+              </ul>
+            </div>
           </div>
-          <!-- Other services -->
-          <div class="featured-info">
-            <h2 class="more-info-heading">
-              Other Services
-            </h2>
-            <ul class="featured-lists" *ngFor="let item of featuredProjectData.ProjectTwo.Services">
-              <li> <p> {{item}} </p> </li>
-            </ul>
-          </div>
-          <!-- Responsibilities -->
-          <div class="featured-info">
-            <h2 class="more-info-heading">
-              Responsibilities
-            </h2>
-            <ul class="featured-lists" *ngFor="let item of featuredProjectData.ProjectTwo.Responsibilities">
-              <li> <p>{{item}}</p> </li>
-            </ul>
-          </div>
-        </div>
 
-        <!-- Links to the project repo or live link and view project page -->
-      <div class="project-links">
-        <!-- External Links -->
-        <ul class="external-links">
-          <!-- GITHUB LINK -->
-          <li *ngIf="featuredProjectData.ProjectTwo.Github.available">
-            <a href={{featuredProjectData.ProjectTwo.Github.link}}>
-              <div class="link">
-               <img src="/assets/logos/github.svg" alt="">
-               <p>GitHub</p>
-              </div>
-            </a>
-          </li>
-          <!-- LIVE LINK -->
-          <li *ngIf="featuredProjectData.ProjectTwo.Live.available">
-            <a href="">
-              <div class="link">
-                <img src="/assets/logos/github.svg" alt="">
-                 <p>Live</p>
+          <!-- Links to the project repo or live link and view project page -->
+        <div class="project-links">
+          <!-- External Links -->
+          <ul class="external-links">
+            <!-- GITHUB LINK -->
+            <li *ngIf="featuredProjectData.ProjectTwo.Github.available">
+              <a href={{featuredProjectData.ProjectTwo.Github.link}}>
+                <div class="link">
+                 <img src="/assets/logos/github.svg" alt="">
+                 <p>GitHub</p>
                 </div>
               </a>
             </li>
-        </ul>
+            <!-- LIVE LINK -->
+            <li *ngIf="featuredProjectData.ProjectTwo.Live.available">
+              <a href="">
+                <div class="link">
+                  <img src="/assets/logos/github.svg" alt="">
+                   <p>Live</p>
+                  </div>
+                </a>
+              </li>
+          </ul>
 
-        <!-- View project link -->
-        <a href="/projects/{{featuredProjectData.ProjectTwo.ID}}" class="view-project">
-          projects &rarr;
-        </a>
-      </div>
+          <!-- View project link -->
+          <a href="/projects/{{featuredProjectData.ProjectTwo.ID}}" class="view-project">
+            projects &rarr;
+          </a>
+        </div>
+        </div>
       </div>
     </div>
-  </div>
 
 
 
@@ -442,94 +446,96 @@
 
 
 
-  <!-- FEATURED PROJECT THREE -->
-  <div class="featured-project">
-    <!-- Project Name -->
-    <h2 class="project-name">
-        {{featuredProjectData.ProjectThree.Name}}
-    </h2>
-    <!-- Project description -->
-    <p class="project-description">
-      {{featuredProjectData.ProjectThree.Description.summary}}
-    </p>
+    <!-- FEATURED PROJECT THREE -->
+    <div class="featured-project">
+      <!-- Project Name -->
+      <h2 class="project-name">
+          {{featuredProjectData.ProjectThree.Name}}
+      </h2>
+      <!-- Project description -->
+      <p class="project-description">
+        {{featuredProjectData.ProjectThree.Description.summary}}
+      </p>
 
-    <!-- Container for project image -->
-    <div class="project-image-container">
-      <!-- Project Image -->
-      <img src={{featuredProjectData.ProjectThree.Image[0]}} alt="">
+      <!-- Container for project image -->
+      <div class="project-image-container">
+        <!-- Project Image -->
+        <img src={{featuredProjectData.ProjectThree.Image[0]}} alt="">
 
-      <!-- More information on the project -->
-      <div class="featured-project-information">
-        <!-- Platfrom -->
-        <h2 class="platform-heading">
-          Platform: {{featuredProjectData.ProjectThree.Platforms.toString()}}
-        </h2>
-        <div class="details">
-          <!-- Stack -->
-          <div class="featured-info">
-            <h2 class="more-info-heading">
-              Languages and Tools
-            </h2>
-            <ul class="featured-lists" *ngFor="let tech of featuredProjectData.ProjectThree.Technologies ">
-              <li> <p>{{tech}}</p> </li>
-            </ul>
+        <!-- More information on the project -->
+        <div class="featured-project-information">
+          <!-- Platfrom -->
+          <h2 class="platform-heading">
+            Platform: {{featuredProjectData.ProjectThree.Platforms.toString()}}
+          </h2>
+          <div class="details">
+            <!-- Stack -->
+            <div class="featured-info">
+              <h2 class="more-info-heading">
+                Languages and Tools
+              </h2>
+              <ul class="featured-lists" *ngFor="let tech of featuredProjectData.ProjectThree.Technologies ">
+                <li> <p>{{tech}}</p> </li>
+              </ul>
 
+            </div>
+            <!-- Other services -->
+            <div class="featured-info">
+              <h2 class="more-info-heading">
+                Other Services
+              </h2>
+              <ul class="featured-lists" *ngFor="let item of featuredProjectData.ProjectThree.Services">
+                <li> <p> {{item}} </p> </li>
+              </ul>
+            </div>
+            <!-- Responsibilities -->
+            <div class="featured-info">
+              <h2 class="more-info-heading">
+                Responsibilities
+              </h2>
+              <ul class="featured-lists" *ngFor="let item of featuredProjectData.ProjectThree.Responsibilities">
+                <li> <p>{{item}}</p> </li>
+              </ul>
+            </div>
           </div>
-          <!-- Other services -->
-          <div class="featured-info">
-            <h2 class="more-info-heading">
-              Other Services
-            </h2>
-            <ul class="featured-lists" *ngFor="let item of featuredProjectData.ProjectThree.Services">
-              <li> <p> {{item}} </p> </li>
-            </ul>
-          </div>
-          <!-- Responsibilities -->
-          <div class="featured-info">
-            <h2 class="more-info-heading">
-              Responsibilities
-            </h2>
-            <ul class="featured-lists" *ngFor="let item of featuredProjectData.ProjectThree.Responsibilities">
-              <li> <p>{{item}}</p> </li>
-            </ul>
-          </div>
-        </div>
 
-        <!-- Links to the project repo or live link and view project page -->
-      <div class="project-links">
-        <!-- External Links -->
-        <ul class="external-links">
-          <!-- GITHUB LINK -->
-          <li *ngIf="featuredProjectData.ProjectThree.Github.available">
-            <a href={{featuredProjectData.ProjectThree.Github.link}}>
-              <div class="link">
-               <img src="/assets/logos/github.svg" alt="">
-               <p>GitHub</p>
-              </div>
-            </a>
-          </li>
-          <!-- LIVE LINK -->
-          <li *ngIf="featuredProjectData.ProjectThree.Live.available">
-            <a href="">
-              <div class="link">
-                <img src="/assets/logos/github.svg" alt="">
-                 <p>Live</p>
+          <!-- Links to the project repo or live link and view project page -->
+        <div class="project-links">
+          <!-- External Links -->
+          <ul class="external-links">
+            <!-- GITHUB LINK -->
+            <li *ngIf="featuredProjectData.ProjectThree.Github.available">
+              <a href={{featuredProjectData.ProjectThree.Github.link}}>
+                <div class="link">
+                 <img src="/assets/logos/github.svg" alt="">
+                 <p>GitHub</p>
                 </div>
               </a>
             </li>
-        </ul>
+            <!-- LIVE LINK -->
+            <li *ngIf="featuredProjectData.ProjectThree.Live.available">
+              <a href="">
+                <div class="link">
+                  <img src="/assets/logos/github.svg" alt="">
+                   <p>Live</p>
+                  </div>
+                </a>
+              </li>
+          </ul>
 
-        <!-- View project link -->
-        <a href="/projects/{{featuredProjectData.ProjectThree.ID}}" class="view-project">
-          projects &rarr;
-        </a>
-      </div>
+          <!-- View project link -->
+          <a href="/projects/{{featuredProjectData.ProjectThree.ID}}" class="view-project">
+            projects &rarr;
+          </a>
+        </div>
+        </div>
       </div>
     </div>
-  </div>
 
 
 
 
-</section>
+  </section>
 
+
+</main>

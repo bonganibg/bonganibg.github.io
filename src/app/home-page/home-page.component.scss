@@ -1,450 +1,518 @@
-$textColorOne: #444;
-$textColorTwo: #EEE;
+main{
+  width: 100vw;
+  overflow-x: hidden;
 
-.hero-section
-{
-  height: 100vh;
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 100%;
-  padding: 0px 10%;
-  background-color: #EEE;
+  $textColorOne: #444;
+  $textColorTwo: #EEE;
 
-  .hero-text
+  .hero-section
   {
-    grid-column: 1;
-    margin: auto 0px;
-    z-index: 1;
-
-    // Heading
-    .hero-heading{
-      font-size: 60px;
-      margin: 0px;
-      font-family: "Lato";
-      font-weight: 100;
-      letter-spacing: 10px;
-    }
-
-    // Information Text
-    .hero-about{
-      font-size: 18px;
-      font-family: "Nixie One";
-      width: 70%;
-      margin: 20px 20%;
-
-    }
-
-    // View projects link
-    a{
-      color: black  ;
-      font-size: 22px;
-      font-family: "Lato";
-    }
-  }
-
-
-  // Logo and social links
-  .hero-logo-links
-  {
-    grid-column: 2;
-    display: flex;
-    justify-content: end;
-
-    // Big circle
-    .hero-background-item{
-      height: 650px;
-      width: 650px;
-      background-color: #FFF;
-      border-radius: 50%;
-      margin: auto;
-      position: absolute;
-      top: 20%;
-      left: 40%;
-
-      box-shadow: rgba(182, 182, 182, 1) 0px 18px 50px -10px;
-    }
-
-    // Big Logo
-    .hero-logo-big{
-      z-index: 1;
-      width: 50%;
-      margin: auto;
-    }
-
-    // Social Media Links
-    .hero-social-links{
-      z-index: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      gap: 30px;
-      margin: auto 0px;
-
-      img{
-        height: 30px;
-        width: 30px;
-      }
-    }
-
-  }
-}
-
-
-// Skills section
-.skills-section
-{
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  margin: 0px 10%;
-  // Skills item
-  .skills{
+    height: 100vh;
     display: grid;
-    min-height: 50vh;
-    max-height: 80vh;
     grid-template-columns: 50% 50%;
     grid-template-rows: 100%;
+    padding: 0px 10%;
+    background-color: #EEE;
+    overflow-x: hidden;
 
-    // Skills image
-    .skill-image{
-      height: 100%;
-      width: 100%;
+    @media screen and (max-width: 890px) {
       display: flex;
-      justify-content: center;
-      align-items: center;
-      img{
-        width: 60%;
-
-      }
+      flex-direction: column-reverse;
     }
 
-
-    // Skills Text
-    .skill-information{
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
+    .hero-text
+    {
+      grid-column: 1;
       margin: auto 0px;
+      z-index: 1;
 
-      // Skill name
-      .skill-name{
-        font-size: 40px;
+      // Heading
+      .hero-heading{
+        font-size: 4em;
         margin: 0px;
         font-family: "Lato";
+        font-weight: 100;
         letter-spacing: 10px;
-        font-weight: 100;
-      }
-
-
-      // Skill description
-      .skill-description{
-        font-size: 18px;
-        font-family: "Lato";
-        font-weight: 100;
-        width: 80%;
-        margin: 5px 0px;
-      }
-
-
-      // Sub Sections
-      .headline{
-        font-size: 20px;
-        margin: 5px 0px;
-        font-family: "Nixie One";
-        color: #2C3333;
-      }
-
-      // Technologies List
-      .list-of-tools{
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        grid-gap: 1rem;
-        font-family: "Nixie one";
-      }
-    }
-  }
-
-
-  // Skills image on the left
-  .skills-left{
-    .skill-image{
-      grid-column: 1;
-      grid-row: 1;
-    }
-    .skill-information{
-      grid-column: 2;
-      grid-row: 1;
-    }
-  }
-
-  // Skills image on the right
-  .skills-right{
-    .skill-image{
-      grid-column: 2;
-      grid-row: 1;
-    }
-    .skill-information{
-      grid-column: 1;
-      grid-row: 1;
-
-    }
-  }
-}
-
-
-
-
-
-
-
-// Featured projectrs section
-.featured-projects
-{
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-
-  .featured-project:nth-child(2){
-    background: #ECE9E6;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-    h2{
-      color: $textColorOne;
-    }
-
-    p{
-      color: $textColorOne;
-    }
-
-    .project-image-container{
-      background-color: #444;
-    }
-  }
-
-
-  // Featured project
-  .featured-project{
-    height: 80vh;
-    margin-top: 20px;
-    background: #232526;  /* fallback for old browsers */
-    background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    display: grid;
-    grid-template-columns: 15% 70% 15%;
-    grid-template-rows: 15% 15% 70%;
-
-
-    .project-name{
-      grid-column: 2;
-      grid-row: 1;
-      text-align: center;
-      font-size: 2.5em;
-      font-family: "Lato";
-      font-weight: 100;
-      margin: auto 0px;
-      color: $textColorTwo;
-    }
-
-    .project-description{
-      grid-column: 2;
-      grid-row: 2;
-      text-align: center;
-      font-family: "Nixie One";
-      font-size: 1.5em;
-      margin: auto 0px;
-      color: $textColorTwo;
-    }
-
-    .project-image-container{
-      grid-column: 2;
-      grid-row: 3;
-      width: 100%;
-      height: 100%;
-      background-color: #FFF;
-      border-radius: 30px 30px 0px 0px;
-      overflow-y: hidden;
-      transition: all 0.5s ease-out;
-      position: relative;
-      display: inline-block;
-
-
-      img{
-        height: 100%;
-        width: 100%;
-        margin: 0px auto;
-        object-fit: scale-down;
-        transition: all 0.8s ease-out;
-      }
-
-      // Information about the project
-      .featured-project-information{
-        height: 100%;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        transition: all 0.5s ease-out;
-        transform: translateY(0);
-        background-color: $textColorTwo;
-
-
-        // Platform heading
-        .platform-heading{
-          grid-row: 1;
-          font-size: 1.5em;
-          font-family: "Lato";
-          font-weight: 200;
-          margin:  0px 10%;
+        @media screen and (max-width: 890px){
+          font-size: 3em;
         }
+      }
 
-        .details{
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      // Information Text
+      .hero-about{
+        font-size: 18px;
+        font-family: "Nixie One";
+        width: 70%;
+        margin: 20px 20%;
 
-          .featured-info{
-            margin: 0px auto;
-            width: 300px;
-            text-align: center;
+      }
+
+      // View projects link
+      a{
+        color: black  ;
+        font-size: 22px;
+        font-family: "Lato";
+      }
+    }
 
 
-            // Sub headings
-            .more-info-heading{
-              font-size: 1.2em;
-              font-family: "Lato";
-              font-weight: 200;
-            }
+    // Logo and social links
+    .hero-logo-links
+    {
+      grid-column: 2;
+      display: flex;
+      justify-content: end;
 
-            .featured-lists{
-
-            }
+      // Big circle
+      .hero-background-item{
+        height: 40rem;
+        width: 40rem;
+        margin: auto;
+        position: absolute;
+        top: 30%;
+        left: 45%;
+        svg{
+          height: 80%;
+          width: 80%;
+          @media screen and (max-width: 890px){
+            height: 0px;
+            width: 0px;
           }
         }
 
-        // Project links
-        .project-links{
+        @media screen and (max-width: 890px) {
+          visibility: hidden;
+          height: 0px;
+          width: 0px;
+        }
+      }
+
+      // Big Logo
+      .hero-logo-big{
+        z-index: 1;
+        width: 50%;
+        margin: auto;
+      }
+
+      // Social Media Links
+      .hero-social-links{
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 30px;
+        margin: auto 0px;
+
+        img{
+          height: 30px;
+          width: 30px;
+        }
+      }
+
+    }
+  }
+
+
+  // Skills section
+  .skills-section
+  {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 0px 10%;
+    // Skills item
+    .skills{
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-template-rows: 100%;
+
+      @media screen and (max-width: 890px){
+        display: flex;
+        flex-direction: column;
+      }
+      // Skills image
+      .skill-image{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+          width: 60%;
+          @media screen and (max-width: 890px)
+          {
+            margin: 0px auto;
+          }
+        }
+      }
+
+
+      // Skills Text
+      .skill-information{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin: auto 0px;
+
+
+        // Skill name
+        .skill-name{
+          font-size: 40px;
+          margin: 0px;
+          font-family: "Lato";
+          letter-spacing: 10px;
+          font-weight: 100;
+        }
+
+
+        // Skill description
+        .skill-description{
+          font-size: 18px;
+          font-family: "Lato";
+          font-weight: 100;
+          width: 80%;
+          margin: 5px 0px;
+        }
+
+
+        // Sub Sections
+        .headline{
+          font-size: 20px;
+          margin: 5px 0px;
+          font-family: "Nixie One";
+          color: #2C3333;
+        }
+
+        // Technologies List
+        .list-of-tools{
+
+          font-family: "Nixie one";
+        }
+      }
+    }
+
+
+    // Skills image on the left
+    .skills-left{
+      .skill-image{
+        grid-column: 1;
+        grid-row: 1;
+      }
+      .skill-information{
+        grid-column: 2;
+        grid-row: 1;
+      }
+
+
+    }
+
+    // Skills image on the right
+    .skills-right{
+      .skill-image{
+        grid-column: 2;
+        grid-row: 1;
+      }
+      .skill-information{
+        grid-column: 1;
+        grid-row: 1;
+
+      }
+    }
+  }
+
+
+
+
+
+
+
+  // Featured projectrs section
+  .featured-projects
+  {
+    display: flex;
+    flex-direction: column;
+
+    .featured-project:nth-child(2){
+      background: #ECE9E6;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+      h2{
+        color: $textColorOne;
+      }
+
+      p{
+        color: $textColorOne;
+      }
+
+      .project-image-container{
+        background-color: #444;
+      }
+    }
+
+
+    // Featured project
+    .featured-project{
+      height: 80vh;
+      margin-top: 20px;
+      background: #232526;  /* fallback for old browsers */
+      background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      display: grid;
+      grid-template-columns: 15% 70% 15%;
+      grid-template-rows: 15% 15% 70%;
+
+      @media screen and (max-width: 890px) {
+        grid-template-columns: auto 95% auto;
+        grid-template-rows: 15% 15% 70%;
+      }
+
+
+      .project-name{
+        grid-column: 2;
+        grid-row: 1;
+        text-align: center;
+        font-size: 2.5em;
+        font-family: "Lato";
+        font-weight: 100;
+        margin: auto 0px;
+        color: $textColorTwo;
+
+        @media screen and (max-width: 890px){
+          font-size: 2em;
+        }
+      }
+
+      .project-description{
+        grid-column: 2;
+        grid-row: 2;
+        text-align: center;
+        font-family: "Nixie One";
+        font-size: 1.5em;
+        margin: auto 0px;
+        color: $textColorTwo;
+
+        @media screen and (max-width: 890px){
+          font-size: 1em;
+        }
+      }
+
+
+      .project-image-container{
+        grid-column: 2;
+        grid-row: 3;
+        width: 100%;
+        height: 100%;
+        background-color: #FFF;
+        border-radius: 30px 30px 0px 0px;
+        overflow-y: hidden;
+        transition: all 0.5s ease-out;
+
+
+        img{
+          height: 100%;
+          width: 100%;
+          margin: 0px auto;
+          object-fit: scale-down;
+          transition: all 0.8s ease-out;
+        }
+
+        // Information about the project
+        .featured-project-information{
+          height: 100%;
+          width: 100%;
           display: flex;
-          justify-content: space-between;
-          margin: 0px 5%;
+          flex-direction: column;
+          justify-content: space-around;
+          transition: all 0.5s ease-out;
+          transform: translateY(0);
+          background-color: $textColorTwo;
 
-          // external Links
-          .external-links{
+
+          // Platform heading
+          .platform-heading{
+            grid-row: 1;
+            font-size: 1.5em;
+            font-family: "Lato";
+            font-weight: 200;
+            margin:  0px 10%;
+
+            @media screen and (max-width: 890px){
+              font-size: 1em;
+
+            }
+          }
+
+          .details{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+
+            .featured-info{
+              margin: 0px auto;
+              width: 240px;
+              text-align: center;
+
+
+              // Sub headings
+              .more-info-heading{
+                font-size: 1.2em;
+                font-family: "Nixie One";
+                font-weight: 200;
+
+                @media screen and (max-width: 890px){
+                  font-size: 1em;
+
+                }
+              }
+
+            }
+          }
+
+          // Project links
+          .project-links{
             display: flex;
-            gap: 20px;
-            li{
-              a{
-                .link{
-                  display: flex;
-                  gap: 10px;
-                  align-items: center;
-                  img{
-                    height: 30px;
-                    width: 30px;
-                  }
+            justify-content: space-between;
+            margin: 0px 5%;
 
-                  p{
-                    font-size: 1.1em;
-                    color: $textColorOne;
+            @media screen and (max-width: 890px) {
+              margin: 0px 0px;
+
+            }
+
+            // external Links
+            .external-links{
+              display: flex;
+              gap: 20px;
+              li{
+                a{
+                  .link{
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+                    img{
+                      height: 30px;
+                      width: 30px;
+                      @media screen and (max-width: 890px){
+                        height: 20px;
+                        width: 20px;
+                      }
+                    }
+
+                    p{
+                      font-size: 1.1em;
+                      color: $textColorOne;
+
+                      @media screen and (max-width: 890px){
+                        font-size: 0.5em;
+                      }
+                    }
                   }
                 }
               }
             }
-          }
 
 
-          .view-project{
-            font-size: 1.5em;
-            font-family: "Lato";
-            color: $textColorOne;
+            .view-project{
+              font-size: 1.5em;
+              font-family: "Lato";
+              color: $textColorOne;
+              @media screen and (max-width: 890px){
+                font-size: 0.8em;
+              }
+
+            }
           }
+
         }
-
       }
-    }
 
 
-    // On Card over
-    .project-image-container:hover {
 
-      // Bring the project information up
-      .featured-project-information{
-        transform: translateY(-100%);
+      // On Card over
+      .project-image-container:hover {
+
+        // Bring the project information up
+        .featured-project-information{
+          transform: translateY(-100%);
+        }
       }
-    }
 
+
+    }
 
   }
 
-}
 
 
 
 
 
-
-// Moving Text On Scroll
-.text-scrolling
-{
-  overflow: hidden;
-  h2{
-    font-size: 5em;
-    white-space: nowrap;
-    color: #f1f1f1;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 3px;
-  }
-
-  .scroll-left{
+  // Moving Text On Scroll
+  .text-scrolling
+  {
+    overflow: hidden;
     h2{
-      direction: rtl;
-      left: 100%
+      font-size: 5em;
+      white-space: nowrap;
+      color: #f1f1f1;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke: 3px;
+    }
+
+    .scroll-left{
+      h2{
+        direction: rtl;
+        left: 100%
+      }
     }
   }
-}
 
-// Featured project container
-.featured-projects-header
-{
-  margin-top: 30px;
-   height: 50vh;
-   width: 100%;
-   background: #ECE9E6;  /* fallback for old browsers */
-   background: linear-gradient(to left, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  // Featured project container
+  .featured-projects-header
+  {
+    margin-top: 30px;
+     height: 50vh;
+     background: #ECE9E6;  /* fallback for old browsers */
+     background: linear-gradient(to left, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-   display: flex;
-   justify-content: center;
-   align-items: center;
+     display: flex;
+     justify-content: center;
+     align-items: center;
 
-  // Heading and description
-  .featured-projects-content{
-    text-align: center;
+    // Heading and description
+    .featured-projects-content{
+      text-align: center;
 
-    .header-featured{
-      font-size: 2.5em;
-      margin: 0px;
-      font-family: "Lato";
-      font-weight: lighter;
-    }
+      .header-featured{
+        font-size: 2.5em;
+        margin: 0px;
+        font-family: "Lato";
+        font-weight: lighter;
+      }
 
-    .description-featured{
-      font-size: 1.3em;
-      margin: 10px 15%;
-      font-family: "Nixie One";
-    }
+      .description-featured{
+        font-size: 1.3em;
+        margin: 10px 15%;
+        font-family: "Nixie One";
+      }
 
-    .view-all-projects{
-      height: 40px;
-      width: 150px;
-      background-color: #444;
-      border-style: none;
-      color: #FFF;
-      font-family: "Nixie One";
+      .view-all-projects{
+        height: 40px;
+        width: 150px;
+        background-color: #444;
+        border-style: none;
+        color: #FFF;
+        font-family: "Nixie One";
+      }
+
+
     }
 
 
   }
 
 
+
+
+
+
 }
-
-
-

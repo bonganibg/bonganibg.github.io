@@ -44,7 +44,7 @@ export class ProjectService {
     ID: "etwertwertwert",
     Name: "Bonganibg.github.io",
     Image: ["/assets/mibo.svg"],
-    Description: {full: "link.md", summary: "Personal portfolio website for professional software engineer bongani brendon gumbo", overview: "So I guess this would be the section where I talk about why I wasted weeks of my life building a system which no one will ever care about and probably do nothing for me"},
+    Description: {full: "/assets/readme.md", summary: "Personal portfolio website for professional software engineer bongani brendon gumbo", overview: "So I guess this would be the section where I talk about why I wasted weeks of my life building a system which no one will ever care about and probably do nothing for me"},
     Client: "Bonganibg",
     Platforms: ["Web"],
     Technologies: ["Angular", "Firebase"],
