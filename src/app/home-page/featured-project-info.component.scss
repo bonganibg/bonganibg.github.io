@@ -1,0 +1,74 @@
+$textColorOne: #444;
+$textColorTwo: #EEE;
+.featured-project{
+  .featured-project-information{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    transition: all 0.5s ease-out;
+    transform: translateY(0);
+    background-color: $textColorTwo;
+    .platform-heading{
+      grid-row: 1;
+      font-size: 1.5em;
+      font-family: "Lato";
+      font-weight: 200;
+      margin:  0px 10%;
+    }
+    .details{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+
+      .featured-info{
+        margin: 0px auto;
+        width: 240px;
+        text-align: center;
+
+        .more-info-heading{
+          font-size: 1.2em;
+          font-family: "Nixie One";
+          font-weight: 200;
+        }
+
+      }
+    }
+    .project-links{
+      display: flex;
+      justify-content: space-between;
+      margin: 0px 5%;
+
+      // external Links
+      .external-links{
+        display: flex;
+        gap: 20px;
+        li{
+          a{
+            .link{
+              display: flex;
+              gap: 10px;
+              align-items: center;
+              img{
+                height: 30px;
+                width: 30px;
+              }
+
+              p{
+                font-size: 1.1em;
+                color: $textColorOne;
+              }
+            }
+          }
+        }
+      }
+      .view-project{
+        font-size: 1.5em;
+        font-family: "Lato";
+        color: $textColorOne;
+
+      }
+    }
+
+  }
+}

@@ -54,4 +54,4 @@ baseline.json
 .husky/_
 
 #Angular Cache
-.angular/cache
+.angular

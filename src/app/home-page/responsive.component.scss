@@ -1,0 +1,63 @@
+  .hero-section
+  {
+    @media screen and (max-width: 890px) {
+      display: flex;
+      flex-direction: column-reverse;}
+    .hero-text{
+      @media screen and (max-width: 890px){
+        font-size: 1em;}}
+    .hero-logo-links{
+      .hero-background-item{
+        svg{
+          @media screen and (max-width: 890px){
+            height: 0px;
+            width: 0px;}
+          @media screen and (max-width: 890px) {
+            visibility: hidden;
+            height: 0px;
+            width: 0px;}}}}}
+  .skills-section{
+    .skills{
+      @media screen and (max-width: 890px){
+        display: flex;
+        flex-direction: column;}
+    .skill-image{
+      img{
+        @media screen and (max-width: 890px){
+            margin: 0px auto;}}}}
+  .featured-projects{
+    .featured-project{
+      @media screen and (max-width: 890px) {
+        grid-template-columns: auto 95% auto;
+        grid-template-rows: 15% 15% 70%;}
+      .project-name{
+        @media screen and (max-width: 890px){
+          font-size: 2em;}}
+      .project-description{
+        @media screen and (max-width: 890px){
+          font-size: 1em;}}
+      .platform-heading{
+        @media screen and (max-width: 890px){
+          font-size: 1em;}}
+      .details{
+        .featured-info{
+          .more-info-heading{
+            @media screen and (max-width: 890px){
+              font-size: 1em;}}}}
+      .project-links{
+        @media screen and (max-width: 890px) {
+          margin: 0px 0px;}
+        .external-links{
+          li{
+            a{
+              .link{
+                img{
+                  @media screen and (max-width: 890px){
+                    height: 20px;
+                    width: 20px;}}
+                p{
+                  @media screen and (max-width: 890px){
+                    font-size: 0.5em;}}}}}}
+        .view-project{
+          @media screen and (max-width: 890px){
+            font-size: 0.8em;}}}}}}

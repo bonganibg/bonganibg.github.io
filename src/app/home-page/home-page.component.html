@@ -102,8 +102,8 @@
         </h2>
 
         <!-- Skills -->
-        <ul class="list-of-tools" *ngFor="let skill of skillsData.Design.Design.experience">
-          <li>
+        <ul class="list-of-tools" >
+          <li *ngFor="let skill of skillsData.Design.Design.experience">
             {{skill}}
           </li>
         </ul>
@@ -114,8 +114,8 @@
         </h2>
 
         <!-- Skills -->
-        <ul class="list-of-tools" *ngFor="let language of skillsData.Design.Implementation.languages">
-          <li>
+        <ul class="list-of-tools" >
+          <li *ngFor="let language of skillsData.Design.Implementation.languages">
             {{language}}
           </li>
         </ul>
@@ -126,8 +126,8 @@
         </h2>
 
         <!-- Skills -->
-        <ul class="list-of-tools" *ngFor="let framework of skillsData.Design.Implementation.frameworks">
-          <li>
+        <ul class="list-of-tools" >
+          <li *ngFor="let framework of skillsData.Design.Implementation.frameworks">
             {{framework}}
           </li>
         </ul>

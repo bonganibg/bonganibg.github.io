@@ -1,0 +1,64 @@
+
+  // Moving Text On Scroll
+  .text-scrolling
+  {
+    overflow: hidden;
+    h2{
+      font-size: 5em;
+      white-space: nowrap;
+      color: #f1f1f1;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke: 3px;
+    }
+
+    .scroll-left{
+      h2{
+        direction: rtl;
+        left: 100%
+      }
+    }
+  }
+
+  // Featured project container
+  .featured-projects-header
+  {
+    margin-top: 30px;
+     height: 50vh;
+     background: #ECE9E6;  /* fallback for old browsers */
+     background: linear-gradient(to left, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+     display: flex;
+     justify-content: center;
+     align-items: center;
+
+    // Heading and description
+    .featured-projects-content{
+      text-align: center;
+
+      .header-featured{
+        font-size: 2.5em;
+        margin: 0px;
+        font-family: "Lato";
+        font-weight: lighter;
+      }
+
+      .description-featured{
+        font-size: 1.3em;
+        margin: 10px 15%;
+        font-family: "Nixie One";
+      }
+
+      .view-all-projects{
+        height: 40px;
+        width: 150px;
+        background-color: #444;
+        border-style: none;
+        color: #FFF;
+        font-family: "Nixie One";
+      }
+
+
+    }
+
+
+  }

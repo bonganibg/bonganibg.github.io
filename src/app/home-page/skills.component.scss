@@ -1,0 +1,85 @@
+// Skills section
+.skills-section
+{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 0px 10%;
+  // Skills item
+  .skills{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+    // Skills image
+    .skill-image{
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img{
+        width: 60%;
+      }
+    }
+    // Skills Text
+    .skill-information{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      margin: auto 0px;
+      // Skill name
+      .skill-name{
+        font-size: 40px;
+        margin: 0px;
+        font-family: "Lato";
+        letter-spacing: 10px;
+        font-weight: 100;
+      }
+      // Skill description
+      .skill-description{
+        font-size: 18px;
+        font-family: "Lato";
+        font-weight: 100;
+        width: 80%;
+        margin: 5px 0px;
+      }
+      // Sub Sections
+      .headline{
+        font-size: 20px;
+        margin: 5px 0px;
+        font-family: "Nixie One";
+        color: #2C3333;
+      }
+      // Technologies List
+      .list-of-tools{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        align-items: center;
+        font-family: "Nixie one";
+      }
+    }
+  }
+  // Skills image on the left
+  .skills-left{
+    .skill-image{
+      grid-column: 1;
+      grid-row: 1;
+    }
+    .skill-information{
+      grid-column: 2;
+      grid-row: 1;
+    }
+  }
+  // Skills image on the right
+  .skills-right{
+    .skill-image{
+      grid-column: 2;
+      grid-row: 1;
+    }
+    .skill-information{
+      grid-column: 1;
+      grid-row: 1;
+
+    }
+  }
+}
