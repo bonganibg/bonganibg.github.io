@@ -22,22 +22,22 @@ export class HomepageService
 
   dummySkills: Skills = {Design: {
     Heading: "Frontend",
-    Image: "/assets/images/design.jpg",
+    Image: "https://cdn-icons-png.flaticon.com/512/681/681662.png",
     Description: "I really love design so much, like a really really lot and i always try and make everything i make look beautiful becuase without beauty there is ugliness and if ther is ugliness there is not beauty",
     Design: {headline: "Design Tasks", experience: ["UI Mockups", "Photo Editing", "Logo Design"], tools: ["Figma, GIMP"]},
     Implementation: {headline: "Implementation", languages: ["HTML", "CSS", "SCSS", "XML", "XAML"], frameworks: ["Angular", "Bootstrap", "WPF", "WinForms"]}
   },
   Programming: {
     Heading: "Programming",
-    Image: "/assets/images/programming.jpg",
+    Image: "https://cdn-icons-png.flaticon.com/512/1197/1197460.png",
     Description: "Programming is what I do, I love writing code, and code is loved to be written by me, it's just the way that it is, how did i find myself to be so pittyful, I'm alon, im miserable",
     Languages: {headline: "Languages", languages: ["C#", "Java", "JavaScript", "TypeScript", "Delphi"]},
     Frameworks: {headline: "Frameworks", frameworks: [".Net Core", ".Net Framework", "ASP.NET", "Node", "Express"]}
   },
   Database: {
     Heading: "Databases",
-    Image: "/assets/images/database.jpg",
-    Description: "Data is everywhere and that is a very scary thing knowing that there is a lot of information just floating there in nothingness but as a developer it i obvious that it is not floating in thin are where a bird can eat it, so i have equiped myself with skills beyond those of a mortal to be able to manipulate the transporation of data",
+    Image: "https://cdn-icons-png.flaticon.com/512/2906/2906206.png",
+    Description: "nothingness but as a developer it i obvious that it is not floating in thin are where a bird can eat it, so i have equiped myself with skills beyond those of a mortal to be able to manipulate the transporation of data",
     Languages: {headline: "Languages", languages: ["SQL", "T-SQL","NoSQL","JSON","Spreadsheet"]},
     Software: {headline: "Software and Tools", systems: ["MS SQL Server", "ORACLE SQL", "MS Access", "Postman", "MonogCompass"]},
     Cloud: {headline: "Cloud Services", platforms: ["Azure","Firebase","MongoDB"]}

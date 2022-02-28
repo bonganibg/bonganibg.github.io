@@ -1,23 +1,4 @@
 
-  // Moving Text On Scroll
-  .text-scrolling
-  {
-    overflow: hidden;
-    h2{
-      font-size: 5em;
-      white-space: nowrap;
-      color: #f1f1f1;
-      -webkit-text-fill-color: transparent;
-      -webkit-text-stroke: 3px;
-    }
-
-    .scroll-left{
-      h2{
-        direction: rtl;
-        left: 100%
-      }
-    }
-  }
 
   // Featured project container
   .featured-projects-header

@@ -10,6 +10,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { AppRoutingModule } from './app-routing.module';
 import { MyProjectsComponent } from './my-projects/my-projects.component';
+import { SkillsComponent } from './skills/skills.component';
+import { FeaturedProjectsComponent } from './featured-projects/featured-projects.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { MyProjectsComponent } from './my-projects/my-projects.component';
     NavBarComponent,
     ProjectInfoPageComponent,
     AboutMeComponent,
-    MyProjectsComponent
+    MyProjectsComponent,
+    SkillsComponent,
+    FeaturedProjectsComponent
   ],
   imports: [
     BrowserModule,

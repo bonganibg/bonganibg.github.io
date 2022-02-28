@@ -31,8 +31,7 @@ export class HomePageComponent implements OnInit {
 
     // Load the list of projects
 
-    // Load the skills information
-    this.skillsData = this.homeService.getSkillsInformation();
+
 
   }
 
@@ -56,14 +55,6 @@ export class HomePageComponent implements OnInit {
 
       var circleRate = scrolled * 0.15;
       circle.style.transform = `translate3d(1px, ${circleRate}px, 0px)`;
-
-      // Skills letter Scrolling
-      const left = document.querySelector('.scroll-left') as HTMLScriptElement;
-      const right = document.querySelector('.scroll-right') as HTMLScriptElement;
-
-      var textRate = scrolled * 0.5;
-      left.style.transform = `translate3d(${textRate}px, 0px, 0px)`;
-      right.style.transform = `translate3d(-${textRate}px, 0px, 0px)`;
 
     })
   }
