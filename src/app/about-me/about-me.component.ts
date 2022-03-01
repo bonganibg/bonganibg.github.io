@@ -12,8 +12,11 @@ export class AboutMeComponent implements OnInit {
   constructor(private aboutService: AboutService) { }
 
 
-  aboutMe!: AboutMe[];
-  ngOnInit(): void {
+  aboutMe!: AboutMe;
+  async ngOnInit() {
+
+    await this.aboutService.loadAboutMe();
+
     this.aboutMe = this.aboutService.getAboutMe();
   }
 

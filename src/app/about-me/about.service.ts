@@ -25,21 +25,24 @@ export class AboutService {
 
   constructor() { }
 
-  aboutMe!: AboutMe[];
+  aboutMe!: AboutMe;
+
+
+  getAboutMe()
+  {
+    return this.aboutMe;
+  }
 
   // Get the about me
-  getAboutMe()
+  async loadAboutMe()
   {
     // About ref
     let aboutRef = ref(database, 'About');
 
-    get(aboutRef).then((snapshot) =>{
+    await get(aboutRef).then((snapshot) =>{
       let data = snapshot.val();
-      console.log(data);
+      this.aboutMe = data;
     });
-
-
-    return this.aboutMe;
   }
 
 
