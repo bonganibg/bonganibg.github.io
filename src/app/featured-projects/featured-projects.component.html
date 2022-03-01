@@ -1,1 +1,72 @@
-<p>featured-projects works!</p>
+<section class="featured-projects-container">
+  <!-- Featured Projects -->
+  <section class="featured-projects">
+    <!-- List of projects -->
+    <ul class="list-projects">
+      <!-- Project Item -->
+      <li class="project-item" *ngFor="let project of projects">
+        <div class="project" style="height: 100%;">
+          <!-- Image container -->
+          <div class="image-container" style="display: flex; justify-content: center; align-items: center;">
+            <img src="/assets/mibo.svg" alt="">
+          </div>
+          <!-- Content -->
+          <div class="project-content">
+            <div class="text-content">
+              <!-- Client -->
+              <p class="client">
+                Personal
+              </p>
+              <!-- name -->
+              <h2 class="name">
+                {{project}}
+              </h2>
+              <!-- Platform -->
+              <ul class="list-platforms">
+                <li class="platform">
+                  <p>Web</p>
+                </li>
+              </ul>
+              <!-- Project Description -->
+              <p class="description">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus beatae hic error possimus, consequatur sint natus porro facere, velit nemo minus aliquid autem tenetur exercitationem sequi voluptatibus incidunt doloribus! Sit!
+              </p>
+              <!-- Technologies Used -->
+              <ul class="list-technologies">
+                <li class="technologies">
+                  <img src="/assets/logos/github.svg" alt="">
+                </li>
+
+              </ul>
+            </div>
+
+            <!-- External Links -->
+            <div class="links" style="">
+              <!-- Code and LIve -->
+              <div class="code-and-live" style="display: flex; gap: 5px;">
+                <a href="" style="width: auto;">
+                  <div class="ext-link">
+                    <p class="link-name">Github</p>
+                  </div>
+                </a>
+                <a href="">
+                  <div class="ext-link">
+                    <p class="link-name">Live</p>
+                  </div>
+                </a>
+              </div>
+
+              <!-- View project -->
+              <a href="/projects" class="view-projects">
+                projects &rarr;
+              </a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <div style="height: 30px;"></div>
+    </ul>
+
+  </section>
+
+</section>
