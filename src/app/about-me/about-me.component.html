@@ -1,46 +1,19 @@
-<main>
+<section class="about-me-container">
 
-  <section class="about-me-page-container" *ngFor="let about of aboutMe">
+  <section class="about-me">
+    <h2 class="heading">
+      About Me
+    </h2>
+    <hr>
+    <p class="content">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas, quaerat repellendus! Dolores error harum provident deleniti? Quasi eius, laborum neque ad commodi voluptas exercitationem corrupti pariatur quos libero ratione consequatur.
+      <br>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid reprehenderit beatae voluptates aliquam minima minus nesciunt mollitia cum, maiores, asperiores obcaecati, quas quisquam. Voluptate quas ipsum, voluptas est possimus deleniti. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid reprehenderit beatae voluptates aliquam minima minus nesciunt mollitia cum, maiores, asperiores obcaecati, quas quisquam. Voluptate quas ipsum, voluptas est possimus deleniti.
+    </p>
+  </section>
 
-    <!-- Section heading -->
-    <div class="section-container">
-      <h2 class="about-heading">
-        {{about.About.heading}}
-      </h2>
-
-
-      <!-- About me lists -->
-      <ul class="about-me-section" *ngFor="let info of about.About.sections">
-        <!-- INDI ITEM -->
-        <li>
-          <div class="about-me-container">
-            <!-- Line on the side of the list item -->
-            <div class="line">
-              <p>
-                &#9899;
-              </p>
-            </div>
-
-            <!-- Text Content -->
-              <div class="text-content">
-                <!-- Section Header -->
-                <h3 class="section-header">
-                  {{info.Heading}}
-                </h3>
-
-                <!-- Information -->
-                <p class="information">
-                  {{info.Content}}
-                </p>
-              </div>
-          </div>
-        </li>
-      </ul>
-
-    </div>
-
+  <section class="timeline-container">
 
   </section>
 
-
-</main>
+</section>
