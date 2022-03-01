@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { getAnalytics } from 'firebase/analytics';
 import { initializeApp } from 'firebase/app';
-import { getDatabase } from 'firebase/database';
+import { getDatabase, get, ref } from 'firebase/database';
 import { Project } from '../models/project.model';
 
 const firebaseConfig = {
@@ -25,16 +25,21 @@ export class ProjectService {
 
   constructor() { }
 
+  projects!: Project[];
 
   // Get All of the projects
   getProjects()
   {
-
+    return this.projects;
   }
 
-  // Get Single Project
-  getProject(projectID: String)
+  async loadProjects()
   {
+    let projectRef = ref(database, 'Projects');
 
+    await get(projectRef).then((snap) =>{
+      let data = snap.val();
+      this.projects = data;
+    });
   }
 }

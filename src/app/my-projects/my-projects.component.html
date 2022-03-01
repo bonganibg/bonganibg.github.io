@@ -38,7 +38,7 @@
                 <!-- Github and live Links -->
                 <div class="external-links">
                   <!-- Github lnk -->
-                  <a href="{{project.Github.link}}"  *ngIf="project.Github.available">
+                  <a href="{{project.Github.link}}"  *ngIf="project.Github.available" target="_blank">
                     <div class="ext-link">
                       <h3 class="link-name">
                         Github
@@ -47,7 +47,7 @@
                   </a>
 
                   <!-- live Link -->
-                  <a href="{{project.Live.link}}" *ngIf="project.Live.available">
+                  <a href="{{project.Live.link}}" *ngIf="project.Live.available" target="_blank">
                     <div class="ext-link">
                       <h3 class="link-name">
                         Live
@@ -58,8 +58,7 @@
                 </div>
 
                 <!-- View Project Link -->
-                <a  [routerLink]="['/proj']"
-                    [queryParams]="{id: project.ID}">
+                <a  href="{{project.Blog}}" target="_blank">
                   <h3 class="view-project">
                     view project &rarr;
                   </h3>

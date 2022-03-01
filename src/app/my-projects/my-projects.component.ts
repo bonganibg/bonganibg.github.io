@@ -13,8 +13,11 @@ export class MyProjectsComponent implements OnInit {
 
   projects!: Project[];
 
-  ngOnInit(): void
+  async ngOnInit()
   {
+    await this.projectService.loadProjects();
+
+    this.projects = this.projectService.getProjects();
   }
 
 }
