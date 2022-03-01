@@ -12,6 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { MyProjectsComponent } from './my-projects/my-projects.component';
 import { SkillsComponent } from './skills/skills.component';
 import { FeaturedProjectsComponent } from './featured-projects/featured-projects.component';
+import { ContactMeComponent } from './contact-me/contact-me.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FeaturedProjectsComponent } from './featured-projects/featured-projects
     AboutMeComponent,
     MyProjectsComponent,
     SkillsComponent,
-    FeaturedProjectsComponent
+    FeaturedProjectsComponent,
+    ContactMeComponent
   ],
   imports: [
     BrowserModule,

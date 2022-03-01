@@ -1,5 +1,4 @@
 main{
-  width: 100vw;
   overflow-x: hidden;
 
   $textColorOne: #444;
@@ -14,12 +13,17 @@ main{
     padding: 0px 10%;
     background-color: #f8f9fa;
     overflow-x: hidden;
+    @media screen and (max-width: 890px) {
+      display: flex;
+      flex-direction: column-reverse;}
     .hero-text
     {
       grid-column: 1;
       margin: auto 0px;
       z-index: 1;
-
+      @media screen and (max-width: 890px){
+        font-size: 0.7em;
+      }
       // Heading
       .hero-heading{
         font-size: 4em;
@@ -28,16 +32,17 @@ main{
         font-weight: 100;
         letter-spacing: 10px;
       }
-
       // Information Text
       .hero-about{
         font-size: 18px;
         font-family: "Nixie One";
         width: 70%;
         margin: 20px 20%;
+        @media screen and (max-width: 890px){
+          font-size: 1.2em;
+        }
 
       }
-
       // View projects link
       a{
         color: black  ;
@@ -62,9 +67,19 @@ main{
         position: absolute;
         top: 30%;
         left: 45%;
+        @media screen and (max-width: 890px){
+          height: 0px;
+          width: 0px;
+        }
         svg{
           height: 80%;
           width: 80%;
+
+          @media screen and (max-width: 890px) {
+            visibility: hidden;
+            height: 0px;
+            width: 0px;
+          }
         }
       }
 
@@ -92,4 +107,48 @@ main{
 
     }
   }
+}
+
+// Featured project container
+.featured-projects-header
+{
+  margin-top: 30px;
+   height: 50vh;
+   background: #6c757d;  /* fallback for old browsers */
+
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+  // Heading and description
+  .featured-projects-content{
+    text-align: center;
+
+    .header-featured{
+      font-size: 2.5em;
+      margin: 0px;
+      font-family: "Lato";
+      font-weight: lighter;
+    }
+
+    .description-featured{
+      font-size: 1.3em;
+      margin: 10px 15%;
+      font-family: "Nixie One";
+    }
+
+    .view-all-projects{
+      height: 40px;
+      width: 150px;
+      background-color: #444;
+      border-style: none;
+      color: #FFF;
+      font-family: "Nixie One";
+    }
+
+
+  }
+
+
 }
