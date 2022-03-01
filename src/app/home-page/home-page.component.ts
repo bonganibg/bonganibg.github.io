@@ -22,10 +22,10 @@ export class HomePageComponent implements OnInit {
 
   ngOnInit(): void {
     // Load the header information
-    this.headerData = this.homeService.getHeadingInformation();
+    this.homeService.loadHeader();
 
     // Load the featured project information
-    this.featuredProjectData = this.homeService.getFeaturedProjects();
+
 
     // Load the list of projects
 

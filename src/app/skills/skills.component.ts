@@ -16,7 +16,7 @@ export class SkillsComponent implements OnInit {
     this.parallaxScrollingEffect();
 
     // Load the skills information
-    this.skillsData = this.homeService.getSkillsInformation();
+
   }
 
 

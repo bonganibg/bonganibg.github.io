@@ -15,21 +15,21 @@
             <div class="text-content">
               <!-- Client -->
               <p class="client">
-                Personal
+                {{project.Client}}
               </p>
               <!-- name -->
               <h2 class="name">
-                {{project}}
+                {{project.Name}}
               </h2>
               <!-- Platform -->
               <ul class="list-platforms">
-                <li class="platform">
-                  <p>Web</p>
+                <li class="platform" *ngFor="let platform of project.Platforms">
+                  <p> {{platform}} </p>
                 </li>
               </ul>
               <!-- Project Description -->
               <p class="description">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus beatae hic error possimus, consequatur sint natus porro facere, velit nemo minus aliquid autem tenetur exercitationem sequi voluptatibus incidunt doloribus! Sit!
+                {{project.Description}}
               </p>
               <!-- Technologies Used -->
               <ul class="list-technologies">
@@ -41,15 +41,15 @@
             </div>
 
             <!-- External Links -->
-            <div class="links" style="">
+            <div class="links">
               <!-- Code and LIve -->
               <div class="code-and-live" style="display: flex; gap: 5px;">
-                <a href="" style="width: auto;">
+                <a href="" style="width: auto;" *ngIf="project.Github.available">
                   <div class="ext-link">
                     <p class="link-name">Github</p>
                   </div>
                 </a>
-                <a href="">
+                <a href="" *ngIf="project.Live.available">
                   <div class="ext-link">
                     <p class="link-name">Live</p>
                   </div>
@@ -57,7 +57,7 @@
               </div>
 
               <!-- View project -->
-              <a href="/projects" class="view-projects">
+              <a href="{{project.Blog}}" class="view-projects" target="_blank">
                 projects &rarr;
               </a>
             </div>

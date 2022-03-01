@@ -1,6 +1,7 @@
-import { AboutSection } from "./about-section.model";
+import { Timeline } from "./timeline.model";
 
 export interface AboutMe
 {
-  About: {heading: string, sections: AboutSection[]}
+  AboutMe: string,
+  Timeline: Timeline[]
 }

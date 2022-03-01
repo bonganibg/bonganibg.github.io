@@ -23,6 +23,5 @@ export class ProjectInfoPageComponent implements OnInit {
     });
 
 
-    this.project = this.projectService.getProject(id);
   }
 }
