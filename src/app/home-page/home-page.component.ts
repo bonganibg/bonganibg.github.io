@@ -2,6 +2,7 @@ import { style } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { FeaturedProjects } from '../models/featured.model';
 import { Heading } from '../models/header.model';
+import { Project } from '../models/project.model';
 import { Skills } from '../models/skills.model';
 import { HomepageService } from './homepage.service';
 
@@ -16,21 +17,27 @@ export class HomePageComponent implements OnInit {
    this.parallaxFunction();
   }
 
-  featuredProjectData!: FeaturedProjects;
   headerData!: Heading;
   skillsData!:  Skills;
+  projects!: Project[];
 
-  ngOnInit(): void {
+  async ngOnInit() {
     // Load the header information
-    this.homeService.loadHeader();
+    await this.homeService.loadInformation();
 
-    // Load the featured project information
+    //Load Heading stuff
+    this.headerData = this.homeService.getHeader();
+
+    // Load Skills
+    this.skillsData = this.homeService.getSkills();
+
+    // Load Featured Projects
+    this.projects = this.homeService.getFeatured();
 
 
-    // Load the list of projects
 
 
-
+    console.log(this.projects)
   }
 
 

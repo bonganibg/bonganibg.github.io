@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { HomepageService } from '../home-page/homepage.service';
 import { FeaturedProjects } from '../models/featured.model';
 import { Project } from '../models/project.model';
@@ -10,14 +10,14 @@ import { Project } from '../models/project.model';
 })
 export class FeaturedProjectsComponent implements OnInit {
 
-  constructor(private homeService: HomepageService) { }
+  @Input() projects!: Project[];
 
-  projects!: Project[];
+  constructor() { }
+
 
   featuredProjectData!: FeaturedProjects;
 
   ngOnInit(): void {
-    // Load the featured project information
 
   }
 

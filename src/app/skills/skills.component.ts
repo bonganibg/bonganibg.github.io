@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { HomepageService } from '../home-page/homepage.service';
 import { Skills } from '../models/skills.model';
 
@@ -9,13 +9,12 @@ import { Skills } from '../models/skills.model';
 })
 export class SkillsComponent implements OnInit {
 
-  constructor(private homeService: HomepageService) { }
+  @Input() skillsData!: Skills;
 
-  skillsData!:  Skills;
+  constructor() { }
+
   ngOnInit(): void {
     this.parallaxScrollingEffect();
-
-    // Load the skills information
 
   }
 
