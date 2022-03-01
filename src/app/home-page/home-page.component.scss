@@ -114,13 +114,12 @@ main{
 {
   margin-top: 30px;
    height: 50vh;
-   background: #6c757d;  /* fallback for old browsers */
-
-
+   background: #495057;
    display: flex;
    justify-content: center;
    align-items: center;
 
+   color: #adb5bd;
   // Heading and description
   .featured-projects-content{
     text-align: center;
