@@ -15,7 +15,9 @@ main{
     overflow-x: hidden;
     @media screen and (max-width: 890px) {
       display: flex;
-      flex-direction: column-reverse;}
+      flex-direction: column-reverse;
+      margin-top: 8vh;
+    }
     .hero-text
     {
       grid-column: 1;

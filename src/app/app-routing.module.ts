@@ -8,8 +8,7 @@ import { ProjectInfoPageComponent } from "./project-info-page/project-info-page.
 const routes: Routes = [
   {path: '', component:HomePageComponent},
   {path: 'about', component:AboutMeComponent},
-  {path: 'projects', component:MyProjectsComponent},
-  {path: 'proj', component:ProjectInfoPageComponent}
+  {path: 'projects', component:MyProjectsComponent}
 ];
 
 @NgModule({

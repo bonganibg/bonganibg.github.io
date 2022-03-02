@@ -6,16 +6,19 @@
       <h2>Contact Me</h2>
     </div>
 
-    <form action="" class="contact-form">
+    <form class="contact-form" #sendMessage="ngForm" novalidate>
       <div class="inputs">
         <!-- Name -->
-        <input type="text" class="text" placeholder="Name">
+        <input required type="text" pattern="^[a-zA-Z0=9\s-]+$"
+        ngmodel name="inputName" placeholder="Name" maxlength="30"  class="text"
+        >
         <!-- Email -->
-        <input type="text" class="text" placeholder="Email">
+        <input required type="text" pattern="^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$"
+        ngModel name="inputEmail" maxlength="60" class="text" placeholder="Email" >
         <!-- Message -->
-        <input type="text" class="message" placeholder="Message">
+        <textarea name="inputMessage" pattern="^[a-zA-Z0=9\s-]+$" placeholder="Message" class="message" cols="30" rows="10"></textarea>
       </div>
-      <button class="submit">
+      <button class="button-sub" type="button" (click)="getFormInfo(sendMessage)">
         <img src="https://cdn-icons-png.flaticon.com/512/545/545682.png" alt="">
       </button>
     </form>
@@ -32,18 +35,18 @@
     <div class="socials">
       <ul>
         <li>
-          <a href="">
+          <a href="http://www.linkedin.com/in/bongani-gumbo-85021222a" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/220/220343.png" alt="">
+          </a>
+        </li>
+        <li>
+          <a href="http://www.github.com/bonganibg" target="_blank">
             <img src="/assets/logos/github.svg" alt="">
           </a>
         </li>
         <li>
-          <a href="">
-            <img src="/assets/logos/github.svg" alt="">
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <img src="/assets/logos/github.svg" alt="">
+          <a href="http://www.instagram.com/bonganibg" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/1077/1077042.png" alt="">
           </a>
         </li>
       </ul>

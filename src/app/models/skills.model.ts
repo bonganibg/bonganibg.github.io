@@ -5,7 +5,7 @@ export interface Skills
     Image: string,
     Description: string,
     Design: {headline: string, experience: string[], tools: string[]},
-    Implementation: {headline: string, languages: string[], frameworks: string[]}
+    Implementation: {headline: string, languages: string[], Frameworks: string[]}
   },
 
   Programming: {

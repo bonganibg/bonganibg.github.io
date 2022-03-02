@@ -14,6 +14,7 @@ import { SkillsComponent } from './skills/skills.component';
 import { FeaturedProjectsComponent } from './featured-projects/featured-projects.component';
 import { ContactMeComponent } from './contact-me/contact-me.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { FooterComponent } from './components/footer/footer.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     MarkdownModule,
     HttpClientModule,
     MarkdownModule.forRoot({loader: HttpClient}),
