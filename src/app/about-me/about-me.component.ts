@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { AboutMe } from '../models/about.model';
 import { AboutService } from './about.service';
 
@@ -9,11 +10,13 @@ import { AboutService } from './about.service';
 })
 export class AboutMeComponent implements OnInit {
 
-  constructor(private aboutService: AboutService) { }
+  constructor(private aboutService: AboutService,
+              private route: ActivatedRoute) { }
 
 
   aboutMe!: AboutMe;
   async ngOnInit() {
+    this.route.data.subscribe();
 
     await this.aboutService.loadAboutMe();
 

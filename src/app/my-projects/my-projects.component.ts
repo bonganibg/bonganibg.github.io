@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Project } from '../models/project.model';
 import { ProjectService } from './project.service';
 
@@ -9,12 +10,14 @@ import { ProjectService } from './project.service';
 })
 export class MyProjectsComponent implements OnInit {
 
-  constructor(private projectService: ProjectService) { }
+  constructor(private projectService: ProjectService,
+              private route: ActivatedRoute) { }
 
   projects!: Project[];
 
   async ngOnInit()
   {
+    this.route.data.subscribe();
     await this.projectService.loadProjects();
 
     this.projects = this.projectService.getProjects();
