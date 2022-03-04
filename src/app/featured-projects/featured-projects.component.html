@@ -28,15 +28,14 @@
                 </li>
               </ul>
               <!-- Project Description -->
-              <p class="description">
+              <p class="description" [innerHTML]="project.Description">
                 {{project.Description}}
               </p>
               <!-- Technologies Used -->
               <ul class="list-technologies">
-                <li class="technologies">
-                  <img src={{project.Technologies}} alt="">
+                <li class="technologies" *ngFor="let tech of project.Technologies">
+                  <img src={{tech}} alt="">
                 </li>
-
               </ul>
             </div>
 
@@ -58,7 +57,7 @@
 
               <!-- View project -->
               <a href="{{project.Blog}}" class="view-projects" target="_blank">
-                projects &rarr;
+                project blog &rarr;
               </a>
             </div>
           </div>

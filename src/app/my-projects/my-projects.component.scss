@@ -44,7 +44,7 @@ main
           display: flex;
           justify-content: center;
           margin: 0px auto;
-          height: 500px;
+          min-height: 500px;
           width: 350px;
           @media only screen and (max-width: 614px) {
               width: 385px;
@@ -60,7 +60,7 @@ main
     height: 100%;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 50% auto auto;
+    grid-template-rows: 50% auto auto 50px;
     background-color: #FFF;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     @media only screen and (max-width: 614px) {
@@ -132,6 +132,19 @@ main
           font-family: "Nixie One";
           font-size: 1em;
           color: #444;
+        }
+      }
+    }
+
+    .list-technologies{
+      display: flex;
+      height: 50px;
+      gap: 5px;
+      justify-content: start;
+      .technologies{
+        img{
+          height: 30px;
+          width: 30px;
         }
       }
     }

@@ -27,7 +27,7 @@
                 </h3>
 
                 <!-- Project Summary -->
-                <p class="summary">
+                <p class="summary" [innerHTML]="project.Description">
                   {{project.Description}}
                 </p>
               </div>
@@ -60,10 +60,16 @@
                 <!-- View Project Link -->
                 <a  href="{{project.Blog}}" target="_blank">
                   <h3 class="view-project">
-                    view project &rarr;
+                    project blog &rarr;
                   </h3>
                 </a>
               </div>
+
+              <ul class="list-technologies" >
+                <li class="technologies" *ngFor="let tech of project.Technologies">
+                  <img src={{tech}} alt="">
+                </li>
+              </ul>
             </div>
           </li>
         </ul>
