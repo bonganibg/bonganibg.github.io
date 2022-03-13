@@ -19,9 +19,11 @@ export class FooterComponent implements OnInit {
   }
 
   getFormInfo(form: NgForm){
+
+    alert(form)
+    console.log();
     if (form.invalid)
     {
-      alert("Message not sent");
       return;
     }
     else
