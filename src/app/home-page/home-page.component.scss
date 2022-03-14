@@ -4,6 +4,18 @@ main{
   $textColorOne: #444;
   $textColorTwo: #EEE;
 
+  @keyframes transitionIn {
+    from{
+      opacity: 0;
+      transform: rotateX(-10deg);
+    }
+
+    to {
+      opacity: 1;
+      transform: rotateX(0);
+    }
+  }
+
   .hero-section
   {
     height: 100vh;
@@ -60,6 +72,7 @@ main{
       grid-column: 2;
       display: flex;
       justify-content: end;
+
 
       // Big circle
       .hero-background-item{

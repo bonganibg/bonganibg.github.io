@@ -14,20 +14,22 @@
           <!-- List item -->
           <li *ngFor="let project of projects">
             <div class="project">
-
-              <!-- Project image -->
-              <img src={{project.Image[0]}} alt="">
+              <div class="image-container">
+                <app-selection-loader *ngIf="!loaded" cWidth="250" cHegiht="200"></app-selection-loader>
+                <!-- Project image -->
+                <img *ngIf="loaded" src={{project.Image[0]}} alt="project">
+              </div>
 
               <!-- Name and description -->
               <div class="project-information">
-
+                <app-selection-loader *ngIf="!loaded" cWidth="300" cHegiht="50"></app-selection-loader>
                 <!-- Name -->
-                <h3 class="name">
-                  <!-- {{project.Name}} -->
+                <h3 *ngIf="loaded" class="name">
+                  {{project.Name}}
                 </h3>
 
                 <!-- Project Summary -->
-                <p class="summary" [innerHTML]="project.Description">
+                <p *ngIf="loaded" class="summary" [innerHTML]="project.Description">
                   {{project.Description}}
                 </p>
               </div>
@@ -58,7 +60,7 @@
                 </div>
 
                 <!-- View Project Link -->
-                <a  href="{{project.Blog}}" target="_blank">
+                <a *ngIf="loaded" href="{{project.Blog}}" target="_blank">
                   <h3 class="view-project">
                     project blog &rarr;
                   </h3>

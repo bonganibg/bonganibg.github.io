@@ -15,6 +15,9 @@ import { FeaturedProjectsComponent } from './featured-projects/featured-projects
 import { ContactMeComponent } from './contact-me/contact-me.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { FormsModule } from '@angular/forms';
+import { LoadingComponent } from './components/loading/loading.component';
+import { SelectionLoaderModule } from './components/selection-loader/selection-loader.module';
+
 
 @NgModule({
   declarations: [
@@ -27,7 +30,8 @@ import { FormsModule } from '@angular/forms';
     SkillsComponent,
     FeaturedProjectsComponent,
     ContactMeComponent,
-    FooterComponent
+    FooterComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +39,8 @@ import { FormsModule } from '@angular/forms';
     MarkdownModule,
     HttpClientModule,
     MarkdownModule.forRoot({loader: HttpClient}),
-    AppRoutingModule
+    AppRoutingModule,
+    SelectionLoaderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

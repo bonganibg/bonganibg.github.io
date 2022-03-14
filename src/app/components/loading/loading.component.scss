@@ -1,0 +1,23 @@
+.loading-container{
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .loader{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    img{
+      height: 150px;
+      width: 150px;
+    }
+    p{
+      font-family: 'Nixie One';
+      font-size: 1.5em;
+    }
+  }
+}

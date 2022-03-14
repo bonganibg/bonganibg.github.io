@@ -4,6 +4,7 @@ import { FeaturedProjects } from '../models/featured.model';
 import { Heading } from '../models/header.model';
 import { Project } from '../models/project.model';
 import { Skills } from '../models/skills.model';
+import { PublicService } from '../public.service';
 import { HomepageService } from './homepage.service';
 
 @Component({
@@ -16,6 +17,8 @@ export class HomePageComponent implements OnInit {
   constructor(private homeService: HomepageService) {
    this.parallaxFunction();
   }
+
+  loading = PublicService.loading;
 
   headerData!: Heading;
   skillsData!:  Skills;
