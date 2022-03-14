@@ -4,6 +4,7 @@ import { FeaturedProjects } from '../models/featured.model';
 import { Heading } from '../models/header.model';
 import { Project } from '../models/project.model';
 import { Skills } from '../models/skills.model';
+import { ViewingStat } from '../models/stat.model';
 import { PublicService } from '../public.service';
 import { HomepageService } from './homepage.service';
 
@@ -28,6 +29,15 @@ export class HomePageComponent implements OnInit {
     // Load the header information
     await this.homeService.loadInformation();
 
+    let stat: ViewingStat = {
+      Date: new Date(),
+      Message: "Viewing Homepafe",
+      Page: "Home",
+      Time: new Date().getUTCDay().toString()
+    }
+
+    PublicService.WriteStat(stat);
+
     //Load Heading stuff
     this.headerData = this.homeService.getHeader();
 
@@ -38,7 +48,7 @@ export class HomePageComponent implements OnInit {
     this.projects = this.homeService.getFeatured();
 
 
-
+    PublicService.loading = true;
 
     console.log(this.projects)
   }

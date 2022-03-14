@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { AboutMe } from '../models/about.model';
+import { ViewingStat } from '../models/stat.model';
+import { PublicService } from '../public.service';
 import { AboutService } from './about.service';
 
 @Component({
@@ -17,6 +19,15 @@ export class AboutMeComponent implements OnInit {
   aboutMe!: AboutMe;
   async ngOnInit() {
     this.route.data.subscribe();
+
+    let stat: ViewingStat = {
+      Date: new Date(),
+      Message: "Viewing About",
+      Page: "About Page",
+      Time: new Date().getUTCDay().toString()
+    }
+
+    PublicService.WriteStat(stat);
 
     await this.aboutService.loadAboutMe();
 

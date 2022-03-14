@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { HomepageService } from '../home-page/homepage.service';
 import { Skills } from '../models/skills.model';
+import { PublicService } from '../public.service';
 
 @Component({
   selector: 'app-skills',
@@ -10,6 +11,8 @@ import { Skills } from '../models/skills.model';
 export class SkillsComponent implements OnInit {
 
   @Input() skillsData!: Skills;
+
+  loaded = PublicService.loading;
 
   constructor() { }
 

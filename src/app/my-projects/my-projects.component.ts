@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Project } from '../models/project.model';
+import { ViewingStat } from '../models/stat.model';
+import { PublicService } from '../public.service';
 import { ProjectService } from './project.service';
 
 @Component({
@@ -20,6 +22,15 @@ export class MyProjectsComponent implements OnInit {
   {
     this.route.data.subscribe();
     await this.projectService.loadProjects();
+
+    let stat: ViewingStat = {
+      Date: new Date(),
+      Message: "Viewing Projects",
+      Page: "Projects",
+      Time: new Date().getUTCDay().toString()
+    }
+
+    PublicService.WriteStat(stat);
 
     this.projects = this.projectService.getProjects();
     this.loaded = true;

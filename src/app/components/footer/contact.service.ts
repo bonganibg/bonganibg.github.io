@@ -33,16 +33,16 @@ export class ContactService {
 
   createNewMessage(message: VisitorMessage)
   {
+    let dateTime = new Date();
+    let ID = `${dateTime.getDate()}${dateTime.getDay()}${dateTime.getHours()}${dateTime.getMinutes()}${dateTime.getMilliseconds()}`
+
     // Don't worry, I can also see what's wrong with this xD, I'll link the site to my email in the next update
-    set(ref(database, 'Messages'), message)
-
+    set(ref(database, 'Messages/'+ ID), message)
     .then(() => {
-      alert("Message has been sent");
+      alert("Message has been sent successfully!")
     })
-    .catch((error) => {
-      console.log(error);
-      alert("Message failed to send");
+    .catch(() => {
+      alert("Interal error, message not sent")
     });
-
   }
 }

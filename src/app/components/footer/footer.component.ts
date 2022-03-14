@@ -19,16 +19,13 @@ export class FooterComponent implements OnInit {
   }
 
   getFormInfo(form: NgForm){
-
-    alert(form)
-    console.log();
     if (form.invalid)
     {
+      alert("Make sure all of the fields are entered")
       return;
     }
     else
     {
-      console.log(form)
       if (this.contactService.email_regEx.test(form.value.inputEmail) && this.contactService.name_surname_regEx.test(form.value.inputName))
       {
           let userMessage: VisitorMessage =
@@ -40,7 +37,7 @@ export class FooterComponent implements OnInit {
           this.contactService.createNewMessage(userMessage);
       }
       else{
-        alert("Message not sent");
+        alert("Internal error, message not sent")
       }
     }
   }
