@@ -1,4 +1,6 @@
-<main>
+<app-loading *ngIf="loading"></app-loading>
+
+<main *ngIf="!loading">
   <section class="hero-section">
 
     <!-- Text information -->

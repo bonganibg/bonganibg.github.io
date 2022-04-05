@@ -16,8 +16,13 @@ export class AboutMeComponent implements OnInit {
               private route: ActivatedRoute) { }
 
 
+
+  loading = true;
+
   aboutMe!: AboutMe;
   async ngOnInit() {
+    PublicService.loading = true;
+
     this.route.data.subscribe();
 
     let stat: ViewingStat = {
@@ -32,6 +37,9 @@ export class AboutMeComponent implements OnInit {
     await this.aboutService.loadAboutMe();
 
     this.aboutMe = this.aboutService.getAboutMe();
+
+    this.loading = false;
+    PublicService.loading = false;
   }
 
 }

@@ -12,4 +12,6 @@ export class LoadingComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // Remove the loading animation and make the logo palse
+
 }

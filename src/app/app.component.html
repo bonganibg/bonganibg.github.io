@@ -1,8 +1,8 @@
-<app-nav-bar></app-nav-bar>
+<app-nav-bar *ngIf="!loading"></app-nav-bar>
 <!-- <app-featured-projects></app-featured-projects> -->
 <!-- <app-home-page></app-home-page> -->
 <!-- <app-about-me></app-about-me> -->
 <!-- <app-contact-me></app-contact-me> -->
 <!-- <app-my-projects></app-my-projects> -->
 <router-outlet></router-outlet>
-<app-footer></app-footer>
+<app-footer *ngIf="!loading"></app-footer>

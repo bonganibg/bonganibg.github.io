@@ -19,19 +19,21 @@ export class HomePageComponent implements OnInit {
    this.parallaxFunction();
   }
 
-  loading = PublicService.loading;
+  loading = true;
 
   headerData!: Heading;
   skillsData!:  Skills;
   projects!: Project[];
 
   async ngOnInit() {
+    PublicService.loading = true;
+
     // Load the header information
     await this.homeService.loadInformation();
 
     let stat: ViewingStat = {
       Date: new Date(),
-      Message: "Viewing Homepafe",
+      Message: "Viewing Homepage",
       Page: "Home",
       Time: new Date().getUTCDay().toString()
     }
@@ -48,9 +50,11 @@ export class HomePageComponent implements OnInit {
     this.projects = this.homeService.getFeatured();
 
 
-    PublicService.loading = true;
+    this.loading = false;
+    PublicService.loading = false;
 
-    console.log(this.projects)
+
+
   }
 
 

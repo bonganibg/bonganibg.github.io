@@ -25,7 +25,7 @@ export class PublicService {
 
   constructor() { }
 
-  static loading = false;
+  static loading = true;
 
   static WriteStat(stat: ViewingStat)
   {
