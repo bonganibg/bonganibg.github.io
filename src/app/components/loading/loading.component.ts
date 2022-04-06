@@ -9,9 +9,6 @@ export class LoadingComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
-
-  // Remove the loading animation and make the logo palse
-
 }

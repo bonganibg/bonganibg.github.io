@@ -26,8 +26,6 @@ export class HomePageComponent implements OnInit {
   projects!: Project[];
 
   async ngOnInit() {
-    PublicService.loading = true;
-
     // Load the header information
     await this.homeService.loadInformation();
 

@@ -1,6 +1,4 @@
-<app-loading></app-loading>
-
-<section class="about-me-container">
+<section *ngIf="!loading" class="about-me-container">
 
   <section class="about-me">
     <h2 class="heading">
@@ -146,3 +144,5 @@
   </section>
 
 </section>
+
+<app-loading *ngIf="loading"></app-loading>
