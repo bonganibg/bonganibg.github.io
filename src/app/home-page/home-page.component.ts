@@ -1,5 +1,6 @@
 import { style } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
+import { AppComponent } from '../app.component';
 import { FeaturedProjects } from '../models/featured.model';
 import { Heading } from '../models/header.model';
 import { Project } from '../models/project.model';
@@ -15,7 +16,7 @@ import { HomepageService } from './homepage.service';
 })
 export class HomePageComponent implements OnInit {
 
-  constructor(private homeService: HomepageService) {
+  constructor(private homeService: HomepageService, private appComp: AppComponent) {
    this.parallaxFunction();
   }
 
@@ -26,6 +27,9 @@ export class HomePageComponent implements OnInit {
   projects!: Project[];
 
   async ngOnInit() {
+
+    let date = Date();
+
     // Load the header information
     await this.homeService.loadInformation();
 
@@ -49,10 +53,6 @@ export class HomePageComponent implements OnInit {
 
 
     this.loading = false;
-    PublicService.loading = false;
-
-
-
   }
 
 

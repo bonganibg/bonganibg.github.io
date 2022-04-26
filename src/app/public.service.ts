@@ -29,7 +29,7 @@ export class PublicService {
 
   static WriteStat(stat: ViewingStat)
   {
-
+    let date = Date();
     let ID = `${stat.Date.getDate()}${stat.Date.getDay()}${stat.Date.getHours()}${stat.Date.getMinutes()}${stat.Date.getMilliseconds()}`
     set(ref(database, 'statistics/'+ ID), stat)
   }
