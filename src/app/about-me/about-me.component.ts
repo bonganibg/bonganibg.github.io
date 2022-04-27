@@ -21,7 +21,7 @@ export class AboutMeComponent implements OnInit {
 
   aboutMe!: AboutMe;
   async ngOnInit() {
-    PublicService.loading = true;
+    this.loading = true;
 
     this.route.data.subscribe();
 
@@ -39,7 +39,6 @@ export class AboutMeComponent implements OnInit {
     this.aboutMe = this.aboutService.getAboutMe();
 
     this.loading = false;
-    PublicService.loading = false;
   }
 
 }

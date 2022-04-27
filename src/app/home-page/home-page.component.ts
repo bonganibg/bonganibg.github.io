@@ -27,7 +27,7 @@ export class HomePageComponent implements OnInit {
   projects!: Project[];
 
   async ngOnInit() {
-
+    this.loading = true;
     let date = Date();
 
     // Load the header information
