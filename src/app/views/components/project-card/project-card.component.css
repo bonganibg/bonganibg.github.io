@@ -1,0 +1,11 @@
+.main-container:hover .background-filter{
+    display: none;
+}
+
+.main-container{
+    cursor: pointer;
+}
+
+.background-filter{
+    background-color: #000000c5;
+}

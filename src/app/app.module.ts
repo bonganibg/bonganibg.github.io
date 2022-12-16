@@ -16,6 +16,7 @@ import { ExpertiseCardComponent } from './views/components/expertise-card/expert
 import { MyServicesCardComponent } from './views/components/my-services-card/my-services-card.component';
 import { IndustryCardComponent } from './views/components/industry-card/industry-card.component';
 import { LandingProjectCardComponent } from './views/components/landing-project-card/landing-project-card.component';
+import { ProjectCardComponent } from './views/components/project-card/project-card.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { LandingProjectCardComponent } from './views/components/landing-project-
     MyServicesCardComponent,
     IndustryCardComponent,
     LandingProjectCardComponent,
+    ProjectCardComponent,
   ],
   imports: [
     BrowserModule,
