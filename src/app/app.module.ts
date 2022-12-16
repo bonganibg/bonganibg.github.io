@@ -13,6 +13,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { NavBarComponent } from './views/components/nav-bar/nav-bar.component';
 import { FooterComponent } from './views/components/footer/footer.component';
 import { ExpertiseCardComponent } from './views/components/expertise-card/expertise-card.component';
+import { MyServicesCardComponent } from './views/components/my-services-card/my-services-card.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { ExpertiseCardComponent } from './views/components/expertise-card/expert
     NavBarComponent,
     FooterComponent,
     ExpertiseCardComponent,
+    MyServicesCardComponent,
   ],
   imports: [
     BrowserModule,
