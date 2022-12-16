@@ -5,9 +5,15 @@
         <div class=""></div>
 
         <div class="text-content">
-          <p class="text-grey-300 text-md mb-2">Hi, I'm BonganiBG</p>
-          <h2 class="text-grey-300 text-5xl lg:text-6xl mb-4">Software & <br> Web Engineer</h2>
-          <p class="text-grey-100 max-w-2xl mb-10">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo inventore deserunt fugiat non consectetur? Sequi ea necessitatibus ut tenetur aperiam? Labore delectus vel vitae ratione ducimus reprehenderit quis. Tempore, ipsa?</p>
+          <p class="text-grey-300 text-md mb-2">
+            {{content.small_header}}
+          </p>
+          <h2 class="text-grey-300 text-5xl lg:text-6xl mb-4" [innerHTML]="content.big_header">
+            {{content.big_header}}
+          </h2>
+          <p class="text-grey-100 max-w-2xl mb-10">
+            {{content.paragraph}}
+          </p>
 
           <a href="" class="text-2xl text-grey-100 hover:text-white-400">
             Projects &rarr;

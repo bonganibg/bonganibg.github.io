@@ -1,0 +1,93 @@
+{
+    "hero": {
+        "small_header": "hi, I'm BonganiBG",
+        "big_header": "Software & <br> Web Engineer",
+        "paragraph": "I craft software and web solutions that allow small business owners to modernize their operations and automate manual tasks"
+    },
+    "expertise": [
+        {
+            "name": "Web Development",
+            "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga itaque saepe obcaecati velit aliquam amet dolore dolores recusandae temporibus quam et commodi, molestiae, sit quidem error aperiam perferendis est adipisci!",
+            "page_link": ""
+        },
+        {
+            "name": "Cloud Development",
+            "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga itaque saepe obcaecati velit aliquam amet dolore dolores recusandae temporibus quam et commodi, molestiae, sit quidem error aperiam perferendis est adipisci!",
+            "page_link": ""
+        },
+        {
+            "name": "Native Development",
+            "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga itaque saepe obcaecati velit aliquam amet dolore dolores recusandae temporibus quam et commodi, molestiae, sit quidem error aperiam perferendis est adipisci!",
+            "page_link": ""
+        }
+    ],
+    "services": [
+        {
+            "image": "https://cdn-icons-png.flaticon.com/512/2620/2620971.png",
+            "name": "Custom Software",
+            "paragraph":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga itaque saepe obcaecati velit aliquam amet dolore dolores recusandae temporibus quam et commodi, molestiae, sit quidem error aperiam perferendis est adipisci!"
+        },
+        {
+            "image": "https://cdn-icons-png.flaticon.com/512/2620/2620971.png",
+            "name": "Website",
+            "paragraph":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga itaque saepe obcaecati velit aliquam amet dolore dolores recusandae temporibus quam et commodi, molestiae, sit quidem error aperiam perferendis est adipisci!"
+        },
+        {
+            "image": "https://cdn-icons-png.flaticon.com/512/2620/2620971.png",
+            "name": "DevOps Implementation",
+            "paragraph":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga itaque saepe obcaecati velit aliquam amet dolore dolores recusandae temporibus quam et commodi, molestiae, sit quidem error aperiam perferendis est adipisci!"
+        },
+        {
+            "image": "https://cdn-icons-png.flaticon.com/512/2620/2620971.png",
+            "name": "UI Design",
+            "paragraph":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga itaque saepe obcaecati velit aliquam amet dolore dolores recusandae temporibus quam et commodi, molestiae, sit quidem error aperiam perferendis est adipisci!"
+        },
+        {
+            "image": "https://cdn-icons-png.flaticon.com/512/2620/2620971.png",
+            "name": "Database Modeling",
+            "paragraph":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga itaque saepe obcaecati velit aliquam amet dolore dolores recusandae temporibus quam et commodi, molestiae, sit quidem error aperiam perferendis est adipisci!"
+        }
+    ],
+    "industry_header": {
+        "slogran": "Diverse Industry <br> Knowledge",
+        "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga itaque saepe obcaecati velit aliquam amet dolore dolores recusandae temporibus quam et commodi, molestiae, sit quidem error aperiam perferendis est adipisci!"
+    },
+    "industries": [
+        {
+            "image": "assets/food.png",
+            "name": "Healthcare",
+            "work": [
+                "Database",
+                "Web",
+                "Cloud Native",
+                "PWA"
+            ]
+        },
+        {
+            "image": "assets/food.png",
+            "name": "B2C Business",
+            "work": [
+                "Database",
+                "Web",
+                "Hybrid Cloud",
+                "Mobile"
+            ]
+        },
+        {
+            "image": "assets/food.png",
+            "name": "Transport",
+            "work": [
+                "Mobile",
+                "Cloud Native"
+            ]
+        },
+        {
+            "image": "assets/food.png",
+            "name": "Ecommerce",
+            "work": [
+                "Database",
+                "Web"
+            ]
+        }
+    ]
+}

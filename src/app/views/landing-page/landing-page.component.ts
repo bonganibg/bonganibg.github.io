@@ -1,4 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { LandingPageModel } from 'src/app/models/landing-page.model';
+import { LandingPageService } from 'src/app/services/landing-page.service';
 
 @Component({
   selector: 'app-landing-page',
@@ -7,9 +10,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private landingService: LandingPageService) { }
 
-  ngOnInit(): void {
+  isLoading!: boolean;
+
+  pageData!: LandingPageModel;
+
+  ngOnInit() {
+    this.loadPageData();
+  }
+
+  loadPageData(){
+    this.landingService.loadPageData().subscribe((response) => {
+      let value: any = response;
+      this.pageData = value;
+    });
+    console.log(this.pageData);
   }
 
 }
