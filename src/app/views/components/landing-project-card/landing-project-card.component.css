@@ -1,0 +1,8 @@
+.main-container .image-container{
+    display: none;
+}
+
+.main-container:hover .image-container{
+    display: flex;
+}
+
