@@ -12,6 +12,7 @@ import { LandingPageComponent } from './views/landing-page/landing-page.componen
 import { AppRoutingModule } from './app-routing.module';
 import { NavBarComponent } from './views/components/nav-bar/nav-bar.component';
 import { FooterComponent } from './views/components/footer/footer.component';
+import { ExpertiseCardComponent } from './views/components/expertise-card/expertise-card.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { FooterComponent } from './views/components/footer/footer.component';
     ProjectsComponent,
     NavBarComponent,
     FooterComponent,
+    ExpertiseCardComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,9 +1,9 @@
-<body class="flex flex-col bg-grey-400 py-10 rounded-t-2xl items-center">
+<body class="flex flex-col bg-grey-400 gap-20 py-10 items-center rounded-t-2xl">
     <section class="flex flex-col gap-10">
         <h2 class="text-grey-200 font-semibold text-center text-lg">
             My main development tools
         </h2>
-        <ul class="flex w-full h-[35px] gap-10">
+        <ul class="flex w-full h-[35px] gap-10 justify-center">
             <li class="h-full">
                 <a href="">
                     <svg class="h-full" viewBox="0 0 126 33" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -54,4 +54,17 @@
         </a>
     </section>
 
+
+    <section class="flex flex-col max-w-[1200px] gap-10">
+        <div class="flex flex-col gap-2">
+            <h2 class="font-semibold text-grey-200 text-3xl">
+                My Expertise
+            </h2>
+            <hr class="border border-1 w-[60px] border-grey-200">
+        </div>
+
+        <div class="flex flex-wrap justify-between gap-5">
+            <app-expertise-card class="w-[350px]" *ngFor="let item of [1,1,1]"></app-expertise-card>
+        </div>
+    </section>
 </body>
