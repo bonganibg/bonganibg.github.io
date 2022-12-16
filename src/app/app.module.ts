@@ -14,6 +14,7 @@ import { NavBarComponent } from './views/components/nav-bar/nav-bar.component';
 import { FooterComponent } from './views/components/footer/footer.component';
 import { ExpertiseCardComponent } from './views/components/expertise-card/expertise-card.component';
 import { MyServicesCardComponent } from './views/components/my-services-card/my-services-card.component';
+import { IndustryCardComponent } from './views/components/industry-card/industry-card.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { MyServicesCardComponent } from './views/components/my-services-card/my-
     FooterComponent,
     ExpertiseCardComponent,
     MyServicesCardComponent,
+    IndustryCardComponent,
   ],
   imports: [
     BrowserModule,
