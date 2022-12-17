@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { LandingExpertiseModel } from 'src/app/models/landing-page.model';
 
 @Component({
   selector: 'app-landing-expertise-section',
@@ -9,7 +10,10 @@ export class LandingExpertiseSectionComponent implements OnInit {
 
   constructor() { }
 
+  @Input() expertise!: LandingExpertiseModel[];
+
   ngOnInit(): void {
+    console.log(this.expertise)
   }
 
 }

@@ -20,26 +20,8 @@
     </div>
 
     <div class="carousel w-full gap-5">
-        <div id="slide1" class="carousel-item relative">
-            <app-my-services-card></app-my-services-card>
-        </div>
-        <div id="slide2" class="carousel-item relative">
-            <app-my-services-card></app-my-services-card>
-        </div>
-        <div id="slide3" class="carousel-item relative">
-            <app-my-services-card></app-my-services-card>
-        </div>
-        <div id="slide4" class="carousel-item relative">
-            <app-my-services-card></app-my-services-card>
-        </div>
-        <div id="slide5" class="carousel-item relative">
-            <app-my-services-card></app-my-services-card>
-        </div>
-        <div id="slide6" class="carousel-item relative">
-            <app-my-services-card></app-my-services-card>
-        </div>
-        <div id="slide7" class="carousel-item relative">
-            <app-my-services-card></app-my-services-card>
+        <div id="slide1" class="carousel-item relative" *ngFor="let item of services">
+            <app-my-services-card [service]="item"></app-my-services-card>
         </div>
     </div>
 

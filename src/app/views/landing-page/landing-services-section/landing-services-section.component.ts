@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { LandingServiceModel } from 'src/app/models/landing-page.model';
 
 @Component({
   selector: 'app-landing-services-section',
@@ -8,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 export class LandingServicesSectionComponent implements OnInit {
 
   constructor() { }
+
+  @Input() services!: LandingServiceModel[];
 
   ngOnInit(): void {
   }

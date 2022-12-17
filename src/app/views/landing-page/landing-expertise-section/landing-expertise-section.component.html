@@ -64,7 +64,9 @@
         </div>
 
         <div class="flex flex-wrap justify-between gap-5">
-            <app-expertise-card class="w-[350px]" *ngFor="let item of [1,1,1]"></app-expertise-card>
+              <app-expertise-card class="w-[350px]" [expertise]="expertise[0]"></app-expertise-card>
+              <app-expertise-card class="w-[350px]" [expertise]="expertise[1]"></app-expertise-card>
+              <app-expertise-card class="w-[350px]" [expertise]="expertise[2]"></app-expertise-card>
         </div>
     </section>
 </body>

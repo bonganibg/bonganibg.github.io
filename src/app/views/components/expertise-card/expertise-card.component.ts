@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { LandingExpertiseModel } from 'src/app/models/landing-page.model';
 
 @Component({
   selector: 'app-expertise-card',
@@ -8,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 export class ExpertiseCardComponent implements OnInit {
 
   constructor() { }
+
+  @Input() expertise!: LandingExpertiseModel;
 
   ngOnInit(): void {
   }

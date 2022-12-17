@@ -4,7 +4,7 @@ export interface LandingPageModel
     expertise: LandingExpertiseModel[],
     services: LandingServiceModel[],
     industry_header: LandingIndustriesHeading,
-    industries: LandingIndustry[]
+    industries: LandingIndustryModel[]
 }
 
 export interface LandingHeroModel
@@ -34,7 +34,7 @@ export interface LandingIndustriesHeading
     paragraph: string,
 }
 
-export interface LandingIndustry
+export interface LandingIndustryModel
 {
     image: string,
     name: string,

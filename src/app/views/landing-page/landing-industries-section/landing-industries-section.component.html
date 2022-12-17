@@ -8,12 +8,11 @@
                     Industries
                 </h2>
             </div>
-            <h2 class="text-4xl font-medium">
-                Diverse Industry <br>
-                Knowledge
+            <h2 class="text-4xl font-medium" [innerHTML]="header.slogan">
+                {{header.slogan}}
             </h2>
             <p class="text-sm w-3/4">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia placeat similique quod optio possimus, dicta vel tempora porro, magnam corrupti impedit. Aliquam explicabo fuga dignissimos nulla nostrum? Tenetur, quo voluptatum.
+                {{header.paragraph}}
             </p>
             <a href="" class="mt-10">
                 <p class="text-grey-100 hover:text-grey-200">
@@ -23,17 +22,8 @@
         </div>
 
         <ul class="carousel gap-5 w-2/3">
-            <li >
-                <app-industry-card></app-industry-card>
-            </li>
-            <li>
-                <app-industry-card></app-industry-card>
-            </li>
-            <li>
-                <app-industry-card></app-industry-card>
-            </li>
-            <li>
-                <app-industry-card></app-industry-card>
+            <li *ngFor="let item of industries">
+                <app-industry-card [industry]="item"></app-industry-card>
             </li>
         </ul>
 

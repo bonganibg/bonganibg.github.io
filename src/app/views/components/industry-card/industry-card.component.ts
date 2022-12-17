@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { LandingIndustryModel } from 'src/app/models/landing-page.model';
 
 @Component({
   selector: 'app-industry-card',
@@ -8,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 export class IndustryCardComponent implements OnInit {
 
   constructor() { }
+
+  @Input() industry!: LandingIndustryModel;
 
   ngOnInit(): void {
   }
