@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
+import { AboutMeComponent } from './views/about-me/about-me.component';
 import { LandingPageComponent } from './views/landing-page/landing-page.component';
 import { ProjectsComponent } from './views/projects/projects.component';
 
 const routes: Routes = [
   {path: '', component:LandingPageComponent},
-  {path: 'projects', component:ProjectsComponent}
+  {path: 'projects', component:ProjectsComponent},
+  {path: 'about', component:AboutMeComponent}
 ]
 
 

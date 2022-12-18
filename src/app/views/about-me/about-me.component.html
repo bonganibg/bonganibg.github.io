@@ -1,0 +1,42 @@
+<section class="flex flex-col px-44">
+
+  <div class="flex justify-between mt-44">
+    <h2 class="text-4xl text-semibold">
+      About
+    </h2>
+    <ul class="tabs gap-3">
+      <li class="tab px-0 tab-active">
+        <a href="">
+          <p class="text-md">
+            Development Story
+          </p>
+        </a>
+      </li>
+      <li class="tab px-0">
+        <a href="">
+          <p class="text-md">
+            Technologies
+          </p>
+        </a>
+      </li>
+      <li class="tab px-0">
+        <a href="">
+          <p class="text-md">
+            Random Questions
+          </p>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <hr class="border border-1 border-white-200 mb-20">
+
+  <div class="grid grid-cols-1 gap-4 lg:grid-cols-4 lg:item-start">
+    <div class="sticky top-4 z-50">
+      <app-about-section-nav></app-about-section-nav>
+    </div>
+    <div class="lg:col-span-3">
+      <app-about-questions-page></app-about-questions-page>
+    </div>
+  </div>
+</section>

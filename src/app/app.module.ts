@@ -18,6 +18,11 @@ import { MyServicesCardComponent } from './views/components/my-services-card/my-
 import { IndustryCardComponent } from './views/components/industry-card/industry-card.component';
 import { LandingProjectCardComponent } from './views/components/landing-project-card/landing-project-card.component';
 import { ProjectCardComponent } from './views/components/project-card/project-card.component';
+import { AboutMeComponent } from './views/about-me/about-me.component';
+import { AboutSectionNavComponent } from './views/about-me/about-section-nav/about-section-nav.component';
+import { AboutMePageComponent } from './views/about-me/about-me-page/about-me-page.component';
+import { AboutTechnologiesPageComponent } from './views/about-me/about-technologies-page/about-technologies-page.component';
+import { AboutQuestionsPageComponent } from './views/about-me/about-questions-page/about-questions-page.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +41,11 @@ import { ProjectCardComponent } from './views/components/project-card/project-ca
     IndustryCardComponent,
     LandingProjectCardComponent,
     ProjectCardComponent,
+    AboutMeComponent,
+    AboutSectionNavComponent,
+    AboutMePageComponent,
+    AboutTechnologiesPageComponent,
+    AboutQuestionsPageComponent,
   ],
   imports: [
     BrowserModule,
