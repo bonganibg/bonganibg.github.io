@@ -16,6 +16,7 @@ export interface LandingHeroModel
 
 export interface LandingExpertiseModel
 {
+    id: string,
     name: string,
     paragraph: string,
     page_link: string
@@ -23,6 +24,7 @@ export interface LandingExpertiseModel
 
 export interface LandingServiceModel
 {
+    id: string,
     image: string,
     name: string,
     paragraph: string

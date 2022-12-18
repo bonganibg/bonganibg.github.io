@@ -6,16 +6,19 @@
     },
     "expertise": [
         {
+            "id": "1",
             "name": "Web Development",
             "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga itaque saepe obcaecati velit aliquam amet dolore dolores recusandae temporibus quam et commodi, molestiae, sit quidem error aperiam perferendis est adipisci!",
             "page_link": ""
         },
         {
+            "id": "2",
             "name": "Cloud Development",
             "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga itaque saepe obcaecati velit aliquam amet dolore dolores recusandae temporibus quam et commodi, molestiae, sit quidem error aperiam perferendis est adipisci!",
             "page_link": ""
         },
         {
+            "id": "3",
             "name": "Native Development",
             "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga itaque saepe obcaecati velit aliquam amet dolore dolores recusandae temporibus quam et commodi, molestiae, sit quidem error aperiam perferendis est adipisci!",
             "page_link": ""
@@ -23,26 +26,31 @@
     ],
     "services": [
         {
+            "id": "1",
             "image": "https://cdn-icons-png.flaticon.com/512/2620/2620971.png",
             "name": "Custom Software",
             "paragraph":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga itaque saepe obcaecati velit aliquam amet dolore dolores recusandae temporibus quam et commodi, molestiae, sit quidem error aperiam perferendis est adipisci!"
         },
         {
+            "id": "2",
             "image": "https://cdn-icons-png.flaticon.com/512/2620/2620971.png",
             "name": "Website",
             "paragraph":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga itaque saepe obcaecati velit aliquam amet dolore dolores recusandae temporibus quam et commodi, molestiae, sit quidem error aperiam perferendis est adipisci!"
         },
         {
+            "id": "3",
             "image": "https://cdn-icons-png.flaticon.com/512/2620/2620971.png",
             "name": "DevOps Implementation",
             "paragraph":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga itaque saepe obcaecati velit aliquam amet dolore dolores recusandae temporibus quam et commodi, molestiae, sit quidem error aperiam perferendis est adipisci!"
         },
         {
+            "id": "4",
             "image": "https://cdn-icons-png.flaticon.com/512/2620/2620971.png",
             "name": "UI Design",
             "paragraph":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga itaque saepe obcaecati velit aliquam amet dolore dolores recusandae temporibus quam et commodi, molestiae, sit quidem error aperiam perferendis est adipisci!"
         },
         {
+            "id": "5",
             "image": "https://cdn-icons-png.flaticon.com/512/2620/2620971.png",
             "name": "Database Modeling",
             "paragraph":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga itaque saepe obcaecati velit aliquam amet dolore dolores recusandae temporibus quam et commodi, molestiae, sit quidem error aperiam perferendis est adipisci!"

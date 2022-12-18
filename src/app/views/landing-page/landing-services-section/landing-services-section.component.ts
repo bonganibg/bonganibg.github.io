@@ -15,4 +15,8 @@ export class LandingServicesSectionComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  getNextSlider(){
+
+  }
+
 }
