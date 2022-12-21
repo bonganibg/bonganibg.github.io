@@ -1,10 +1,10 @@
 <section class="flex flex-col gap-10">
-  <div class="flex flex-col gap-4 w-[35vw] self-start ml-20" *ngFor="let item of [1,1,1,1]">
+  <div class="flex flex-col gap-4 w-[35vw] self-start ml-20" *ngFor="let item of aboutMe">
       <h2 class="text-4xl font-light">
-        Overview
+        {{item.heading}}
       </h2>
       <p class="font-thin text-sm">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore delectus laborum labore voluptate. Natus quaerat beatae, animi in id accusamus vero perspiciatis tempora necessitatibus laboriosam corrupti consequuntur voluptates modi ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti inventore totam odio officiis facilis quidem temporibus asperiores expedita, odit deserunt doloremque, sint atque esse iusto dicta sapiente corporis at quod. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas ea officia asperiores odit odio magnam mollitia culpa, quos aliquid exercitationem laudantium aut voluptatem. Praesentium qui possimus necessitatibus error quas inventore.
+        {{item.paragraph}}
       </p>
   </div>
 </section>

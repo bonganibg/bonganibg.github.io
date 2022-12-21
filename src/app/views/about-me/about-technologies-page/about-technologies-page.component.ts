@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { TechnologiesModel, TechnologiesSectionModel } from 'src/app/models/about-page-model';
+import { AboutService } from 'src/app/services/about.service';
 
 @Component({
   selector: 'app-about-technologies-page',
@@ -7,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutTechnologiesPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private aboutService: AboutService) { }
 
-  ngOnInit(): void {
+  technologies!: TechnologiesSectionModel[];
+
+  async ngOnInit() {
+    await this.loadTechnologies();
+  }
+
+  async loadTechnologies(){
+    this.aboutService.getTechnologies().then((response) => {
+      this.technologies = response.data.technologies;
+      console.log(this.technologies)
+    })
+    .catch((error) => {
+      console.warn(error);
+      alert("something has gone wrong")
+    })
   }
 
 }

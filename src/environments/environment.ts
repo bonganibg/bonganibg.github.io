@@ -7,7 +7,12 @@ export const environment = {
   LINK_GITHUB: "https://www.github.com/bonganibg",
   LINK_LINKEDIN: "https://www.linkedin.com/in/bonganibg",
   LINK_TWITTER: "https://www.twitter.com/bonganibg",
-  PAGE_DATA_LANDING_PAGE: "/assets/content/landing-page.json"
+  PAGE_DATA_LANDING_PAGE: "/assets/content/landing-page.json",
+  API_BASE_URL: "http://localhost:8080",
+  API_QUESTION_ENDPOINT: "/about/question",
+  API_ABOUT_ME_ENDPOINT: "/about/me",
+  API_TECH_ENDPOINT: "/about/tech",
+  API_TECH_DETAILS_ENDPOINT: "/about/tech/detail"
 };
 
 /*

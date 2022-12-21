@@ -2,7 +2,7 @@ export interface AboutPageModel
 {
   about_me:AboutSectionModel[],
   technologies: TechnologiesSectionModel[],
-  questions: AboutSectionModel
+  questions: QuestionSectionModel[]
 }
 
 export interface AboutSectionModel
@@ -12,13 +12,21 @@ export interface AboutSectionModel
   paragraph: string
 }
 
+export interface QuestionSectionModel{
+  _id: string,
+  question: string,
+  answer: string
+}
+
 export interface TechnologiesSectionModel{
   _id: string,
   heading: string,
-  technologies: {
-    _id: string,
-    name: string
-  }
+  technologies: TechModel[]
+}
+
+export interface TechModel{
+  tech_id: string,
+  name: string
 }
 
 export interface TechnologiesModel{

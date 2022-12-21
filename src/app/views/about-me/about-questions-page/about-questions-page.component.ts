@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { QuestionSectionModel } from 'src/app/models/about-page-model';
+import { AboutService } from 'src/app/services/about.service';
 
 @Component({
   selector: 'app-about-questions-page',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutQuestionsPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private aboutService: AboutService) { }
 
-  ngOnInit(): void {
+  questions!: QuestionSectionModel[];
+
+  async ngOnInit() {
+    await this.loadQuestions();
   }
+
+  async loadQuestions(){
+    this.aboutService.getQuestions().then((response) => {
+      this.questions = response.data.questions;
+      console.warn(this.questions);
+    })
+  }
+
 
 }

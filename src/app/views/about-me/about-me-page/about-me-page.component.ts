@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AboutSectionModel } from 'src/app/models/about-page-model';
+import { AboutService } from 'src/app/services/about.service';
 
 @Component({
   selector: 'app-about-me-page',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutMePageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private aboutService: AboutService) { }
 
-  ngOnInit(): void {
+  aboutMe!: AboutSectionModel[];
+
+  async ngOnInit() {
+    await this.loadAboutMe();
+  }
+
+  async loadAboutMe(){
+    this.aboutService.getAboutMe().then((response) => {
+      this.aboutMe = response.data.about;
+      console.log(this.aboutMe)
+    })
+    .catch(error => {
+      alert("something went wron")
+    })
   }
 
 }
