@@ -19,4 +19,13 @@ export class LandingServicesSectionComponent implements OnInit {
 
   }
 
+  scrollLeft(){
+    const scrollContainer = document.getElementById("scroll-container") as HTMLDivElement;
+    scrollContainer.scrollBy(-20, 0);
+  }
+
+  scrollRight(){
+    document.getElementById("scroll-container")?.scrollBy(20, 0);
+  }
+
 }

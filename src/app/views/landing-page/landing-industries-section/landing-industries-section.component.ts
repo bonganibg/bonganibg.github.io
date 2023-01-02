@@ -20,4 +20,12 @@ export class LandingIndustriesSectionComponent implements OnInit {
 
   }
 
+  scrollRight(){
+    document.getElementById("industry-scroll-container")?.scrollBy(20, 0);
+  }
+
+  scrollLeft(){
+    document.getElementById("industry-scroll-container")?.scrollBy(-20, 0);
+  }
+
 }
