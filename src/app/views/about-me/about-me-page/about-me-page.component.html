@@ -1,9 +1,9 @@
-<section class="flex flex-col gap-10">
-  <div class="flex flex-col gap-4 w-[35vw] self-start ml-20" *ngFor="let item of aboutMe">
-      <h2 class="text-4xl font-light">
+<section class="flex flex-col gap-5 lg:gap-10">
+  <div class="flex flex-col gap-2 lg:gap-4 self-start" *ngFor="let item of aboutMe">
+      <h2 class="text-2xl lg:text-4xl font-light">
         {{item.heading}}
       </h2>
-      <p class="font-thin text-sm">
+      <p class="font-thin text-xs lg:text-sm">
         {{item.paragraph}}
       </p>
   </div>
