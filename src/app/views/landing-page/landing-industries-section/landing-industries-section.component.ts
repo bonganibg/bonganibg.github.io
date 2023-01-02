@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { LandingIndustriesHeading, LandingIndustryModel } from 'src/app/models/landing-page.model';
 
 @Component({
@@ -8,12 +9,15 @@ import { LandingIndustriesHeading, LandingIndustryModel } from 'src/app/models/l
 })
 export class LandingIndustriesSectionComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   @Input() industries!: LandingIndustryModel[];
   @Input() header!: LandingIndustriesHeading;
 
-  ngOnInit(): void {
+  currentIndex!: number;
+
+  ngOnInit() {
+
   }
 
 }

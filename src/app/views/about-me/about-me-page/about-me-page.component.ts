@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { AboutSectionModel } from 'src/app/models/about-page-model';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { AboutSectionModel, LinkModel } from 'src/app/models/about-page-model';
 import { AboutService } from 'src/app/services/about.service';
 
 @Component({
@@ -13,8 +13,11 @@ export class AboutMePageComponent implements OnInit {
 
   aboutMe!: AboutSectionModel[];
 
+  @Output() links = new EventEmitter<LinkModel[]>();
+
   async ngOnInit() {
     await this.loadAboutMe();
+    this.links.emit(this.sendLinks());
   }
 
   async loadAboutMe(){
@@ -25,6 +28,20 @@ export class AboutMePageComponent implements OnInit {
     .catch(error => {
       alert("something went wron")
     })
+  }
+
+  sendLinks(): LinkModel[]{
+    let links: LinkModel[] = [];
+
+    this.aboutMe.forEach(item => {
+      links.push({
+        index: item._id,
+        title: item.heading
+      })
+    })
+
+    console.table(links)
+    return links;
   }
 
 }

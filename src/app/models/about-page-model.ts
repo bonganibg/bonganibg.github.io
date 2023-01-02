@@ -36,3 +36,8 @@ export interface TechnologiesModel{
   score: number,
   icon: string
 }
+
+export interface LinkModel{
+  title: string,
+  index: string
+}

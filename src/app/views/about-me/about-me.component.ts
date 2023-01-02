@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LinkModel } from 'src/app/models/about-page-model';
 
 @Component({
   selector: 'app-about-me',
@@ -10,6 +11,8 @@ export class AboutMeComponent implements OnInit {
   constructor() { }
 
   currentPage = 0;
+
+  links: LinkModel[] = []
 
   ngOnInit(): void {
   }

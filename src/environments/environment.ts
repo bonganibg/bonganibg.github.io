@@ -12,7 +12,9 @@ export const environment = {
   API_QUESTION_ENDPOINT: "/about/question",
   API_ABOUT_ME_ENDPOINT: "/about/me",
   API_TECH_ENDPOINT: "/about/tech",
-  API_TECH_DETAILS_ENDPOINT: "/about/tech/detail"
+  API_TECH_DETAILS_ENDPOINT: "/about/tech/detail",
+  API_PROJECT_ENDPOINT: "/project",
+  API_PROJECT_TAG_ENDPOINT: "/project/tag"
 };
 
 /*

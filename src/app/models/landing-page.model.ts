@@ -38,6 +38,7 @@ export interface LandingIndustriesHeading
 
 export interface LandingIndustryModel
 {
+    id: string,
     image: string,
     name: string,
     work: string[]
