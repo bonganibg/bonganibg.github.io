@@ -8,62 +8,62 @@
         {
             "id": "1",
             "name": "Web Development",
-            "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga itaque saepe obcaecati velit aliquam amet dolore dolores recusandae temporibus quam et commodi, molestiae, sit quidem error aperiam perferendis est adipisci!",
+            "paragraph": "I build responsive and intuitive progressive web applications that allow businesses and individuals to provide unique solutions within their industries for internal or commercial use. I build full-stack solutions that incorporate robust database solutions, performant backend systems that make use of any external or internal systems required, and responsive front-end implementations. All solutions are built to be deployable to any environment.",
             "page_link": ""
         },
         {
             "id": "2",
-            "name": "Cloud Development",
-            "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga itaque saepe obcaecati velit aliquam amet dolore dolores recusandae temporibus quam et commodi, molestiae, sit quidem error aperiam perferendis est adipisci!",
+            "name": "Custom Software",
+            "paragraph": "I build cloud, desktop, and IoT solutions that allow businesses and individuals to streamline their operations and facilitate growth within their domain. From self-contained systems that perform a set of tasks independently to systems that work with your other existing services, I build robust and scalable solutions that will meet your requirements and use case.",
             "page_link": ""
         },
         {
             "id": "3",
-            "name": "Native Development",
-            "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga itaque saepe obcaecati velit aliquam amet dolore dolores recusandae temporibus quam et commodi, molestiae, sit quidem error aperiam perferendis est adipisci!",
+            "name": "Android Development",
+            "paragraph": "I develop native mobile applications that allow businesses and individuals to gain a competitive edge within their industries, whether it is an internal system to be used within your organization or a commercial application to serve your audience, I will build out solutions that meet your needs. ",
             "page_link": ""
         }
     ],
     "services": [
         {
             "id": "1",
-            "image": "https://cdn-icons-png.flaticon.com/512/2620/2620971.png",
-            "name": "Custom Software",
-            "paragraph":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga itaque saepe obcaecati velit aliquam amet dolore dolores recusandae temporibus quam et commodi, molestiae, sit quidem error aperiam perferendis est adipisci!"
+            "image": "https://cdn-icons-png.flaticon.com/512/1197/1197460.png",
+            "name": "Programming",
+            "paragraph":"An expert in Object Oriented Programming and Functional Programming, I use modern programming languages like C#, Java, JavaScript, TypeScript, and Python along with technologies like .NET and NodeJS to write custom code that performs bespoke functions, communicates with external services and/or connects to databases, etc."
         },
         {
             "id": "2",
-            "image": "https://cdn-icons-png.flaticon.com/512/2620/2620971.png",
-            "name": "Website",
-            "paragraph":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga itaque saepe obcaecati velit aliquam amet dolore dolores recusandae temporibus quam et commodi, molestiae, sit quidem error aperiam perferendis est adipisci!"
+            "image": "https://cdn-icons-png.flaticon.com/512/2906/2906206.png",
+            "name": "Database Design",
+            "paragraph":"Using my advanced knowledge of database modeling and implementation, I design and implement database solutions that meet performance, capacity, security, and cost requirement using SQL databases or NoSQL databases like MongoDB, Firebase, and Firestore."
         },
         {
             "id": "3",
-            "image": "https://cdn-icons-png.flaticon.com/512/2620/2620971.png",
-            "name": "DevOps Implementation",
-            "paragraph":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga itaque saepe obcaecati velit aliquam amet dolore dolores recusandae temporibus quam et commodi, molestiae, sit quidem error aperiam perferendis est adipisci!"
+            "image": "https://cdn-icons-png.flaticon.com/512/565/565190.png",
+            "name": "Cloud Development",
+            "paragraph":"Using a cloud-native approach for development, I incorporate DevOps principles to produce solutions that can be deployed using different cloud strategies independent of the cloud provider. I can achieve this through the use of containerization with Docker and orchestration with Kubernetes along with my expertise with Git and different repository hosting and DevOps platforms like Azure DevOps, GitLabs, BitBucket, and GitHub. "
         },
         {
             "id": "4",
-            "image": "https://cdn-icons-png.flaticon.com/512/2620/2620971.png",
-            "name": "UI Design",
-            "paragraph":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga itaque saepe obcaecati velit aliquam amet dolore dolores recusandae temporibus quam et commodi, molestiae, sit quidem error aperiam perferendis est adipisci!"
+            "image": "https://cdn-icons-png.flaticon.com/512/781/781683.png",
+            "name": "Frontend Implementation",
+            "paragraph":"Using my expertise with different platforms, I will implement robust front-end designs from custom UI designs I created or any designs supplied. My experience with HTML, CSS, Angular, and Blazor allows me to implement responsive component-based web front-ends, while my knowledge of WPF, XAML, and Android Studio XML allows me to implement solutions for desktop and android respectively."
         },
         {
             "id": "5",
-            "image": "https://cdn-icons-png.flaticon.com/512/2620/2620971.png",
-            "name": "Database Modeling",
-            "paragraph":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga itaque saepe obcaecati velit aliquam amet dolore dolores recusandae temporibus quam et commodi, molestiae, sit quidem error aperiam perferendis est adipisci!"
+            "image": "https://cdn-icons-png.flaticon.com/512/681/681662.png",
+            "name": "User Interface Design",
+            "paragraph":"Using my advanced knowledge of Figma and other editing tools, I create custom UI/UX designs for websites, web applications, and mobile applications packaged in easy-to-navigate visual prototypes. Additionally, I build custom icon packs and recreate logos and branding for use in front-end implementation."
         }
     ],
     "industry_header": {
         "slogan": "Diverse Industry <br> Knowledge",
-        "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga itaque saepe obcaecati velit aliquam amet dolore dolores recusandae temporibus quam et commodi, molestiae, sit quidem error aperiam perferendis est adipisci!"
+        "paragraph": "I have worked with clients from various industries within Africa and Europe, gaining a broader view of common issues faced across the business landscape as well as learning about the intricacies of the different industries and how technology is implemented."
     },
     "industries": [
         {
             "id": "1",
-            "image": "assets/food.png",
+            "image": "https://images.unsplash.com/photo-1638202993928-7267aad84c31?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
             "name": "Healthcare",
             "work": [
                 "Database",
@@ -74,8 +74,8 @@
         },
         {
             "id": "2",
-            "image": "assets/food.png",
-            "name": "B2C Business",
+            "image": "https://images.unsplash.com/photo-1506306460327-3164753b74c7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+            "name": "Transport",
             "work": [
                 "Database",
                 "Web",
@@ -85,8 +85,8 @@
         },
         {
             "id": "3",
-            "image": "assets/food.png",
-            "name": "Transport",
+            "image": "https://images.unsplash.com/photo-1556745753-b2904692b3cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1073&q=80",
+            "name": "B2C",
             "work": [
                 "Mobile",
                 "Cloud Native"
@@ -94,12 +94,48 @@
         },
         {
             "id": "4",
-            "image": "assets/food.png",
+            "image": "https://images.unsplash.com/photo-1582004531564-50f300aae039?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
             "name": "Ecommerce",
             "work": [
                 "Database",
                 "Web"
             ]
+        },
+        {
+          "id": "4",
+          "image": "https://images.unsplash.com/photo-1634986666676-ec8fd927c23d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80",
+          "name": "Digital Arts",
+          "work": [
+              "Database",
+              "Web"
+          ]
+        },
+        {
+          "id": "4",
+          "image": "https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1232&q=80",
+          "name": "Education",
+          "work": [
+              "Database",
+              "Web"
+          ]
+        },
+        {
+          "id": "4",
+          "image": "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80",
+          "name": "Research",
+          "work": [
+              "Database",
+              "Web"
+          ]
+        },
+        {
+          "id": "4",
+          "image": "https://images.unsplash.com/photo-1535303311164-664fc9ec6532?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+          "name": "Social Media",
+          "work": [
+              "Database",
+              "Web"
+          ]
         }
     ]
 }
