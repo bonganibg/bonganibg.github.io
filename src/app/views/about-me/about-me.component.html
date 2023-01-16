@@ -19,13 +19,13 @@
           </p>
         </a>
       </li>
-      <li [ngClass]="getClass(2)">
+      <!-- <li [ngClass]="getClass(2)">
         <a (click)="changePage(2)">
           <p class="text-xs lg:text-md">
             Random Questions
           </p>
         </a>
-      </li>
+      </li> -->
     </ul>
   </div>
 
@@ -38,7 +38,7 @@
     <div class="lg:col-span-3" [ngSwitch]="currentPage">
         <app-about-me-page (links)="links" *ngSwitchCase="0"></app-about-me-page>
         <app-about-technologies-page *ngSwitchCase="1"></app-about-technologies-page>
-        <app-about-questions-page *ngSwitchCase="2"></app-about-questions-page>
+        <!-- <app-about-questions-page *ngSwitchCase="2"></app-about-questions-page> -->
     </div>
   </div>
 </section>
