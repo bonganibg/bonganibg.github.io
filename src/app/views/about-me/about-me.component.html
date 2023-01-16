@@ -36,8 +36,8 @@
       <app-about-section-nav [links]="links"></app-about-section-nav>
     </div>
     <div class="lg:col-span-2" [ngSwitch]="currentPage">
-        <app-about-me-page (links)="links" *ngSwitchCase="0"></app-about-me-page>
-        <app-about-technologies-page *ngSwitchCase="1"></app-about-technologies-page>
+        <app-about-me-page (links)="updateLinks($event)" *ngSwitchCase="0"></app-about-me-page>
+        <app-about-technologies-page (links)="updateLinks($event)" *ngSwitchCase="1"></app-about-technologies-page>
         <!-- <app-about-questions-page *ngSwitchCase="2"></app-about-questions-page> -->
     </div>
   </div>

@@ -22,6 +22,10 @@ export class AboutMeComponent implements OnInit {
     this.currentPage = page;
   }
 
+  updateLinks($links: any){
+    this.links = $links;
+  }
+
   getClass(page: number){
     return page == this.currentPage ? "tab px-0" : "tab px-0 tab-active";
   }

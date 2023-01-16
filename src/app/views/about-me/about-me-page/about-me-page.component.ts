@@ -9,7 +9,9 @@ import { AboutService } from 'src/app/services/about.service';
 })
 export class AboutMePageComponent implements OnInit {
 
-  constructor(private aboutService: AboutService) { }
+  constructor(private aboutService: AboutService) {
+
+  }
 
   aboutMe!: AboutSectionModel[];
 
@@ -17,13 +19,12 @@ export class AboutMePageComponent implements OnInit {
 
   async ngOnInit() {
     await this.loadAboutMe();
-    this.links.emit(this.sendLinks());
   }
 
   async loadAboutMe(){
     this.aboutService.getAboutMe().then((response) => {
       this.aboutMe = response.data.about;
-      console.log(this.aboutMe)
+      this.links.emit(this.sendLinks());
     })
     .catch(error => {
       alert("something went wron")
@@ -40,7 +41,6 @@ export class AboutMePageComponent implements OnInit {
       })
     })
 
-    console.table(links)
     return links;
   }
 

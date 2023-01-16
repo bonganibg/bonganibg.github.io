@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { TechnologiesModel, TechnologiesSectionModel } from 'src/app/models/about-page-model';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { LinkModel, TechnologiesModel, TechnologiesSectionModel } from 'src/app/models/about-page-model';
 import { AboutService } from 'src/app/services/about.service';
 
 @Component({
@@ -8,6 +8,8 @@ import { AboutService } from 'src/app/services/about.service';
   styleUrls: ['./about-technologies-page.component.css']
 })
 export class AboutTechnologiesPageComponent implements OnInit {
+
+  @Output() links = new EventEmitter<LinkModel[]>();
 
   constructor(private aboutService: AboutService) { }
 
@@ -20,12 +22,25 @@ export class AboutTechnologiesPageComponent implements OnInit {
   async loadTechnologies(){
     this.aboutService.getTechnologies().then((response) => {
       this.technologies = response.data.technologies;
-      console.log(this.technologies)
+      this.links.emit(this.sendLinks());
     })
     .catch((error) => {
       console.warn(error);
       alert("something has gone wrong")
     })
+  }
+
+  sendLinks(): LinkModel[]{
+    let links: LinkModel[] = [];
+
+    this.technologies.forEach(item => {
+      links.push({
+        index: item._id,
+        title: item.heading
+      })
+    })
+
+    return links;
   }
 
 }
