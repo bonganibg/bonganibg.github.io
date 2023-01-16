@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Project, Tag } from 'src/app/models/project.model';
+import { ProjectService } from 'src/app/services/project.service';
 
 @Component({
   selector: 'app-projects',
@@ -7,9 +9,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private projectService: ProjectService) { }
 
-  ngOnInit(): void {
+  projects: Project[] = [];
+  tags: Tag[] = [];
+
+  async ngOnInit(){
+    await this.loadProjects();
+    await this.loadProjectTags();
   }
 
+  async loadProjects(){
+    this.projectService.getProjects().then((response) => {
+      this.projects = response.data.projects;
+    })
+    .catch(() => {
+      alert("Something has gone wrong");
+    })
+  }
+
+  async loadProjectTags(){
+    this.projectService.getProjectTags().then((response) => {
+      this.tags = response.data.tags;
+    })
+    .catch(() => {
+      alert("Something has gone wrong");
+    })
+  }
 }

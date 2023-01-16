@@ -5,18 +5,18 @@
 
     <div class="background-filter w-full h-full absolute top-0 left-0 rounded-md flex flex-col justify-end p-5 gap-1">
         <ul class="text-xs text-grey-100 flex gap-1">
-            <li *ngFor="let item of [1,1,1]" class="border border-1 border-grey-200 py-[2px] px-[10px] rounded-xl">
+            <li *ngFor="let item of project.tags" class="border border-1 border-grey-200 py-[2px] px-[10px] rounded-xl">
                 <a>
-                    Mobile
+                    {{item.name}}
                 </a>
             </li>
         </ul>
 
         <h2 class="text-2xl text-white-400">
-            Pasvord
+            {{project.name}}
         </h2>
         <p class="text-xs text-white-400">
-            Password & Keymanager
+            {{project.short_description}}
         </p>
     </div>
 </section>
