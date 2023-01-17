@@ -41,13 +41,13 @@
             "id": "3",
             "image": "https://cdn-icons-png.flaticon.com/512/565/565190.png",
             "name": "Cloud Development",
-            "paragraph":"Using a cloud-native approach for development, I incorporate DevOps principles to produce solutions that can be deployed using different cloud strategies independent of the cloud provider. I can achieve this through the use of containerization with Docker and orchestration with Kubernetes along with my expertise with Git and different repository hosting and DevOps platforms like Azure DevOps, GitLabs, BitBucket, and GitHub. "
+            "paragraph":"Using a cloud-native approach for development, I incorporate DevOps principles to produce solutions that can be deployed using different cloud strategies independent of the cloud provider. I can achieve this through the use of containerization with Docker and orchestration with Kubernetes along with my expertise with Git and different repository hosting platoforms"
         },
         {
             "id": "4",
             "image": "https://cdn-icons-png.flaticon.com/512/781/781683.png",
             "name": "Frontend Implementation",
-            "paragraph":"Using my expertise with different platforms, I will implement robust front-end designs from custom UI designs I created or any designs supplied. My experience with HTML, CSS, Angular, and Blazor allows me to implement responsive component-based web front-ends, while my knowledge of WPF, XAML, and Android Studio XML allows me to implement solutions for desktop and android respectively."
+            "paragraph":"Using my expertise with different platforms, I will implement robust front-end designs from custom UI designs I created or any designs supplied. My experience with HTML, CSS, Angular, and Blazor allows me to implement responsive component-based web front-ends,  and WPF, XAML, and Android Studio XML for implementing solutions for desktop and android respectively."
         },
         {
             "id": "5",

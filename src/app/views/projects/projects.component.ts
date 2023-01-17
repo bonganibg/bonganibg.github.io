@@ -36,4 +36,23 @@ export class ProjectsComponent implements OnInit {
       alert("Something has gone wrong");
     })
   }
+
+  async filterProjects(index: string){
+    await this.loadProjects();
+
+    if (index === '')
+      return;
+
+    console.clear();
+
+    let projects : Project[] = [];
+    this.projects.forEach((project) => {
+      if (project.tags.find(item => item._id == index) != undefined)
+      {
+        projects.push(project);
+      }
+    })
+
+    this.projects = projects;
+  }
 }

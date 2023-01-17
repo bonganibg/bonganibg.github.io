@@ -4,14 +4,14 @@
             Projects
         </h2>
         <div class="tabs gap-4">
-            <a href="" class="px-0 tab tab-active">All</a>
-            <a *ngFor="let item of tags" href="" class="px-0 tab"> {{item.name}} </a>
+            <a (click)="filterProjects('')" class="px-0 tab tab-active">All</a>
+            <a (click)="filterProjects(item._id)" *ngFor="let item of tags" class="px-0 tab"> {{item.name}} </a>
         </div>
     </div>
     <hr class="border border-1 border-white-300 my-8">
 
     <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 mb-10">
-        <div *ngFor="let item of projects" class="">
+        <div *ngFor="let item of projects">
           <app-project-card [project]="item"></app-project-card>
         </div>
     </div>
