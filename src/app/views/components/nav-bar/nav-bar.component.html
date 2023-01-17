@@ -1,4 +1,4 @@
-<nav class="w-full h-[6vh] bg-white-100 flex justify-between items-center px-20">
+<nav *ngIf="!toggleOn; else menu" class="w-[100vw] h-[6vh] bg-white-100 flex justify-between items-center px-20">
     <div class="class text-[#444444] p-2 h-[6vh]">
         <a href="">
             <svg viewBox="0 0 400 614" fill="currentColor" class="h-full" xmlns="http://www.w3.org/2000/svg">
@@ -9,27 +9,44 @@
         </a>
     </div>
 
-    <ul class="flex gap-3 font-semibold text-grey-300">
-        <li>
-            <a href="">
-                <p class="hover:text-white-400">
-                    Home
-                </p>
-            </a>
-        </li>
-        <li>
-            <a href="about">
-                <p class="hover:text-white-400">
-                    About
-                </p>
-            </a>
-        </li>
-        <li>
-            <a href="projects">
-                <p class="hover:text-white-400">
-                    Projects
-                </p>
-            </a>
-        </li>
-    </ul>
+    <div class="">
+      <button (click)="toggleMenu()">
+        show
+      </button>
+    </div>
 </nav>
+
+<ng-template #menu>
+  <section class="w-[100vw] h-[100vh] bg-white-100 flex justify-center items-center overflow-hidden relative top-0 left-0">
+
+    <div class="absolute top-0 right-0 my-4 mx-20">
+      <button (click)="toggleMenu()">
+        close
+      </button>
+    </div>
+
+    <ul class="flex flex-col gap-3 font-semibold text-grey-300">
+      <li>
+          <a href="">
+              <p class="hover:text-white-400">
+                  Home
+              </p>
+          </a>
+      </li>
+      <li>
+          <a href="about">
+              <p class="hover:text-white-400">
+                  About
+              </p>
+          </a>
+      </li>
+      <li>
+          <a href="projects">
+              <p class="hover:text-white-400">
+                  Projects
+              </p>
+          </a>
+      </li>
+    </ul>
+  </section>
+</ng-template>
