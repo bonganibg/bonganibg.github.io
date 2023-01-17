@@ -42,17 +42,8 @@
         <app-industry-card  [industry]="item"></app-industry-card>
       </li> -->
 
-      <li id="slide1" class="carousel-item relative">
-        <app-industry-card [industry]="industries[0]"></app-industry-card>
-      </li>
-      <li id="slide2" class="carousel-item relative">
-        <app-industry-card [industry]="industries[1]"></app-industry-card>
-      </li>
-      <li id="slide3" class="carousel-item relative">
-        <app-industry-card [industry]="industries[2]"></app-industry-card>
-      </li>
-      <li id="slide4" class="carousel-item relative">
-        <app-industry-card [industry]="industries[3]"></app-industry-card>
+      <li id="slide1" class="carousel-item relative" *ngFor="let industry of industries">
+        <app-industry-card [industry]="industry"></app-industry-card>
       </li>
     </ul>
 

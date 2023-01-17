@@ -3,12 +3,12 @@
         <h2 class="text-3xl text-white-400 ">
             {{industry.name}}
         </h2>
-        <ul class="flex gap-2">
-            <li class="py-[2px] px-[8px] rounded-2xl border border-1 border-grey-100"
+        <ul class="flex gap-2 overflow-x-scroll">
+            <li class=" py-[2px] px-[8px] rounded-2xl border border-1 border-grey-100"
                 *ngFor="let item of industry.work">
                 <a href="" class="rounded-xl">
                     <p class="text-[10px] font-thin text-grey-100">
-                        item
+                        {{item}}
                     </p>
                 </a>
             </li>

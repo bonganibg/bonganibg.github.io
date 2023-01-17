@@ -66,10 +66,9 @@
             "image": "https://images.unsplash.com/photo-1638202993928-7267aad84c31?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
             "name": "Healthcare",
             "work": [
-                "Database",
-                "Web",
-                "Cloud Native",
-                "PWA"
+              "Cloud",
+              "Database",
+              "PWA"
             ]
         },
         {
@@ -77,10 +76,10 @@
             "image": "https://images.unsplash.com/photo-1506306460327-3164753b74c7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
             "name": "Transport",
             "work": [
-                "Database",
-                "Web",
-                "Hybrid Cloud",
-                "Mobile"
+              "Cloud",
+              "Database",
+              "PWA",
+              "Mobile"
             ]
         },
         {
@@ -88,8 +87,12 @@
             "image": "https://images.unsplash.com/photo-1556745753-b2904692b3cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1073&q=80",
             "name": "B2C",
             "work": [
-                "Mobile",
-                "Cloud Native"
+              "Automation",
+              "Cloud",
+              "Database",
+              "Desktop",
+              "PWA",
+              "Mobile"
             ]
         },
         {
@@ -98,7 +101,7 @@
             "name": "Ecommerce",
             "work": [
                 "Database",
-                "Web"
+                "PWA"
             ]
         },
         {
@@ -106,6 +109,7 @@
           "image": "https://images.unsplash.com/photo-1634986666676-ec8fd927c23d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80",
           "name": "Digital Arts",
           "work": [
+              "Cloud",
               "Database",
               "Web"
           ]
@@ -116,6 +120,9 @@
           "name": "Education",
           "work": [
               "Database",
+              "Desktop",
+              "PWA",
+              "Mobile",
               "Web"
           ]
         },
@@ -124,7 +131,9 @@
           "image": "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80",
           "name": "Research",
           "work": [
+              "Automation",
               "Database",
+              "Desktop",
               "Web"
           ]
         },
@@ -133,7 +142,8 @@
           "image": "https://images.unsplash.com/photo-1535303311164-664fc9ec6532?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
           "name": "Social Media",
           "work": [
-              "Database",
+              "Bot",
+              "Cloud",
               "Web"
           ]
         }

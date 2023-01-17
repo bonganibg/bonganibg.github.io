@@ -1,3 +1,7 @@
 .background-filter{
-    background-color: #212529e8;
+    background-color: #212529d7;
+}
+
+*::-webkit-scrollbar{
+  display: none;
 }
