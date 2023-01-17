@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { LandingPageFeaturedProject } from 'src/app/models/landing-page.model';
 
 @Component({
   selector: 'app-landing-project-card',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./landing-project-card.component.css']
 })
 export class LandingProjectCardComponent implements OnInit {
+
+  @Input() project!: LandingPageFeaturedProject
 
   constructor() { }
 

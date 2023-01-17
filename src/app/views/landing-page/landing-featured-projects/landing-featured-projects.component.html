@@ -8,11 +8,9 @@
     <hr class="border border-1 border-grey-300">
 
     <div class="flex flex-col gap-4 lg:gap-10">
-        <app-landing-project-card></app-landing-project-card>
-        <hr class="border border-1 border-grey-300">
-        <app-landing-project-card></app-landing-project-card>
-        <hr class="border border-1 border-grey-300">
-        <app-landing-project-card></app-landing-project-card>
-        <hr class="border border-1 border-grey-300">
+        <div class="" *ngFor="let project of projects">
+          <app-landing-project-card [project]="project"></app-landing-project-card>
+          <hr class="border border-1 border-grey-300">
+        </div>
     </div>
 </section>

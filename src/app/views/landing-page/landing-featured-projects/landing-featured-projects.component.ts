@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { LandingPageFeaturedProject } from 'src/app/models/landing-page.model';
 
 @Component({
   selector: 'app-landing-featured-projects',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./landing-featured-projects.component.css']
 })
 export class LandingFeaturedProjectsComponent implements OnInit {
+
+  @Input() projects!: LandingPageFeaturedProject[];
 
   constructor() { }
 
