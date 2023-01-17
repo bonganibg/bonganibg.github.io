@@ -1,4 +1,4 @@
-<nav *ngIf="!toggleOn; else menu" class="w-[100vw] h-[6vh] bg-white-100 flex justify-between items-center px-20">
+<nav *ngIf="!toggleOn; else menu" class="w-[100vw] h-[6vh] bg-white-100 flex justify-between items-center px-5 lg:px-20">
     <div class="class text-[#444444] p-2 h-[6vh]">
         <a href="">
             <svg viewBox="0 0 400 614" fill="currentColor" class="h-full" xmlns="http://www.w3.org/2000/svg">
@@ -21,7 +21,7 @@
 <ng-template #menu>
   <section class="w-[100vw] h-[100vh] bg-white-100 flex justify-center items-center overflow-hidden relative top-0 left-0">
 
-    <div class="absolute top-0 right-0 my-4 mx-20">
+    <div class="absolute top-0 right-0 my-4 mx-5 lg:mx-20">
       <button (click)="toggleMenu()">
         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
           <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
@@ -31,21 +31,21 @@
 
     <ul class="flex flex-col gap-3 font-semibold text-grey-300">
       <li>
-          <a href="">
+          <a [routerLink]="'/'" (click)="toggleMenu()">
               <p class="hover:text-white-400">
                   Home
               </p>
           </a>
       </li>
       <li>
-          <a href="about">
+          <a [routerLink]="'about'" (click)="toggleMenu()">
               <p class="hover:text-white-400">
                   About
               </p>
           </a>
       </li>
       <li>
-          <a href="projects">
+          <a [routerLink]="'projects'" (click)="toggleMenu()">
               <p class="hover:text-white-400">
                   Projects
               </p>
