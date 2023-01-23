@@ -24,6 +24,7 @@ import { AboutMePageComponent } from './views/about-me/about-me-page/about-me-pa
 import { AboutTechnologiesPageComponent } from './views/about-me/about-technologies-page/about-technologies-page.component';
 import { AboutQuestionsPageComponent } from './views/about-me/about-questions-page/about-questions-page.component';
 import { SkeletonLoaderComponent } from './views/components/skeleton-loader/skeleton-loader.component';
+import { ProjectSkeletonLoaderComponent } from './views/components/project-skeleton-loader/project-skeleton-loader.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { SkeletonLoaderComponent } from './views/components/skeleton-loader/skel
     AboutTechnologiesPageComponent,
     AboutQuestionsPageComponent,
     SkeletonLoaderComponent,
+    ProjectSkeletonLoaderComponent,
   ],
   imports: [
     BrowserModule,

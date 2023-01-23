@@ -11,9 +11,16 @@
     <hr class="border border-1 border-white-300 my-8">
 
     <div class="flex flex-col gap-8 lg:gap-20">
+
+      <div class="" *ngIf="!hasLoaded; else showProjects">
+        <app-project-skeleton-loader *ngFor="let item of [1,1,1,1,1]"></app-project-skeleton-loader>
+      </div>
+
+      <ng-template #showProjects>
         <div *ngFor="let item of projects">
           <app-project-card [project]="item"></app-project-card>
         </div>
+      </ng-template>
     </div>
 
 </section>

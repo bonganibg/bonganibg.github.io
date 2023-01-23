@@ -11,6 +11,8 @@ export class ProjectsComponent implements OnInit {
 
   constructor(private projectService: ProjectService) { }
 
+  hasLoaded = false;
+
   projects: Project[] = [];
   tags: Tag[] = [];
 
@@ -20,8 +22,10 @@ export class ProjectsComponent implements OnInit {
   }
 
   async loadProjects(){
+    this.hasLoaded = false;
     this.projectService.getProjects().then((response) => {
       this.projects = response.data.projects;
+      this.hasLoaded = true;
     })
     .catch(() => {
       alert("Something has gone wrong");
