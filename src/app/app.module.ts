@@ -23,6 +23,7 @@ import { AboutSectionNavComponent } from './views/about-me/about-section-nav/abo
 import { AboutMePageComponent } from './views/about-me/about-me-page/about-me-page.component';
 import { AboutTechnologiesPageComponent } from './views/about-me/about-technologies-page/about-technologies-page.component';
 import { AboutQuestionsPageComponent } from './views/about-me/about-questions-page/about-questions-page.component';
+import { SkeletonLoaderComponent } from './views/components/skeleton-loader/skeleton-loader.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { AboutQuestionsPageComponent } from './views/about-me/about-questions-pa
     AboutMePageComponent,
     AboutTechnologiesPageComponent,
     AboutQuestionsPageComponent,
+    SkeletonLoaderComponent,
   ],
   imports: [
     BrowserModule,

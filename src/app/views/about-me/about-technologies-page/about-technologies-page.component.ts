@@ -14,15 +14,18 @@ export class AboutTechnologiesPageComponent implements OnInit {
   constructor(private aboutService: AboutService) { }
 
   technologies!: TechnologiesSectionModel[];
+  hasLoaded = false;
 
   async ngOnInit() {
     await this.loadTechnologies();
   }
 
   async loadTechnologies(){
+    this.hasLoaded = false;
     this.aboutService.getTechnologies().then((response) => {
       this.technologies = response.data.technologies;
       this.links.emit(this.sendLinks());
+      this.hasLoaded = true;
     })
     .catch((error) => {
       console.warn(error);
