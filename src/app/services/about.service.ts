@@ -7,7 +7,12 @@ import { environment } from 'src/environments/environment';
 })
 export class AboutService {
 
-  constructor() { }
+  constructor() {
+    axios.interceptors.request.use(config => {
+      config.timeout = 500;
+      return config
+    })
+  }
 
   async getQuestions(){
     return await axios({
