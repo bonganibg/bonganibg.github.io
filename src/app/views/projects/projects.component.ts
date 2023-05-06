@@ -27,8 +27,9 @@ export class ProjectsComponent implements OnInit {
       this.projects = response.data.projects;
       this.hasLoaded = true;
     })
-    .catch(() => {
-      alert("Something has gone wrong");
+    .catch(async () => {
+      await this.loadProjects();
+      return;
     })
   }
 
@@ -36,8 +37,9 @@ export class ProjectsComponent implements OnInit {
     this.projectService.getProjectTags().then((response) => {
       this.tags = response.data.tags;
     })
-    .catch(() => {
-      alert("Something has gone wrong");
+    .catch(async () => {
+      this.loadProjectTags();
+      return;
     })
   }
 

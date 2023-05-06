@@ -27,9 +27,10 @@ export class AboutTechnologiesPageComponent implements OnInit {
       this.links.emit(this.sendLinks());
       this.hasLoaded = true;
     })
-    .catch((error) => {
+    .catch(async (error) => {
       console.warn(error);
-      alert("something has gone wrong")
+      await this.loadTechnologies();
+      return;
     })
   }
 

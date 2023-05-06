@@ -7,7 +7,14 @@ import { environment } from 'src/environments/environment';
 })
 export class ProjectService {
 
-  constructor() { }
+
+  constructor()
+  {
+    axios.interceptors.request.use(config => {
+      config.timeout = 500;
+      return config
+    })
+   }
 
   async getProjectTags(){
     return await axios({

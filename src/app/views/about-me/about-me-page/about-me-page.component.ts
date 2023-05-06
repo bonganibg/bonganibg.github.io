@@ -29,8 +29,9 @@ export class AboutMePageComponent implements OnInit {
       this.links.emit(this.sendLinks());
       this.hasLoaded = true;
     })
-    .catch(error => {
-      alert("something went wron")
+    .catch(async () => {
+      await this.loadAboutMe();
+      return;
     })
   }
 
