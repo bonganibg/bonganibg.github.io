@@ -14,7 +14,7 @@ export class ProjectService {
       config.timeout = 500;
       return config
     })
-   }
+  }
 
   async getProjectTags(){
     return await axios({
