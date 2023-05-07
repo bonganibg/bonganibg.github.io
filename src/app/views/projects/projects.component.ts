@@ -18,7 +18,7 @@ export class ProjectsComponent implements OnInit {
 
   async ngOnInit(){
     await this.loadProjects();
-    await this.loadProjectTags();
+    // await this.loadProjectTags();
   }
 
   async loadProjects(){
@@ -34,32 +34,32 @@ export class ProjectsComponent implements OnInit {
     })
   }
 
-  async loadProjectTags(){
-    this.projectService.getProjectTags().then((response) => {
-      this.tags = response.data.tags;
-    })
-    .catch(async () => {
-      this.loadProjectTags();
-      return;
-    })
-  }
+  // async loadProjectTags(){
+  //   this.projectService.getProjectTags().then((response) => {
+  //     this.tags = response.data.tags;
+  //   })
+  //   .catch(async () => {
+  //     this.loadProjectTags();
+  //     return;
+  //   })
+  // }
 
-  async filterProjects(index: string){
-    await this.loadProjects();
+  // async filterProjects(index: string){
+  //   await this.loadProjects();
 
-    if (index === '')
-      return;
+  //   if (index === '')
+  //     return;
 
-    console.clear();
+  //   console.clear();
 
-    let projects : Project[] = [];
-    this.projects.forEach((project) => {
-      if (project.tags.find(item => item._id == index) != undefined)
-      {
-        projects.push(project);
-      }
-    })
+  //   let projects : Project[] = [];
+  //   this.projects.forEach((project) => {
+  //     if (project.tags.find(item => item._id == index) != undefined)
+  //     {
+  //       projects.push(project);
+  //     }
+  //   })
 
-    this.projects = projects;
-  }
+  //   this.projects = projects;
+  // }
 }
