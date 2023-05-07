@@ -9,7 +9,7 @@ export class AboutService {
 
   constructor() {
     axios.interceptors.request.use(config => {
-      config.timeout = 500;
+      config.timeout = environment.RELOAD_TIMEOUT;
       return config
     })
   }

@@ -10,5 +10,6 @@ export const environment = {
   API_TECH_ENDPOINT: "/about/tech",
   API_TECH_DETAILS_ENDPOINT: "/about/tech/detail",
   API_PROJECT_ENDPOINT: "/project",
-  API_PROJECT_TAG_ENDPOINT: "/project/tag"
+  API_PROJECT_TAG_ENDPOINT: "/project/tag",
+  RELOAD_TIMEOUT: 2000
 };

@@ -28,6 +28,7 @@ export class ProjectsComponent implements OnInit {
       this.hasLoaded = true;
     })
     .catch(async () => {
+      console.log('reloading');
       await this.loadProjects();
       return;
     })
