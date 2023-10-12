@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { linkSync } from 'fs';
 import { AboutSectionModel, LinkModel } from 'src/app/models/about-page-model';
 import { AboutService } from 'src/app/services/about.service';
 
@@ -24,16 +25,23 @@ export class AboutMePageComponent implements OnInit {
 
   async loadAboutMe(){
     this.hasLoaded = false;
-    this.aboutService.getAboutMe().then((response) => {
-      this.aboutMe = response.data.about;
-      this.links.emit(this.sendLinks());
-      this.hasLoaded = true;
-    })
-    .catch(async () => {
-      await this.loadAboutMe();
-      return;
-    })
+    this.aboutMe = await this.aboutService.getAboutMe() || [];
+    this.links.emit(this.sendLinks());
+    this.hasLoaded = true;
   }
+
+  // async loadAboutMe(){
+  //   this.hasLoaded = false;
+  //   this.aboutService.getAboutMe().then((response) => {
+  //     this.aboutMe = response.data.about;
+  //     this.links.emit(this.sendLinks());
+  //     this.hasLoaded = true;
+  //   })
+  //   .catch(async () => {
+  //     await this.loadAboutMe();
+  //     return;
+  //   })
+  // }
 
   sendLinks(): LinkModel[]{
     let links: LinkModel[] = [];

@@ -1,40 +1,20 @@
 import { Injectable } from '@angular/core';
 import axios from 'axios';
-import { environment } from 'src/environments/environment';
+import { FirebaseService } from './firebase.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AboutService {
 
-  constructor() {
-    axios.interceptors.request.use(config => {
-      config.timeout = environment.RELOAD_TIMEOUT;
-      return config
-    })
-  }
-
-  async getQuestions(){
-    return await axios({
-      method: 'GET',
-      baseURL: environment.API_BASE_URL,
-      url: environment.API_QUESTION_ENDPOINT
-    });
+  constructor(private firebaseService: FirebaseService) {
   }
 
   async getAboutMe(){
-    return await axios({
-      method: 'GET',
-      baseURL: environment.API_BASE_URL,
-      url: environment.API_ABOUT_ME_ENDPOINT
-    });
+    return await this.firebaseService.get("about_me/")
   }
 
   async getTechnologies(){
-    return await axios({
-      method: 'GET',
-      baseURL: environment.API_BASE_URL,
-      url: environment.API_TECH_ENDPOINT
-    });
+    return await this.firebaseService.get("technologies/")
   }
 }

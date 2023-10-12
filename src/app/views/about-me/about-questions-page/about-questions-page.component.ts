@@ -18,10 +18,10 @@ export class AboutQuestionsPageComponent implements OnInit {
   }
 
   async loadQuestions(){
-    this.aboutService.getQuestions().then((response) => {
-      this.questions = response.data.questions;
-      console.warn(this.questions);
-    })
+    // this.aboutService.getQuestions().then((response) => {
+    //   this.questions = response.data.questions;
+    //   console.warn(this.questions);
+    // })
   }
 
 

@@ -22,16 +22,9 @@ export class AboutTechnologiesPageComponent implements OnInit {
 
   async loadTechnologies(){
     this.hasLoaded = false;
-    this.aboutService.getTechnologies().then((response) => {
-      this.technologies = response.data.technologies;
-      this.links.emit(this.sendLinks());
-      this.hasLoaded = true;
-    })
-    .catch(async (error) => {
-      console.warn(error);
-      await this.loadTechnologies();
-      return;
-    })
+    this.technologies = await this.aboutService.getTechnologies() || [];
+    this.links.emit(this.sendLinks());
+    this.hasLoaded = true;
   }
 
   sendLinks(): LinkModel[]{

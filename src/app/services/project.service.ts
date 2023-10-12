@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import axios from 'axios';
 import { environment } from 'src/environments/environment';
+import { FirebaseService } from './firebase.service';
 
 @Injectable({
   providedIn: 'root'
@@ -8,12 +9,8 @@ import { environment } from 'src/environments/environment';
 export class ProjectService {
 
 
-  constructor()
+  constructor(private database: FirebaseService)
   {
-    axios.interceptors.request.use(config => {
-      config.timeout = environment.RELOAD_TIMEOUT;
-      return config
-    })
   }
 
   async getProjectTags(){
@@ -25,10 +22,7 @@ export class ProjectService {
   }
 
   async getProjects(){
-    return await axios({
-      method: 'GET',
-      baseURL: environment.API_BASE_URL,
-      url: environment.API_PROJECT_ENDPOINT,
-    })
+    const output = await this.database.get("projects/");
+    return output;
   }
 }
