@@ -26,6 +26,7 @@ import { AboutTechnologiesPageComponent } from './views/about-me/about-technolog
 import { AboutQuestionsPageComponent } from './views/about-me/about-questions-page/about-questions-page.component';
 import { SkeletonLoaderComponent } from './views/components/skeleton-loader/skeleton-loader.component';
 import { ProjectSkeletonLoaderComponent } from './views/components/project-skeleton-loader/project-skeleton-loader.component';
+import { ProjectDescriptionComponent } from './views/projects/project-description/project-description.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import { ProjectSkeletonLoaderComponent } from './views/components/project-skele
     AboutQuestionsPageComponent,
     SkeletonLoaderComponent,
     ProjectSkeletonLoaderComponent,
+    ProjectDescriptionComponent,
   ],
   imports: [
     BrowserModule,

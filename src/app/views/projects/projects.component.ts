@@ -12,6 +12,7 @@ export class ProjectsComponent implements OnInit {
   constructor(private projectService: ProjectService) { }
 
   hasLoaded = false;
+  showProjectDetails = false;
 
   projects: Project[] = [];
   tags: Tag[] = [];
@@ -32,6 +33,10 @@ export class ProjectsComponent implements OnInit {
       await this.loadProjects();
       return;
     })
+  }
+
+  toggleProjectDetails(){
+    this.showProjectDetails = !this.showProjectDetails;
   }
 
   // async loadProjectTags(){
