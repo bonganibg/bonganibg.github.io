@@ -18,7 +18,9 @@
 
       <ng-template #showProjects>
         <div *ngFor="let item of projects">
-          <app-project-card [project]="item"></app-project-card>
+          <a (click)="toggleProjectDetails(item._id)">
+            <app-project-card [project]="item"></app-project-card>
+          </a>
         </div>
       </ng-template>
     </div>
@@ -27,6 +29,6 @@
 
 <ng-template [ngIf]="showProjectDetails">
   <section (click)="toggleProjectDetails()" class="h-[100vh] w-[100vw] fixed top-0 left-0 z-50 flex flex-row justify-center align-middle p-5 backdrop-blur-sm">
-    <app-project-description class="flex flex-row justify-center my-auto h-auto w-full md:h-[675px] md:w-[700px] bg-white-100 border border-1 border-grey-100"></app-project-description>
+    <app-project-description [projectDetails]="viewProject" class="flex flex-row justify-center my-auto h-auto w-full md:h-[675px] md:w-[700px] bg-white-100 border border-1 border-grey-100"></app-project-description>
   </section>
 </ng-template>

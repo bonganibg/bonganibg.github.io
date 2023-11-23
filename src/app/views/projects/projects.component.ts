@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Project, Tag } from 'src/app/models/project.model';
+import { Project, ProjectDetail, Tag } from 'src/app/models/project.model';
 import { ProjectService } from 'src/app/services/project.service';
 
 @Component({
@@ -17,8 +17,11 @@ export class ProjectsComponent implements OnInit {
   projects: Project[] = [];
   tags: Tag[] = [];
 
+  viewProject!: ProjectDetail;
+
   async ngOnInit(){
     await this.loadProjects();
+    console.log(this.projects)
     // await this.loadProjectTags();
   }
 
@@ -28,7 +31,13 @@ export class ProjectsComponent implements OnInit {
     this.hasLoaded = true;
   }
 
-  toggleProjectDetails(){
+  toggleProjectDetails(id: string = ""){
+      let project = this.projects.find(p => p._id === id);
+
+      if (project !== undefined && project !== null && project.detail !== undefined && project.detail !== null){
+        this.viewProject = project.detail;
+      }
+
     this.showProjectDetails = !this.showProjectDetails;
   }
 }

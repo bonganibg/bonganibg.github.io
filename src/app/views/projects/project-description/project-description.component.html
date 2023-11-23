@@ -5,13 +5,14 @@
       <div class="flex flex-row justify-start gap-4">
         <hr class="border-black w-10 my-auto bg-grey-200">
 
-        <h2 class="text-3xl text-grey-300">PC Part Hunter</h2>
+        <h2 class="text-3xl text-grey-300"> {{projectDetails.title}} </h2>
       </div>
 
       <ul class="flex flex-wrap gap-2">
-        <li class="flex justify-center items-center px-3 py-1 border border-1 border-grey-100 rounded-2xl">
+        <li class="flex justify-center items-center px-3 py-1 border border-1 border-grey-100 rounded-2xl"
+        *ngFor="let platform of projectDetails.platform">
           <p class="cursor-pointer text-[13px] text-grey-100">
-            Web
+            {{platform}}
           </p>
         </li>
       </ul>
@@ -20,15 +21,7 @@
     <!-- Text Body -->
     <div class="">
       <p class="text-sm">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas dolore delectus voluptatem, magnam facere
-        laudantium deserunt repudiandae similique fugiat nesciunt. Nesciunt molestiae nihil possimus,
-        repudiandae adipisci harum! Obcaecati, rerum aperiam. Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Quas dolore delectus voluptatem, magnam facere laudantium deserunt repudiandae similique fugiat
-        nesciunt. Nesciunt molestiae nihil possimus, repudiandae adipisci harum! Obcaecati, rerum aperiam. Lorem
-        ipsum dolor sit amet consectetur adipisicing elit. Quas dolore delectus voluptatem, magnam facere
-        laudantium deserunt repudiandae similique fugiat nesciunt. Nesciunt molestiae nihil possimus,
-        repudiandae adipisci harum! Obcaecati, rerum aperiam. Lorem ipsum dolor sit amet consectetur adipisicing
-        elit.
+        {{projectDetails.description}}
       </p>
     </div>
 
@@ -41,9 +34,10 @@
         </div>
 
         <ul class="flex flex-wrap gap-2">
-          <li class="flex justify-center items-center px-3 py-1 border border-1 border-grey-100 rounded-2xl">
+          <li class="flex justify-center items-center px-3 py-1 border border-1 border-grey-100 rounded-2xl"
+           *ngFor="let language of projectDetails.language">
             <p class="cursor-pointer text-[13px] text-grey-100">
-              C#
+              {{language}}
             </p>
           </li>
         </ul>
@@ -56,9 +50,10 @@
         </div>
 
         <ul class="flex flex-wrap gap-2">
-          <li class="flex justify-center items-center px-3 py-1 border border-1 border-grey-100 rounded-2xl">
+          <li class="flex justify-center items-center px-3 py-1 border border-1 border-grey-100 rounded-2xl"
+            *ngFor="let tool of projectDetails.tools">
             <p class="cursor-pointer text-[13px] text-grey-100">
-              RabbitMQ
+              {{tool}}
             </p>
           </li>
         </ul>
